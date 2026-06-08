@@ -4,6 +4,11 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { RelatedLinks } from "@/components/related-links";
 import { articles, getArticleBySlug } from "@/lib/articles";
+import {
+  buildArticleJsonLd,
+  buildBreadcrumbJsonLd,
+  buildFaqPageJsonLd,
+} from "@/lib/seo";
 
 type ArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -52,25 +57,25 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound();
   }
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: article.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+  const jsonLd = [
+    buildArticleJsonLd(article),
+    buildFaqPageJsonLd(article.faqs),
+    buildBreadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Blog", path: "/blog" },
+      { name: article.title, path: `/blog/${article.slug}` },
+    ]),
+  ];
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      {jsonLd.map((item, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }}
+        />
+      ))}
       <article className="mx-auto max-w-4xl px-5 py-10 lg:px-8">
         <Link href="/blog" className="screen-link">
           Blog

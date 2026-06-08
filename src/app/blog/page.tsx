@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "ScreenOdds Blog",
   description:
     "SEO guides for entertainment prediction markets, awards odds, movie markets, and reality TV odds.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function BlogPage() {
