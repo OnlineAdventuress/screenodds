@@ -1,0 +1,91 @@
+{
+  "kind": "news",
+  "slug": "box-office-market-watch-2026-06-08",
+  "title": "Box Office Market Watch: Opening Weekend Odds Need More Than a Headline Number",
+  "description": "ScreenOdds is expanding box office market coverage around opening weekend, highest-grossing movie, and franchise performance questions where prediction-market prices need context.",
+  "category": "Box Office",
+  "status": "published",
+  "publishedAt": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "newsType": "box-office-update",
+  "riskLevel": "low",
+  "sourceConfidence": 0.9,
+  "riskFlags": [],
+  "heroImage": "/images/box-office-hero.png",
+  "heroAlt": "Editorial box office counter with ticket stacks and probability charts",
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/box-office-hero.png",
+    "alt": "Editorial box office counter with ticket stacks and probability charts",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/box-office-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image used as a rights-safe placeholder until official film assets are attached."
+  },
+  "sections": [
+    {
+      "heading": "What changed",
+      "paragraphs": [
+        "ScreenOdds is turning box office coverage into a dedicated news and guide cluster. The goal is to give opening weekend markets context before readers overreact to a single percentage, one trade, or a stale market page.",
+        "Box office prediction markets are most useful when paired with release timing, comparable films, presales, review timing, and market liquidity."
+      ]
+    },
+    {
+      "heading": "Why headline grosses are not enough",
+      "paragraphs": [
+        "Opening weekend markets can move for reasons that do not show up in the headline number. A film may hold a strong market price because of franchise demand, premium-format share, holiday timing, or weak competition on the calendar.",
+        "ScreenOdds will keep those notes separate from trading calls. The editorial job is to explain why a market may have moved and which public signals are worth tracking next."
+      ]
+    },
+    {
+      "heading": "What to watch next",
+      "paragraphs": [
+        "The highest-priority evergreen pages are opening weekend odds, highest-grossing movie odds, and franchise-specific prediction pages. News notes will cover verified box office updates and market movement when a relevant ScreenOdds market exists.",
+        "Stories that depend on leaks, unsourced social posts, or unclear theater-count claims should be saved as drafts until better sourcing is available."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-08",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "The Numbers box office data",
+      "url": "https://www.the-numbers.com/box-office",
+      "publisher": "The Numbers",
+      "accessedAt": "2026-06-08",
+      "sourceType": "box-office-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/box-office",
+      "label": "Box Office Prediction Markets",
+      "description": "Opening weekend and highest-grossing movie market pages."
+    },
+    {
+      "href": "/markets/highest-grossing-movie-in-2026",
+      "label": "Highest-grossing movie market",
+      "description": "A seeded ScreenOdds market page for year-end box office outcomes."
+    }
+  ],
+  "related": [
+    {
+      "href": "/box-office",
+      "label": "Box office hub",
+      "description": "Live box office markets and future guide expansion."
+    },
+    {
+      "href": "/movies",
+      "label": "Movie markets",
+      "description": "Casting, franchise, and release-related prediction markets."
+    }
+  ],
+  "inlineImages": [],
+  "infographics": [],
+  "faqs": []
+}

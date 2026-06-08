@@ -1,0 +1,106 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-08",
+  "sources": [
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-08",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "DataForSEO keyword data",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-08",
+      "sourceType": "keyword-data"
+    },
+    {
+      "title": "TMDb logos and attribution",
+      "url": "https://www.themoviedb.org/about/logos-attribution",
+      "publisher": "TMDb",
+      "accessedAt": "2026-06-08",
+      "sourceType": "reference"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/movies",
+      "label": "Movie prediction markets",
+      "description": "Track movie casting, release, and franchise markets."
+    },
+    {
+      "href": "/box-office",
+      "label": "Box office markets",
+      "description": "Opening weekend and highest-grossing movie markets."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/movies-hero.png",
+    "alt": "Editorial spy film casting board with probability charts",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/movies-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [],
+  "infographics": [],
+  "slug": "next-james-bond-actor-odds",
+  "title": "Next James Bond Actor Odds: Market-Implied Favorites",
+  "description": "Next James Bond actor odds, prediction-market signals, and how casting rumors become market prices.",
+  "primaryKeyword": "next james bond actor odds",
+  "keywordVolume": 170,
+  "keywordDifficulty": 6,
+  "category": "Movies",
+  "updatedAt": "2026-06-08",
+  "heroImage": "/images/movies-hero.png",
+  "heroAlt": "Editorial spy film casting board with probability charts",
+  "sections": [
+    {
+      "heading": "A focused movie-market keyword",
+      "paragraphs": [
+        "Generic `movie odds` is a poor SEO target because Google often interprets it as the film *Against All Odds*. `next james bond actor odds` is different: the intent is specific, measurable, and tied to an actual movie-market question.",
+        "DataForSEO shows 170 US searches and low difficulty. That makes it a useful launch page for ScreenOdds' movie cluster."
+      ]
+    },
+    {
+      "heading": "How casting rumors become market prices",
+      "paragraphs": [
+        "Casting markets move on credible reporting, studio comments, actor availability, franchise strategy, and denial language. A rumor from a weak source may create a short-lived move, while trade publication reporting can reset the whole market.",
+        "The market is also sensitive to timing. If a production schedule becomes clearer, actors with conflicting commitments may drift even without a direct announcement."
+      ]
+    },
+    {
+      "heading": "How to use ScreenOdds for casting markets",
+      "paragraphs": [
+        "Look at the implied probability, but do not stop there. Check liquidity, volume, and whether the price has moved recently. Casting markets can hold stale favorites for long periods.",
+        "ScreenOdds keeps the movie hub connected to related box office and awards pages because franchise casting can influence future release expectations, fan interest, and eventual box office markets."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are next James Bond actor odds official?",
+      "answer": "No. They are market-implied probabilities based on trading activity and available public information."
+    },
+    {
+      "question": "What sources matter most for casting markets?",
+      "answer": "Trade publication reporting, studio announcements, actor scheduling, and reliable industry sources generally matter more than unsourced social rumors."
+    }
+  ],
+  "related": [
+    {
+      "href": "/movies",
+      "label": "Movie prediction markets",
+      "description": "Track movie casting, release, and franchise markets."
+    },
+    {
+      "href": "/box-office",
+      "label": "Box office markets",
+      "description": "Opening weekend and highest-grossing movie markets."
+    }
+  ]
+}

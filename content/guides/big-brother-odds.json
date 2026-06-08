@@ -1,0 +1,94 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-08",
+  "sources": [
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-08",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "DataForSEO keyword data",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-08",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/reality-tv",
+      "label": "Reality TV odds",
+      "description": "The hub for reality competition and dating-show markets."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/reality-tv-hero.png",
+    "alt": "Reality TV control room with probability charts and contestant silhouettes",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/reality-tv-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [],
+  "infographics": [],
+  "slug": "big-brother-odds",
+  "title": "Big Brother Odds: Winner Markets and Reality TV Signals",
+  "description": "Big Brother odds explained through prediction-market structure, eviction cycles, social signals, and liquidity.",
+  "primaryKeyword": "big brother odds",
+  "keywordVolume": 140,
+  "keywordDifficulty": 0,
+  "category": "Reality TV",
+  "updatedAt": "2026-06-08",
+  "heroImage": "/images/reality-tv-hero.png",
+  "heroAlt": "Reality TV control room with probability charts and contestant silhouettes",
+  "sections": [
+    {
+      "heading": "A low-difficulty reality TV keyword",
+      "paragraphs": [
+        "DataForSEO shows `big brother odds` at 140 US searches and a keyword difficulty of 0. The head volume is smaller than Oscars, but the page is highly rankable and fits the ScreenOdds reality TV cluster.",
+        "The exact market supply changes by season. ScreenOdds keeps the page evergreen so live markets can attach naturally when a winner, eviction, or finale market appears."
+      ]
+    },
+    {
+      "heading": "Signals that matter for Big Brother markets",
+      "paragraphs": [
+        "Big Brother markets can react to competitions, veto outcomes, alliances, public sentiment, and edit visibility. The game is strategic, so a popular contestant is not always the most likely winner.",
+        "Because outcomes can shift after one week of gameplay, liquidity and recent volume matter. A stale price can look confident even when the underlying house dynamics have changed."
+      ]
+    },
+    {
+      "heading": "How to read the page",
+      "paragraphs": [
+        "Use the probability as the market's current estimate, then check whether recent volume confirms that traders are still paying attention. Thin or inactive markets should be treated as weak signals.",
+        "ScreenOdds links Big Brother pages back to the broader Reality TV hub so users can compare similar shows rather than reading one market in isolation."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why do Big Brother odds change during a season?",
+      "answer": "They can change after competitions, alliance shifts, eviction plans, public sentiment changes, or new market liquidity."
+    },
+    {
+      "question": "Is popularity enough to win Big Brother?",
+      "answer": "No. Popularity helps, but social positioning, jury management, competitions, and timing can matter more."
+    }
+  ],
+  "related": [
+    {
+      "href": "/reality-tv",
+      "label": "Reality TV odds",
+      "description": "The hub for reality competition and dating-show markets."
+    },
+    {
+      "href": "/blog/love-island-odds",
+      "label": "Love Island odds",
+      "description": "A higher-volume reality TV odds keyword."
+    }
+  ]
+}

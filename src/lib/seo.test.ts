@@ -1,9 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { articles } from "./articles";
 import { getLaunchMarkets, hubPages } from "./content";
+import { getDraftNewsPosts, getPublishedNewsPosts } from "./editorial";
 import {
   absoluteUrl,
   buildArticleJsonLd,
+  buildNewsArticleJsonLd,
   buildBreadcrumbJsonLd,
   getSitemapEntries,
   siteConfig,
@@ -32,6 +34,20 @@ describe("ScreenOdds SEO helpers", () => {
     });
   });
 
+  it("builds NewsArticle JSON-LD with absolute images and canonical page URLs", () => {
+    const post = getPublishedNewsPosts()[0];
+    const jsonLd = buildNewsArticleJsonLd(post);
+
+    expect(jsonLd).toMatchObject({
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      headline: post.title,
+      description: post.description,
+      image: absoluteUrl(post.heroImage),
+      mainEntityOfPage: absoluteUrl(`/news/${post.slug}`),
+    });
+  });
+
   it("builds BreadcrumbList JSON-LD with absolute item URLs", () => {
     const jsonLd = buildBreadcrumbJsonLd([
       { name: "Home", path: "/" },
@@ -46,12 +62,13 @@ describe("ScreenOdds SEO helpers", () => {
     });
   });
 
-  it("includes every launch hub, article, and fallback market in the sitemap entries", () => {
+  it("includes every launch hub, article, published news post, and fallback market in the sitemap entries", () => {
     const entries = getSitemapEntries();
     const urls = entries.map((entry) => entry.url);
 
     expect(urls).toContain(absoluteUrl("/"));
     expect(urls).toContain(absoluteUrl("/blog"));
+    expect(urls).toContain(absoluteUrl("/news"));
 
     for (const hub of Object.values(hubPages)) {
       expect(urls).toContain(absoluteUrl(`/${hub.slug}`));
@@ -59,6 +76,14 @@ describe("ScreenOdds SEO helpers", () => {
 
     for (const article of articles) {
       expect(urls).toContain(absoluteUrl(`/blog/${article.slug}`));
+    }
+
+    for (const post of getPublishedNewsPosts()) {
+      expect(urls).toContain(absoluteUrl(`/news/${post.slug}`));
+    }
+
+    for (const draft of getDraftNewsPosts()) {
+      expect(urls).not.toContain(absoluteUrl(`/news/${draft.slug}`));
     }
 
     for (const market of getLaunchMarkets()) {

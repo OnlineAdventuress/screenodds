@@ -1,0 +1,91 @@
+{
+  "kind": "news",
+  "slug": "oscars-best-picture-market-watch-2026-06-08",
+  "title": "Oscars Best Picture Market Watch: Why ScreenOdds Is Prioritizing Awards Odds",
+  "description": "ScreenOdds is treating Oscars and Best Picture prediction markets as the first authority cluster because the category combines clear search demand, public awards signals, and recurring market liquidity.",
+  "category": "Awards",
+  "status": "published",
+  "publishedAt": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "newsType": "market-move",
+  "riskLevel": "low",
+  "sourceConfidence": 0.92,
+  "riskFlags": [],
+  "heroImage": "/images/awards-hero.png",
+  "heroAlt": "Editorial awards envelopes and probability charts for Oscars prediction markets",
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/awards-hero.png",
+    "alt": "Editorial awards envelopes and probability charts for Oscars prediction markets",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/awards-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image used as a rights-safe placeholder until TMDb or official assets are attached."
+  },
+  "sections": [
+    {
+      "heading": "What changed",
+      "paragraphs": [
+        "ScreenOdds has separated Oscars and Best Picture coverage into a dedicated authority cluster instead of treating awards as one generic entertainment feed. The move gives readers a stable path from the Awards hub to evergreen guides, market pages, and daily news notes.",
+        "Awards markets are well suited to this structure because they change around a public calendar: festival reactions, nominations, guild awards, televised ceremonies, and final results."
+      ]
+    },
+    {
+      "heading": "Why it matters for market readers",
+      "paragraphs": [
+        "A single market price is only useful when readers understand the signal behind it. Best Picture movement can reflect critic consensus, distributor campaign strength, guild overlap, and the amount of recent market activity behind the price.",
+        "ScreenOdds will treat those changes as informational context. The site will not frame prediction-market probabilities as guaranteed outcomes or betting advice."
+      ]
+    },
+    {
+      "heading": "What to watch next",
+      "paragraphs": [
+        "The next content layer is category-specific: Best Picture, Best Actor, Best Actress, Best Director, and nomination odds. Each guide links back to the Awards hub and forward to matching market pages where active markets exist.",
+        "Low-risk daily notes will focus on official announcements, market movement, and verified awards milestones. Rumors and weakly sourced campaign chatter stay in draft mode."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-08",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "Academy Awards official site",
+      "url": "https://www.oscars.org/oscars",
+      "publisher": "Academy of Motion Picture Arts and Sciences",
+      "accessedAt": "2026-06-08",
+      "sourceType": "official"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/awards",
+      "label": "Awards Prediction Markets",
+      "description": "The ScreenOdds hub for Oscars, Grammys, Tonys, and culture-award markets."
+    },
+    {
+      "href": "/blog/best-picture-odds",
+      "label": "Best Picture Odds",
+      "description": "Evergreen context for reading Best Picture prediction-market prices."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/polymarket-oscars-odds",
+      "label": "Polymarket Oscars odds",
+      "description": "How prediction markets price awards season."
+    },
+    {
+      "href": "/awards",
+      "label": "Awards hub",
+      "description": "Live awards markets and related ScreenOdds guides."
+    }
+  ],
+  "inlineImages": [],
+  "infographics": [],
+  "faqs": []
+}

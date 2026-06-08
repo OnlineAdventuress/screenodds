@@ -1,0 +1,52 @@
+{
+  "kind": "news",
+  "slug": "reality-tv-rumor-review-draft",
+  "title": "Draft: Reality TV Finale Rumor Review",
+  "description": "A deliberately unpublished draft fixture for reality TV rumor handling.",
+  "category": "Reality TV",
+  "status": "draft",
+  "publishedAt": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "newsType": "reality-tv-signal",
+  "riskLevel": "review",
+  "sourceConfidence": 0.35,
+  "riskFlags": ["rumor", "unclear-sourcing", "missing-image-attribution"],
+  "heroImage": "/images/reality-tv-hero.png",
+  "heroAlt": "Reality TV control room with contestant silhouettes and market charts",
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/reality-tv-hero.png",
+    "alt": "Reality TV control room with contestant silhouettes and market charts",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/reality-tv-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "Draft placeholder image. This post must not publish until source checks pass."
+  },
+  "sections": [
+    {
+      "heading": "Why this is a draft",
+      "paragraphs": [
+        "This record exists to prove that low-confidence reality TV stories stay out of the sitemap, news index, and static routes.",
+        "A real draft would need official episode evidence, a reliable source, or a verified market-data trigger before publication."
+      ]
+    }
+  ],
+  "sources": [],
+  "marketLinks": [
+    {
+      "href": "/reality-tv",
+      "label": "Reality TV Prediction Markets",
+      "description": "The ScreenOdds hub for reality competition markets."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/love-island-odds",
+      "label": "Love Island odds",
+      "description": "Evergreen reality TV prediction-market guide."
+    }
+  ],
+  "inlineImages": [],
+  "infographics": [],
+  "faqs": []
+}

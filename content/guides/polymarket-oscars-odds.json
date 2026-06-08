@@ -1,0 +1,108 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-08",
+  "sources": [
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-08",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "DataForSEO keyword data",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-08",
+      "sourceType": "keyword-data"
+    },
+    {
+      "title": "Academy Awards official site",
+      "url": "https://www.oscars.org/oscars",
+      "publisher": "Academy of Motion Picture Arts and Sciences",
+      "accessedAt": "2026-06-08",
+      "sourceType": "official"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/awards",
+      "label": "Awards Prediction Markets",
+      "description": "Browse Oscars, Grammys, Tonys, and other awards markets."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/awards-hero.png",
+    "alt": "Editorial illustration of awards envelopes and market probability charts",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/awards-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [],
+  "infographics": [],
+  "slug": "polymarket-oscars-odds",
+  "title": "Polymarket Oscars Odds: How Prediction Markets Price Awards Season",
+  "description": "A practical guide to Polymarket Oscars odds, Best Picture markets, and what prediction-market prices can and cannot tell you about awards season.",
+  "primaryKeyword": "polymarket oscars",
+  "keywordVolume": 720,
+  "keywordDifficulty": 0,
+  "category": "Awards",
+  "updatedAt": "2026-06-08",
+  "heroImage": "/images/awards-hero.png",
+  "heroAlt": "Editorial illustration of awards envelopes and market probability charts",
+  "sections": [
+    {
+      "heading": "Why Oscars markets are a natural prediction-market category",
+      "paragraphs": [
+        "Oscars markets sit at the intersection of pop culture, public narrative, critic signals, and measurable voting milestones. That makes them easier for casual readers to understand than abstract macro markets, while still giving prediction-market users a changing information surface.",
+        "DataForSEO shows the direct query `polymarket oscars` at 720 US searches with a keyword difficulty of 0. That is exactly the kind of page ScreenOdds can own early: specific, low difficulty, and closely tied to live market behavior."
+      ]
+    },
+    {
+      "heading": "What market prices are actually saying",
+      "paragraphs": [
+        "A market price is not a critic ranking and it is not a studio campaign memo. It is a live estimate from people willing to trade around the available information. For Oscars, that can include festival reception, precursor awards, guild nominations, review momentum, campaign strength, and late-breaking controversy.",
+        "The useful part is not only the current percentage. The useful part is the movement. If a film drifts from a long shot to a serious contender after a guild result, that change can reveal how the market is weighting new evidence."
+      ]
+    },
+    {
+      "heading": "How to use ScreenOdds during awards season",
+      "paragraphs": [
+        "Start with the Awards hub, then open the specific market page for the category you care about. Check one-month volume, liquidity, and the exact market title before drawing conclusions. Thin markets can move sharply on small trades.",
+        "For Best Picture, compare the market with nomination calendars and major precursor results. For acting categories, watch whether market movement follows critics groups, televised awards, or industry guilds."
+      ]
+    },
+    {
+      "heading": "Important limitations",
+      "paragraphs": [
+        "Prediction markets can be wrong, illiquid, or temporarily distorted. A 60 percent market price does not mean the outcome is guaranteed, and a low-liquidity market may be more fragile than it looks.",
+        "ScreenOdds treats Polymarket Oscars odds as informational signals. The page is designed for research, not financial advice."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are Polymarket Oscars odds the same as betting odds?",
+      "answer": "No. ScreenOdds displays prediction-market probabilities as informational market prices. They are not sportsbook lines and should not be treated as guarantees."
+    },
+    {
+      "question": "Why do Oscars market prices move?",
+      "answer": "Prices can move after festival reactions, nominations, critics awards, guild awards, campaign news, or liquidity changes inside the market."
+    }
+  ],
+  "related": [
+    {
+      "href": "/awards",
+      "label": "Awards Prediction Markets",
+      "description": "Browse Oscars, Grammys, Tonys, and other awards markets."
+    },
+    {
+      "href": "/blog/best-picture-odds",
+      "label": "Best Picture Odds",
+      "description": "A focused guide to the highest-intent awards keyword."
+    }
+  ]
+}

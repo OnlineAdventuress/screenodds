@@ -1,0 +1,94 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-08",
+  "sources": [
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-08",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "DataForSEO keyword data",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-08",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/reality-tv",
+      "label": "Reality TV odds",
+      "description": "Browse reality TV prediction-market pages."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/reality-tv-hero.png",
+    "alt": "Editorial reality TV voting board with market probability charts",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/reality-tv-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [],
+  "infographics": [],
+  "slug": "love-island-odds",
+  "title": "Love Island Odds: How Reality TV Prediction Markets Work",
+  "description": "Love Island odds, reality TV market signals, and what viewer momentum can mean for prediction-market prices.",
+  "primaryKeyword": "love island odds",
+  "keywordVolume": 390,
+  "keywordDifficulty": 2,
+  "category": "Reality TV",
+  "updatedAt": "2026-06-08",
+  "heroImage": "/images/reality-tv-hero.png",
+  "heroAlt": "Editorial reality TV voting board with market probability charts",
+  "sections": [
+    {
+      "heading": "Why Love Island is a good reality TV wedge",
+      "paragraphs": [
+        "DataForSEO shows `love island odds` at 390 US searches with very low difficulty. That is enough demand to justify a permanent ScreenOdds page, even when the live market count is small.",
+        "Reality TV markets are different from awards markets because viewer perception can change weekly. Edits, public votes, social media sentiment, and couple dynamics all affect how users interpret the likely winner."
+      ]
+    },
+    {
+      "heading": "What moves reality TV markets",
+      "paragraphs": [
+        "The biggest moves usually come after episodes that reshape the story. A strong edit, a public vote reveal, a recoupling, or a contestant controversy can change the market faster than traditional press coverage.",
+        "The hard part is separating real viewer momentum from loud online communities. A contestant can dominate social chatter without being the broad-audience favorite."
+      ]
+    },
+    {
+      "heading": "How ScreenOdds handles Love Island pages",
+      "paragraphs": [
+        "The page stays live even when active markets are thin. When a market exists, ScreenOdds shows probability, one-month volume, 24-hour volume, and liquidity. When no market is active, the page remains an indexable explainer ready for the next season.",
+        "That structure matters for SEO. The page can build topical relevance before peak season rather than appearing only after everyone is already searching."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are Love Island odds available year-round?",
+      "answer": "Not always. Reality TV markets tend to appear around active seasons, finales, and high-interest contestant outcomes."
+    },
+    {
+      "question": "Why can reality TV markets move so quickly?",
+      "answer": "They react to episode edits, public-vote signals, social media sentiment, leaks, and market liquidity."
+    }
+  ],
+  "related": [
+    {
+      "href": "/reality-tv",
+      "label": "Reality TV odds",
+      "description": "Browse reality TV prediction-market pages."
+    },
+    {
+      "href": "/blog/big-brother-odds",
+      "label": "Big Brother odds",
+      "description": "Another low-difficulty reality TV keyword target."
+    }
+  ]
+}

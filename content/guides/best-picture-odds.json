@@ -1,0 +1,101 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-08",
+  "sources": [
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-08",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "DataForSEO keyword data",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-08",
+      "sourceType": "keyword-data"
+    },
+    {
+      "title": "Academy Awards official site",
+      "url": "https://www.oscars.org/oscars",
+      "publisher": "Academy of Motion Picture Arts and Sciences",
+      "accessedAt": "2026-06-08",
+      "sourceType": "official"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/awards",
+      "label": "Awards hub",
+      "description": "Live awards prediction markets and related SEO pages."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/best-picture-hero.png",
+    "alt": "Editorial awards-season market board for Best Picture odds",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/best-picture-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [],
+  "infographics": [],
+  "slug": "best-picture-odds",
+  "title": "Best Picture Odds: What Prediction Markets Are Saying",
+  "description": "Best Picture odds explained through prediction-market prices, awards-season signals, and ScreenOdds market context.",
+  "primaryKeyword": "best picture odds",
+  "keywordVolume": 1600,
+  "keywordDifficulty": 7,
+  "category": "Awards",
+  "updatedAt": "2026-06-08",
+  "heroImage": "/images/best-picture-hero.png",
+  "heroAlt": "Editorial awards-season market board for Best Picture odds",
+  "sections": [
+    {
+      "heading": "The highest-volume awards keyword",
+      "paragraphs": [
+        "DataForSEO shows `best picture odds` and close variants around 1,600 US searches. That makes it the strongest awards article target in the ScreenOdds launch set.",
+        "The search intent is clear: users want a ranked view of likely Best Picture winners. ScreenOdds can answer that with market-implied probabilities, but the page also needs to explain why those probabilities change."
+      ]
+    },
+    {
+      "heading": "Signals that matter before nominations",
+      "paragraphs": [
+        "Before nominations, Best Picture markets often price narrative strength. Festival premieres, distributor strategy, critic consensus, box office resilience, and audience sentiment all matter.",
+        "The market can also overreact to early buzz. A film that dominates September conversation may fade if guild bodies do not confirm broad industry support."
+      ]
+    },
+    {
+      "heading": "Signals that matter after nominations",
+      "paragraphs": [
+        "After nominations, the market usually becomes more sensitive to guild results and televised award momentum. Producers Guild, Directors Guild, SAG, BAFTA, and screenplay awards can all affect the implied race.",
+        "That is why ScreenOdds separates static article context from live market cards. The article explains how to read the race, while the market card shows the latest probability and volume context."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the best way to read Best Picture odds?",
+      "answer": "Look at both probability and liquidity. A price with real volume is more informative than a thin market with little trading depth."
+    },
+    {
+      "question": "When do Best Picture odds become most useful?",
+      "answer": "They become more useful after nominations and major guild results, when the field is narrower and industry signals are clearer."
+    }
+  ],
+  "related": [
+    {
+      "href": "/awards",
+      "label": "Awards hub",
+      "description": "Live awards prediction markets and related SEO pages."
+    },
+    {
+      "href": "/blog/polymarket-oscars-odds",
+      "label": "Polymarket Oscars odds",
+      "description": "How Polymarket prices awards-season probabilities."
+    }
+  ]
+}

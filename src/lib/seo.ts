@@ -1,6 +1,7 @@
 import type { Article } from "./articles";
 import { articles } from "./articles";
 import { getLaunchMarkets, hubPages } from "./content";
+import { getPublishedNewsPosts, type NewsPost } from "./editorial";
 
 export const siteConfig = {
   name: "ScreenOdds",
@@ -70,6 +71,30 @@ export function buildArticleJsonLd(article: Article): JsonLd {
   };
 }
 
+export function buildNewsArticleJsonLd(post: NewsPost): JsonLd {
+  return {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: post.title,
+    description: post.description,
+    image: absoluteUrl(post.heroImage),
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    mainEntityOfPage: absoluteUrl(`/news/${post.slug}`),
+    articleSection: post.category,
+  };
+}
+
 export function buildFaqPageJsonLd(
   faqs: Array<{ question: string; answer: string }>,
 ): JsonLd {
@@ -123,6 +148,12 @@ export function getSitemapEntries(): SitemapEntry[] {
     priority: 0.7,
   });
 
+  add("/news", {
+    lastModified: now,
+    changeFrequency: "daily",
+    priority: 0.75,
+  });
+
   for (const hub of Object.values(hubPages)) {
     add(`/${hub.slug}`, {
       lastModified: now,
@@ -136,6 +167,14 @@ export function getSitemapEntries(): SitemapEntry[] {
       lastModified: new Date(`${article.updatedAt}T00:00:00Z`),
       changeFrequency: "weekly",
       priority: 0.8,
+    });
+  }
+
+  for (const post of getPublishedNewsPosts()) {
+    add(`/news/${post.slug}`, {
+      lastModified: new Date(`${post.updatedAt}T00:00:00Z`),
+      changeFrequency: "daily",
+      priority: 0.75,
     });
   }
 
