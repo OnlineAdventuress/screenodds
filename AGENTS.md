@@ -64,6 +64,11 @@ Read the entire file before editing these paths:
 - GitHub repo: `OnlineAdventuress/screenodds`
 - Production branch: `master`
 - Deployment method: Vercel REST API `/v13/deployments` with `gitSource`.
+- Public access: set `ssoProtection` to `null` through `PATCH /v9/projects/screenodds`.
+- Production deployment status check: use `GET /v6/deployments?teamId=<team>&projectId=<project>`.
+- Domains attached: `screenodds.com` and `www.screenodds.com`.
+- Canonical domain: `screenodds.com`; `www.screenodds.com` redirects to apex with HTTP 308.
+- DNS is external. If the domain does not resolve, set apex A records to Vercel's recommended IPv4 values and `www` to Vercel's recommended CNAME from `GET /v6/domains/<domain>/config`.
 
 ## SEO Rules
 
