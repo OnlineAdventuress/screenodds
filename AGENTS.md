@@ -54,21 +54,23 @@ Read the entire file before editing these paths:
 - Data: Polymarket Gamma/CLOB APIs with local fixtures
 - Keyword research: DataForSEO API
 - Images: Kie.ai ChatGPT Image 2 API
-- Hosting target: Vercel for `screenodds.com`
+- Hosting target: Netlify for `screenodds.com`
 
-## Vercel Deployment
+## Netlify Deployment
 
-- Team ID: `team_vZpJDrilxG7c8kO2u8X9Ps0e`
-- Project name: `screenodds`
-- Project ID: `prj_7jhHmgqUo2FYjHZoyoGHPQExjrFj`
-- GitHub repo: `OnlineAdventuress/screenodds`
-- Production branch: `master`
-- Deployment method: Vercel REST API `/v13/deployments` with `gitSource`.
-- Public access: set `ssoProtection` to `null` through `PATCH /v9/projects/screenodds`.
-- Production deployment status check: use `GET /v6/deployments?teamId=<team>&projectId=<project>`.
-- Domains attached: `screenodds.com` and `www.screenodds.com`.
-- Canonical domain: `screenodds.com`; `www.screenodds.com` redirects to apex with HTTP 308.
-- DNS is external. If the domain does not resolve, set apex A records to Vercel's recommended IPv4 values and `www` to Vercel's recommended CNAME from `GET /v6/domains/<domain>/config`.
+- Account slug: `thevinylbyte`
+- Site name: `screenodds`
+- Site ID: `5700712b-37ac-4967-b3a4-9231d35efeda`
+- Admin URL: `https://app.netlify.com/projects/screenodds`
+- Default Netlify URL: `https://screenodds.netlify.app`
+- Production URL: `https://screenodds.com`
+- Custom domain: `screenodds.com`
+- Domain alias: `www.screenodds.com`
+- DNS zone ID: `6a2624e2c0174da03314e7cc`
+- DNS nameservers: `dns1.p06.nsone.net`, `dns2.p06.nsone.net`, `dns3.p06.nsone.net`, `dns4.p06.nsone.net`
+- Deployment method: `netlify deploy --prod --site 5700712b-37ac-4967-b3a4-9231d35efeda`
+- Keep `@netlify/plugin-nextjs` pinned in `devDependencies` and `netlify.toml`.
+- On Windows, stop any local ScreenOdds `next dev` process before deploying. A running dev server can lock `.next` and make `@netlify/plugin-nextjs` fail with `Failed publishing static content`.
 
 ## SEO Rules
 

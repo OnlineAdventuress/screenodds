@@ -21,3 +21,10 @@ Read this before starting each task.
 - What broke: `GET /v13/deployments/<id>` returned `not_found` for status polling. Listing deployments with `/v6/deployments?projectId=<project>` returned the correct `READY` state.
 - What broke: New Vercel deployments were protected by Vercel Authentication until `ssoProtection` was patched to `null`.
 - Pattern to remember: Domain attachment can be verified in Vercel while public DNS still does not resolve; use `/v6/domains/<domain>/config` for the required DNS records.
+
+## 2026-06-08 - Netlify Correction
+
+- What worked: `screenodds.com` already existed as a Netlify DNS zone under account `thevinylbyte`, so the correct canonical host is Netlify, not Vercel.
+- What worked: Created Netlify site `screenodds`, attached `screenodds.com` and `www.screenodds.com`, and deployed with `netlify deploy --prod --site 5700712b-37ac-4967-b3a4-9231d35efeda`.
+- What broke: The first Netlify deploy failed in `@netlify/plugin-nextjs` with `Failed publishing static content` because a local ScreenOdds `next dev` process was still running and locking `.next` on Windows.
+- Pattern to remember: Before Netlify deploys from Windows, stop local dev servers for the same repo, then run the deploy. Keep `netlify.toml` and `@netlify/plugin-nextjs` committed for reproducible Next.js runtime behavior.
