@@ -70,7 +70,7 @@ function dedupeMarkets(markets: Market[]): Market[] {
   return deduped;
 }
 
-function isScreenOddsMarket(market: Market): boolean {
+export function isScreenOddsMarket(market: Market): boolean {
   const text = `${market.title} ${market.description} ${market.tags.join(" ")}`.toLowerCase();
   return [
     "movie",
@@ -78,16 +78,18 @@ function isScreenOddsMarket(market: Market): boolean {
     "box office",
     "opening weekend",
     "oscar",
-    "awards",
     "grammy",
     "tony",
+    "emmy",
     "netflix",
     "tv",
     "reality",
     "love island",
     "big brother",
+    "bachelor",
+    "bachelorette",
+    "survivor",
     "top chef",
     "james bond",
-    "culture",
   ].some((term) => text.includes(term));
 }

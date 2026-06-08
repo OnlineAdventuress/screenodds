@@ -1,65 +1,122 @@
-import Image from "next/image";
+import Link from "next/link";
+import { MarketCard } from "@/components/market-card";
+import { MetricCard } from "@/components/metric-card";
+import { RelatedLinks } from "@/components/related-links";
+import { getCategoryCounts, getHomeStats, hubPages } from "@/lib/content";
+import { formatCompactCurrency } from "@/lib/markets";
+import { fetchEntertainmentMarkets } from "@/lib/polymarket";
 
-export default function Home() {
+export default async function Home() {
+  const markets = await fetchEntertainmentMarkets();
+  const { ranked, summary } = getHomeStats(markets);
+  const topMarkets = ranked.slice(0, 6);
+  const categoryCounts = getCategoryCounts(markets);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <section className="border-b border-zinc-800">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+          <div>
+            <p className="screen-kicker">Live entertainment markets</p>
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-zinc-50 md:text-6xl">
+              Movie, awards, box office, and reality TV odds from prediction markets.
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-300">
+              ScreenOdds tracks Polymarket entertainment markets and turns noisy culture
+              feeds into focused, indexable pages for film, TV, streaming, awards, and
+              reality-show outcomes.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href="/awards" className="screen-button">
+                Track Oscars
+              </Link>
+              <Link href="/box-office" className="screen-button-secondary">
+                View box office
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {topMarkets.slice(0, 4).map((market) => (
+              <MarketCard key={market.slug} market={market} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+        <div className="grid gap-3 md:grid-cols-4">
+          <MetricCard
+            label="Tracked markets"
+            value={String(summary.totalMarkets)}
+            detail="Live and fallback entertainment prediction markets."
+          />
+          <MetricCard
+            label="1M volume"
+            value={formatCompactCurrency(summary.totalVolume1mo)}
+            detail="Recent market volume across the ScreenOdds universe."
+          />
+          <MetricCard
+            label="24H volume"
+            value={formatCompactCurrency(summary.totalVolume24hr)}
+            detail="Fresh activity signal for currently moving markets."
+          />
+          <MetricCard
+            label="Liquidity"
+            value={formatCompactCurrency(summary.totalLiquidity)}
+            detail="Available market depth across tracked events."
+          />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p className="screen-kicker">Hubs</p>
+            <h2 className="mt-3 text-3xl font-semibold text-zinc-50">
+              Built around rankable entertainment-intent pages.
+            </h2>
+          </div>
+          <p className="max-w-xl text-sm leading-6 text-zinc-400">
+            DataForSEO showed the strongest launch wedge around Oscars, Best
+            Picture odds, Love Island odds, Big Brother odds, and next James Bond actor odds.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="mt-6 grid gap-3 md:grid-cols-5">
+          {Object.values(hubPages).map((hub) => {
+            const count =
+              categoryCounts.find((entry) => entry.category === hub.category)?.count ?? 0;
+
+            return (
+              <Link key={hub.slug} href={`/${hub.slug}`} className="screen-panel block p-4">
+                <p className="screen-kicker">{hub.eyebrow}</p>
+                <h3 className="mt-3 font-semibold text-zinc-50">{hub.title}</h3>
+                <p className="mt-2 text-sm text-zinc-500">{count} tracked markets</p>
+              </Link>
+            );
+          })}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <RelatedLinks
+        title="Start with the highest-intent pages"
+        links={[
+          {
+            href: "/awards",
+            label: "Polymarket Oscars odds",
+            description: "The best direct-intent launch cluster by keyword volume.",
+          },
+          {
+            href: "/reality-tv",
+            label: "Reality TV odds",
+            description: "Love Island and Big Brother terms are low difficulty.",
+          },
+          {
+            href: "/movies",
+            label: "Next James Bond actor odds",
+            description: "A focused movie page with measurable search volume.",
+          },
+        ]}
+      />
+    </>
   );
 }
