@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { RelatedLinks } from "@/components/related-links";
 import { articles, getArticleBySlug } from "@/lib/articles";
@@ -25,6 +26,20 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     description: article.description,
     alternates: {
       canonical: `/blog/${article.slug}`,
+    },
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      url: `/blog/${article.slug}`,
+      type: "article",
+      images: [
+        {
+          url: article.heroImage,
+          width: 1200,
+          height: 675,
+          alt: article.heroAlt,
+        },
+      ],
     },
   };
 }
@@ -79,6 +94,16 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <p className="mt-2">{article.keywordDifficulty}</p>
           </div>
         </div>
+
+        <Image
+          src={article.heroImage}
+          alt={article.heroAlt}
+          width={1200}
+          height={675}
+          sizes="(min-width: 768px) 56rem, 100vw"
+          className="mt-8 aspect-[16/9] w-full rounded-lg border border-zinc-800 object-cover shadow-2xl"
+          priority
+        />
 
         <div className="mt-10 space-y-10">
           {article.sections.map((section) => (

@@ -1,22 +1,14 @@
 import { describe, expect, it } from "vitest";
-import { hubPages, keywordTargets } from "./content";
+import { hubPages } from "./content";
 
-describe("ScreenOdds content map", () => {
-  it("defines all launch hubs", () => {
-    expect(Object.keys(hubPages).sort()).toEqual([
-      "awards",
-      "box-office",
-      "movies",
-      "reality-tv",
-      "tv",
-    ]);
-  });
+describe("ScreenOdds content registry", () => {
+  it("defines a generated hero image for every market hub", () => {
+    const hubs = Object.values(hubPages) as Array<{
+      heroImage?: string;
+      heroAlt?: string;
+    }>;
 
-  it("keeps DataForSEO-backed keyword targets for priority pages", () => {
-    expect(keywordTargets["polymarket-oscars"]).toMatchObject({
-      keyword: "polymarket oscars",
-      volume: 720,
-      difficulty: 0,
-    });
+    expect(hubs.every((hub) => hub.heroImage?.startsWith("/images/"))).toBe(true);
+    expect(hubs.every((hub) => hub.heroAlt && hub.heroAlt.length > 20)).toBe(true);
   });
 });

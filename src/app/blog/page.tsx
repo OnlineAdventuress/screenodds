@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { articles } from "@/lib/articles";
 
 export const metadata: Metadata = {
@@ -22,6 +23,14 @@ export default function BlogPage() {
       <div className="mt-8 grid gap-3 lg:grid-cols-2">
         {articles.map((article) => (
           <Link key={article.slug} href={`/blog/${article.slug}`} className="screen-panel block p-5">
+            <Image
+              src={article.heroImage}
+              alt={article.heroAlt}
+              width={1200}
+              height={675}
+              sizes="(min-width: 1024px) 38rem, 100vw"
+              className="aspect-[16/9] w-full rounded-lg object-cover"
+            />
             <p className="screen-kicker">{article.category}</p>
             <h2 className="mt-3 text-2xl font-semibold text-zinc-50">
               {article.title}

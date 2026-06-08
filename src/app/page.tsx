@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MarketCard } from "@/components/market-card";
 import { MetricCard } from "@/components/metric-card";
 import { RelatedLinks } from "@/components/related-links";
@@ -35,10 +36,21 @@ export default async function Home() {
               </Link>
             </div>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {topMarkets.slice(0, 4).map((market) => (
-              <MarketCard key={market.slug} market={market} />
-            ))}
+          <div className="space-y-3">
+            <Image
+              src="/images/screenodds-og.png"
+              alt="Editorial ScreenOdds market desk for movies, awards, and reality TV"
+              width={1200}
+              height={675}
+              sizes="(min-width: 1024px) 48rem, 100vw"
+              className="aspect-[16/9] w-full rounded-lg border border-zinc-800 object-cover shadow-2xl"
+              priority
+            />
+            <div className="grid gap-3 sm:grid-cols-2">
+              {topMarkets.slice(0, 4).map((market) => (
+                <MarketCard key={market.slug} market={market} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

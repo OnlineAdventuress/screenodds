@@ -17,6 +17,8 @@ export type HubPage = {
   description: string;
   primaryKeyword: string;
   intro: string;
+  heroImage: string;
+  heroAlt: string;
 };
 
 export type KeywordTarget = {
@@ -37,6 +39,8 @@ export const hubPages = {
     primaryKeyword: "next james bond actor odds",
     intro:
       "Track market-implied movie probabilities without digging through the full Polymarket culture feed. ScreenOdds highlights the film markets with real search interest and meaningful volume.",
+    heroImage: "/images/movies-hero.png",
+    heroAlt: "Editorial movie casting board with cinema reels and probability charts",
   },
   "box-office": {
     slug: "box-office",
@@ -48,6 +52,8 @@ export const hubPages = {
     primaryKeyword: "polymarket box office",
     intro:
       "Box office markets are small in count but useful for long-tail search: each release can become a focused page with probability, liquidity, and resolution context.",
+    heroImage: "/images/box-office-hero.png",
+    heroAlt: "Editorial box office counter with ticket stacks and market chart lighting",
   },
   awards: {
     slug: "awards",
@@ -59,6 +65,8 @@ export const hubPages = {
     primaryKeyword: "polymarket oscars",
     intro:
       "Awards are the strongest launch wedge for ScreenOdds. DataForSEO shows low-difficulty demand around Best Picture odds, Polymarket Oscars, Grammy odds, and Tony Awards odds.",
+    heroImage: "/images/awards-hero.png",
+    heroAlt: "Editorial awards-season envelopes and trophy silhouettes with probability charts",
   },
   tv: {
     slug: "tv",
@@ -70,6 +78,8 @@ export const hubPages = {
     primaryKeyword: "polymarket netflix",
     intro:
       "Streaming markets can move quickly around release calendars and weekly chart outcomes. This hub keeps TV and Netflix-style markets separate from broader culture noise.",
+    heroImage: "/images/tv-hero.png",
+    heroAlt: "Editorial streaming dashboard with TV screens and abstract market signals",
   },
   "reality-tv": {
     slug: "reality-tv",
@@ -81,6 +91,8 @@ export const hubPages = {
     primaryKeyword: "love island odds",
     intro:
       "Reality TV is not the deepest current Polymarket category, but DataForSEO shows rankable search demand for Love Island odds, Big Brother odds, and celebrity competition markets.",
+    heroImage: "/images/reality-tv-hero.png",
+    heroAlt: "Editorial reality TV studio control room with voting lights and market charts",
   },
 } satisfies Record<string, HubPage>;
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MarketCard } from "@/components/market-card";
 import { MetricCard } from "@/components/metric-card";
 import { RelatedLinks } from "@/components/related-links";
@@ -32,22 +33,33 @@ export function HubPageTemplate({ hub, markets }: HubPageTemplateProps) {
                 Primary SEO target: <span className="text-amber-200">{hub.primaryKeyword}</span>
               </p>
             </div>
-            <div className="grid gap-3 sm:grid-cols-3">
-              <MetricCard
-                label="Markets"
-                value={String(summary.totalMarkets)}
-                detail={`Tracked ${hub.category.toLowerCase()} pages.`}
+            <div className="space-y-3">
+              <Image
+                src={hub.heroImage}
+                alt={hub.heroAlt}
+                width={1200}
+                height={675}
+                sizes="(min-width: 1024px) 48rem, 100vw"
+                className="aspect-[16/9] w-full rounded-lg border border-zinc-800 object-cover shadow-2xl"
+                priority
               />
-              <MetricCard
-                label="1M volume"
-                value={formatCompactCurrency(summary.totalVolume1mo)}
-                detail="Recent prediction-market activity."
-              />
-              <MetricCard
-                label="Liquidity"
-                value={formatCompactCurrency(summary.totalLiquidity)}
-                detail="Depth across matching markets."
-              />
+              <div className="grid gap-3 sm:grid-cols-3">
+                <MetricCard
+                  label="Markets"
+                  value={String(summary.totalMarkets)}
+                  detail={`Tracked ${hub.category.toLowerCase()} pages.`}
+                />
+                <MetricCard
+                  label="1M volume"
+                  value={formatCompactCurrency(summary.totalVolume1mo)}
+                  detail="Recent prediction-market activity."
+                />
+                <MetricCard
+                  label="Liquidity"
+                  value={formatCompactCurrency(summary.totalLiquidity)}
+                  detail="Depth across matching markets."
+                />
+              </div>
             </div>
           </div>
         </div>
