@@ -56,6 +56,15 @@ Read the entire file before editing these paths:
 - Images: Kie.ai ChatGPT Image 2 API
 - Hosting target: Vercel for `screenodds.com`
 
+## Vercel Deployment
+
+- Team ID: `team_vZpJDrilxG7c8kO2u8X9Ps0e`
+- Project name: `screenodds`
+- Project ID: `prj_7jhHmgqUo2FYjHZoyoGHPQExjrFj`
+- GitHub repo: `OnlineAdventuress/screenodds`
+- Production branch: `master`
+- Deployment method: Vercel REST API `/v13/deployments` with `gitSource`.
+
 ## SEO Rules
 
 - Every indexable page needs a unique title, description, canonical URL, H1, crawlable internal links, and useful visible text.
