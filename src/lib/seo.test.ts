@@ -69,6 +69,7 @@ describe("ScreenOdds SEO helpers", () => {
     expect(urls).toContain(absoluteUrl("/"));
     expect(urls).toContain(absoluteUrl("/blog"));
     expect(urls).toContain(absoluteUrl("/news"));
+    expect(urls).toContain(absoluteUrl("/oscars"));
 
     for (const hub of Object.values(hubPages)) {
       expect(urls).toContain(absoluteUrl(`/${hub.slug}`));

@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   getAllNewsPosts,
   getDraftNewsPosts,
+  getLatestNews,
   getPublishedGuides,
   getPublishedNewsPosts,
   isPublishableNewsPost,
@@ -63,5 +64,13 @@ describe("editorial content registry", () => {
 
     expect(draft).toBeDefined();
     expect(isPublishableNewsPost(draft)).toBe(false);
+  });
+
+  it("returns latest published news by category without drafts", () => {
+    const awardsNews = getLatestNews(5, "Awards");
+
+    expect(awardsNews.length).toBeGreaterThan(0);
+    expect(awardsNews.every((post) => post.category === "Awards")).toBe(true);
+    expect(awardsNews.every((post) => post.status === "published")).toBe(true);
   });
 });

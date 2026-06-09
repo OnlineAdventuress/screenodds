@@ -6,6 +6,8 @@ const navItems = [
   ["Awards", "/awards"],
   ["TV", "/tv"],
   ["Reality TV", "/reality-tv"],
+  ["News", "/news"],
+  ["Blog", "/blog"],
 ] as const;
 
 export function SiteHeader() {

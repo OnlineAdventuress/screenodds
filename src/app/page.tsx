@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { LatestNews } from "@/components/latest-news";
 import { MarketCard } from "@/components/market-card";
 import { MetricCard } from "@/components/metric-card";
 import { RelatedLinks } from "@/components/related-links";
@@ -28,7 +29,7 @@ export default async function Home() {
               reality-show outcomes.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/awards" className="screen-button">
+              <Link href="/oscars" className="screen-button">
                 Track Oscars
               </Link>
               <Link href="/box-office" className="screen-button-secondary">
@@ -109,11 +110,13 @@ export default async function Home() {
         </div>
       </section>
 
+      <LatestNews title="Latest market notes" />
+
       <RelatedLinks
         title="Start with the highest-intent pages"
         links={[
           {
-            href: "/awards",
+            href: "/oscars",
             label: "Polymarket Oscars odds",
             description: "The best direct-intent launch cluster by keyword volume.",
           },

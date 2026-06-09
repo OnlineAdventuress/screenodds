@@ -154,6 +154,12 @@ export function getSitemapEntries(): SitemapEntry[] {
     priority: 0.75,
   });
 
+  add("/oscars", {
+    lastModified: now,
+    changeFrequency: "daily",
+    priority: 0.85,
+  });
+
   for (const hub of Object.values(hubPages)) {
     add(`/${hub.slug}`, {
       lastModified: now,

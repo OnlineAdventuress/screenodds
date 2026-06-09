@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { LatestNews } from "@/components/latest-news";
 import { MarketCard } from "@/components/market-card";
 import { MetricCard } from "@/components/metric-card";
 import { RelatedLinks } from "@/components/related-links";
@@ -88,6 +89,8 @@ export function HubPageTemplate({ hub, markets }: HubPageTemplateProps) {
           )}
         </div>
       </section>
+
+      <LatestNews title={`Latest ${hub.category.toLowerCase()} news`} category={hub.category} />
 
       <RelatedLinks
         links={Object.values(hubPages)
