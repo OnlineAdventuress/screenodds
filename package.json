@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "images:launch": "node scripts/generate-launch-images.mjs"
+    "images:launch": "node scripts/generate-launch-images.mjs",
+    "keywords:dataforseo": "node scripts/dataforseo-keywords.mjs"
   },
   "dependencies": {
     "next": "16.2.7",
