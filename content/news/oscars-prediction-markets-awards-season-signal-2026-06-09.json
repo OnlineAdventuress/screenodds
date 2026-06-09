@@ -1,0 +1,129 @@
+{
+  "kind": "news",
+  "slug": "oscars-prediction-markets-awards-season-signal-2026-06-09",
+  "title": "Oscars Prediction Markets Move From Novelty to Awards-Season Signal",
+  "description": "Polymarket's live Oscars pages, trade coverage, and DataForSEO keyword data all point to awards odds as ScreenOdds' strongest authority wedge.",
+  "category": "Awards",
+  "status": "published",
+  "publishedAt": "2026-06-09",
+  "updatedAt": "2026-06-09",
+  "newsType": "awards-signal",
+  "riskLevel": "low",
+  "sourceConfidence": 0.96,
+  "riskFlags": [],
+  "heroImage": "/images/awards-hero.png",
+  "heroAlt": "Awards-season envelopes and probability charts for Oscars prediction markets",
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/awards-hero.png",
+    "alt": "Awards-season envelopes and probability charts for Oscars prediction markets",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/awards-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image used as a rights-safe placeholder until TMDb or official assets are attached."
+  },
+  "sections": [
+    {
+      "heading": "Why this is the first authority cluster",
+      "paragraphs": [
+        "The strongest ScreenOdds wedge is still awards, and the June 9 DataForSEO refresh makes that measurable. Best Picture odds showed 1,600 US searches, Best Actor odds showed 1,300, Polymarket Oscars showed 720, and Polymarket Best Picture showed 170.",
+        "That mix matters because the terms are not generic entertainment phrases. They describe users who are already looking for odds, prediction markets, or category-specific awards probabilities."
+      ]
+    },
+    {
+      "heading": "What the market surface shows now",
+      "paragraphs": [
+        "Polymarket's current Oscars and Best Picture pages show active markets around 2027 nomination races, most-nominations questions, and related movie outcomes. The market surface is not only a final-night winner board; it is already pricing early nomination narratives.",
+        "That makes ScreenOdds' hub-and-news structure useful. Evergreen guides explain how to read awards-market signals, while news posts can document the verified market pages, trade coverage, and upcoming catalysts that may move prices."
+      ]
+    },
+    {
+      "heading": "Why trade coverage is now part of the signal",
+      "paragraphs": [
+        "Variety framed Oscar prediction markets as a mainstream awards-season phenomenon rather than a niche side market, noting large combined activity across major prediction-market platforms and specific attention around acting and Best Picture races.",
+        "The Hollywood Reporter also treated Oscars prediction markets as a scale story, reporting heavy activity across Kalshi and Polymarket before the ceremony and asking how seriously awards watchers should treat those prices."
+      ]
+    },
+    {
+      "heading": "What ScreenOdds will cover next",
+      "paragraphs": [
+        "The next evergreen pages should be Best Actor odds, Best Actress odds, Best Director odds, Oscar nomination odds, and Polymarket Netflix. Those are now tracked in the DataForSEO coverage file as planned gaps rather than vague content ideas.",
+        "Daily news can stay low risk by focusing on official market pages, verified trade reporting, nomination announcements, guild results, box office data, and visible market movement. Rumors, leaks, and weak social signals should remain drafts."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Best Picture Predictions and Real-Time Odds",
+      "url": "https://polymarket.com/predictions/best-picture",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-09",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "Oscars Prediction Markets and Live Odds 2026",
+      "url": "https://polymarket.com/pop-culture/oscars",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-09",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "Chalamet or Jordan? Now, Oscar Watchers Can Put Serious Money on It",
+      "url": "https://variety.com/2026/film/news/chalamet-jordan-oscar-prediction-markets-1236686211/",
+      "publisher": "Variety",
+      "accessedAt": "2026-06-09",
+      "sourceType": "trade-reporting"
+    },
+    {
+      "title": "More Than $116 Million Has Already Been Bet on the Oscars",
+      "url": "https://www.hollywoodreporter.com/movies/movie-news/bet-on-oscars-best-actor-best-picture-kalshi-polymarket-1236530164/",
+      "publisher": "The Hollywood Reporter",
+      "accessedAt": "2026-06-09",
+      "sourceType": "trade-reporting"
+    },
+    {
+      "title": "DataForSEO keyword coverage refresh",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-09",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/oscars",
+      "label": "Oscars Odds",
+      "description": "The focused ScreenOdds topic page for Oscars prediction-market coverage."
+    },
+    {
+      "href": "/blog/polymarket-oscars-odds",
+      "label": "Polymarket Oscars odds",
+      "description": "Evergreen guide to reading Oscars prediction-market prices."
+    },
+    {
+      "href": "/markets/polymarket-oscars-best-picture",
+      "label": "Best Picture market",
+      "description": "ScreenOdds market page for Polymarket Best Picture coverage."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/best-picture-odds",
+      "label": "Best Picture odds",
+      "description": "How to read the strongest awards keyword target."
+    },
+    {
+      "href": "/awards",
+      "label": "Awards hub",
+      "description": "Live awards markets and related ScreenOdds guides."
+    },
+    {
+      "href": "/news",
+      "label": "ScreenOdds news",
+      "description": "Source-backed entertainment market updates."
+    }
+  ],
+  "inlineImages": [],
+  "infographics": [],
+  "faqs": []
+}

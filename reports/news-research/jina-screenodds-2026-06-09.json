@@ -1,0 +1,163 @@
+{
+  "checkedAt": "2026-06-09T04:51:11.612Z",
+  "docs": [
+    "https://jina.ai/en-US/reader/"
+  ],
+  "results": [
+    {
+      "category": "Awards",
+      "query": "Oscars Best Picture prediction market Polymarket awards news",
+      "sourceConfidence": 1,
+      "sources": [
+        {
+          "title": "Best Picture Predictions & Real-Time Odds | Polymarket",
+          "url": "https://polymarket.com/predictions/best-picture",
+          "publisher": "Polymarket",
+          "sourceType": "market-data"
+        },
+        {
+          "title": "Pop Culture Odds & Predictions 2026 | Polymarket",
+          "url": "https://polymarket.com/pop-culture/oscars",
+          "publisher": "Polymarket",
+          "sourceType": "market-data"
+        },
+        {
+          "title": "Chalamet or Jordan? Now, Oscar Watchers Can Put Serious Money on It",
+          "url": "https://variety.com/2026/film/news/chalamet-jordan-oscar-prediction-markets-1236686211/",
+          "publisher": "Variety",
+          "sourceType": "trade-reporting"
+        },
+        {
+          "title": "Instagram",
+          "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fp%2FDV61H9OkmrB%2F&is_from_rle",
+          "publisher": "Instagram",
+          "sourceType": "reference"
+        },
+        {
+          "title": "And The Winner Is… Kalshi? Prediction Markets Soar On Oscars",
+          "url": "https://www.forbes.com/sites/jasonbrett/2026/03/15/and-the-winner-is-kalshi-prediction-markets-soar-on-oscars/",
+          "publisher": "Forbes",
+          "sourceType": "reference"
+        }
+      ]
+    },
+    {
+      "category": "Box Office",
+      "query": "box office opening weekend prediction market Polymarket movie news",
+      "sourceConfidence": 0.7,
+      "sources": [
+        {
+          "title": "Instagram",
+          "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fp%2FDX4l7f4jOrI%2F%3Fhl%3Den&is_from_rle",
+          "publisher": "Instagram",
+          "sourceType": "reference"
+        },
+        {
+          "title": "Box Office Predictions/Results – All My Life… I Wanted To Be A Blogster",
+          "url": "https://toddmthatcher.com/category/box-office-predictionsresults/",
+          "publisher": "Toddmthatcher",
+          "sourceType": "reference"
+        },
+        {
+          "title": "‘Scary Movie’ Opening Weekend Box Office Revealed: Did Polymarket Traders Get It Right?",
+          "url": "https://popculture.com/entertainment/news/scary-movie-opening-weekend-box-office-revealed-did-polymarket-traders-get-it-right/",
+          "publisher": "Popculture",
+          "sourceType": "reference"
+        },
+        {
+          "title": "Box Office Report - Weekend Predictions Archive",
+          "url": "http://www.boxofficereport.com/predictions/predictions.html",
+          "publisher": "Boxofficereport",
+          "sourceType": "reference"
+        },
+        {
+          "title": "PopCulture.com",
+          "url": "https://www.facebook.com/popculturedotcom/posts/-new-movie-predicted-for-record-breaking-opening-weekend-at-the-box-office-this-/1368620251797825/",
+          "publisher": "Facebook",
+          "sourceType": "reference"
+        }
+      ]
+    },
+    {
+      "category": "Movies",
+      "query": "movie casting prediction market Polymarket film news",
+      "sourceConfidence": 0.9000000000000001,
+      "sources": [
+        {
+          "title": "Polymarket and Kalshi Got the Oscars About 80 Percent Right",
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/predictions-markets-oscars-80-percent-right-kalshi-polymarket-what-paid-out-1236534573/",
+          "publisher": "Hollywoodreporter",
+          "sourceType": "trade-reporting"
+        },
+        {
+          "title": "Kalshi and Polymarket correctly predicted 19 out of 24 Oscar winners. Here are the ones they missed.",
+          "url": "https://www.yahoo.com/entertainment/movies/articles/kalshi-polymarket-correctly-predicted-19-154534319.html",
+          "publisher": "Yahoo",
+          "sourceType": "reference"
+        },
+        {
+          "title": "Instagram",
+          "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Freel%2FDSFrVhWDkis%2F%3Fhl%3Den&is_from_rle",
+          "publisher": "Instagram",
+          "sourceType": "reference"
+        },
+        {
+          "title": "Golden Globes Announces Exclusive Prediction Market Partnership With Polymarket",
+          "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/golden-globes-partners-polymarket-fan-engagement-1235497113/",
+          "publisher": "Rollingstone",
+          "sourceType": "reference"
+        },
+        {
+          "title": "Who is favored to win an Oscar, according to Kalshi and Polymarket",
+          "url": "https://www.businessinsider.com/oscar-academy-awards-betting-odds-winners-kalshi-polymarket-2026-2",
+          "publisher": "Businessinsider",
+          "sourceType": "reference"
+        }
+      ]
+    },
+    {
+      "category": "TV & Streaming",
+      "query": "Netflix streaming prediction market Polymarket TV news",
+      "sourceConfidence": 1,
+      "sources": [
+        {
+          "title": "Netflix Predictions & Real-Time Odds | Polymarket",
+          "url": "https://polymarket.com/predictions/netflix",
+          "publisher": "Polymarket",
+          "sourceType": "market-data"
+        },
+        {
+          "title": "Wichita Eagle",
+          "url": "https://www.facebook.com/wichitaeagle/posts/prediction-market-polymarket-now-prices-only-a-61-chance-that-netflix-closes-its/1267047595469571/",
+          "publisher": "Facebook",
+          "sourceType": "reference"
+        },
+        {
+          "title": "Who will close Warner Bros. acquisition? — Discussion",
+          "url": "https://polymarket.com/event/who-will-close-warner-bros-acquisition",
+          "publisher": "Polymarket",
+          "sourceType": "market-data"
+        },
+        {
+          "title": "Page not found — PredictionNews",
+          "url": "https://predictionnews.com/guides/culture/netflix",
+          "publisher": "Predictionnews",
+          "sourceType": "reference"
+        },
+        {
+          "title": "What will be the top US Netflix show this week?",
+          "url": "https://polymarket.com/event/what-will-be-the-top-us-netflix-show-this-week-648",
+          "publisher": "Polymarket",
+          "sourceType": "market-data"
+        }
+      ]
+    },
+    {
+      "category": "Reality TV",
+      "query": "reality TV winner odds prediction market Big Brother Love Island Survivor news",
+      "sourceConfidence": 0,
+      "sources": [],
+      "error": "This operation was aborted"
+    }
+  ]
+}

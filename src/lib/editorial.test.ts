@@ -59,6 +59,22 @@ describe("editorial content registry", () => {
     );
   });
 
+  it("rejects Jina image results from non-allowlisted sources", () => {
+    expect(
+      validateMediaAsset({
+        kind: "real",
+        url: "/media/movie/example/random.jpg",
+        alt: "Random entertainment image",
+        provider: "Jina",
+        sourceUrl: "https://example.com/random.jpg",
+        credit: "Example",
+        usageNote: "Unverified source.",
+      }),
+    ).toEqual(
+      expect.arrayContaining(["Jina image results require an allowlisted sourceUrl."]),
+    );
+  });
+
   it("keeps low-confidence news in draft mode", () => {
     const draft = getDraftNewsPosts()[0];
 

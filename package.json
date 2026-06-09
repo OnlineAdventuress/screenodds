@@ -9,7 +9,11 @@
     "lint": "eslint",
     "test": "vitest run",
     "images:launch": "node scripts/generate-launch-images.mjs",
-    "keywords:dataforseo": "node scripts/dataforseo-keywords.mjs"
+    "images:infographics": "node scripts/generate-infographics.mjs",
+    "keywords:dataforseo": "node scripts/dataforseo-keywords.mjs",
+    "media:tmdb": "node scripts/tmdb-media.mjs",
+    "news:daily": "node scripts/daily-news-routine.mjs",
+    "news:scan": "node scripts/jina-news-scan.mjs"
   },
   "dependencies": {
     "next": "16.2.7",
