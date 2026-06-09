@@ -28,3 +28,10 @@ Read this before starting each task.
 - What worked: Created Netlify site `screenodds`, attached `screenodds.com` and `www.screenodds.com`, and deployed with `netlify deploy --prod --site 5700712b-37ac-4967-b3a4-9231d35efeda`.
 - What broke: The first Netlify deploy failed in `@netlify/plugin-nextjs` with `Failed publishing static content` because a local ScreenOdds `next dev` process was still running and locking `.next` on Windows.
 - Pattern to remember: Before Netlify deploys from Windows, stop local dev servers for the same repo, then run the deploy. Keep `netlify.toml` and `@netlify/plugin-nextjs` committed for reproducible Next.js runtime behavior.
+
+## 2026-06-09 - Authority Content Implementation
+
+- What worked: Migrated launch guides into JSON-backed content files and added `/news`, `/oscars`, DataForSEO keyword coverage, Jina scan reports, TMDb media tooling, and Kie infographic tooling without breaking the existing blog/market pages.
+- What worked: `npm run lint`, `npm run test`, and `npm run build` all pass. Local production checks confirmed `/news`, `/blog`, `/oscars`, and the June 9 awards article render expected titles/content.
+- What broke: Netlify production deploy is blocked because both stored shared-env Netlify tokens return 404 for site `5700712b-37ac-4967-b3a4-9231d35efeda` and account slug `thevinylbyte`; live `/news` remains 404 until a token with access to the ScreenOdds Netlify site is added.
+- Pattern to remember: Verify Netlify token access with `GET /api/v1/sites/<siteId>` before running deploys. If it returns 404, the token cannot deploy this site regardless of local `.netlify/state.json`.
