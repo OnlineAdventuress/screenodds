@@ -12,6 +12,7 @@
     "images:infographics": "node scripts/generate-infographics.mjs",
     "keywords:dataforseo": "node scripts/dataforseo-keywords.mjs",
     "media:tmdb": "node scripts/tmdb-media.mjs",
+    "apis:check": "node scripts/check-entertainment-apis.mjs",
     "news:daily": "node scripts/daily-news-routine.mjs",
     "news:scan": "node scripts/jina-news-scan.mjs"
   },

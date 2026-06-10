@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ExternalSignals } from "@/components/external-signals";
 import { MarketCard } from "@/components/market-card";
 import { getLaunchMarkets, getRelatedMarkets, getSeededMarket } from "@/lib/content";
+import { getExternalSignalsForMarket } from "@/lib/external-signals";
 import { formatCompactCurrency, formatProbability } from "@/lib/markets";
 
 type MarketPageProps = {
@@ -50,6 +52,7 @@ export default async function MarketPage({ params }: MarketPageProps) {
   }
 
   const related = getRelatedMarkets(market);
+  const externalSignals = await getExternalSignalsForMarket(market);
 
   return (
     <>
@@ -118,6 +121,10 @@ export default async function MarketPage({ params }: MarketPageProps) {
             and recent volume before treating a price as a durable entertainment signal.
           </p>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+        <ExternalSignals signals={externalSignals} />
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">

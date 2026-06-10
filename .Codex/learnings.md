@@ -35,3 +35,9 @@ Read this before starting each task.
 - What worked: `npm run lint`, `npm run test`, and `npm run build` all pass. Local production checks confirmed `/news`, `/blog`, `/oscars`, and the June 9 awards article render expected titles/content.
 - What broke: Netlify production deploy is blocked because both stored shared-env Netlify tokens return 404 for site `5700712b-37ac-4967-b3a4-9231d35efeda` and account slug `thevinylbyte`; live `/news` remains 404 until a token with access to the ScreenOdds Netlify site is added.
 - Pattern to remember: Verify Netlify token access with `GET /api/v1/sites/<siteId>` before running deploys. If it returns 404, the token cannot deploy this site regardless of local `.netlify/state.json`.
+
+## 2026-06-10 - Entertainment Provider API Signals
+
+- What worked: TMDb and TVmaze keys in `C:\Users\longl\Desktop\Shared-Sync\.env` verified live and now power market-page external signal panels with deterministic fallbacks.
+- What broke: The supplied OMDb key returns HTTP 401 over both HTTP and HTTPS; keep OMDb optional and let movie/box-office pages fall back until the key is activated or replaced.
+- Pattern to remember: Clear `.next` before rendered verification when changing SSG provider logic; a clean rebuild showed live TMDb/TVmaze labels after stale static output initially masked the change.
