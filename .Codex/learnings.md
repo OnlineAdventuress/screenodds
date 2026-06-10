@@ -41,3 +41,5 @@ Read this before starting each task.
 - What worked: TMDb and TVmaze keys in `C:\Users\longl\Desktop\Shared-Sync\.env` verified live and now power market-page external signal panels with deterministic fallbacks.
 - What broke: The supplied OMDb key returns HTTP 401 over both HTTP and HTTPS; keep OMDb optional and let movie/box-office pages fall back until the key is activated or replaced.
 - Pattern to remember: Clear `.next` before rendered verification when changing SSG provider logic; a clean rebuild showed live TMDb/TVmaze labels after stale static output initially masked the change.
+- What worked: Netlify deploy access now works with the `THEVINYLBYTE` token, and production deploy `6a2960300294f2411b524353` went live after stopping the lingering ScreenOdds `next start -p 3002` process.
+- Pattern to remember: Before Netlify deploys, search Node command lines for `screenodds` as well as checking the intended preview port; a hidden Next process on another port can still lock `.next` and trigger `Failed publishing static content`.
