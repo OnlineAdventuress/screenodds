@@ -1,0 +1,129 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-11",
+  "sources": [
+    {
+      "title": "2026 Grammys winners and nominees list",
+      "url": "https://www.grammy.com/news/2026-grammys-nominations-full-winners-nominees-list",
+      "publisher": "Recording Academy",
+      "accessedAt": "2026-06-11",
+      "sourceType": "official"
+    },
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-11",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "ScreenOdds DataForSEO topical authority keyword map",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-11",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/awards",
+      "label": "Awards Markets",
+      "description": "Browse ScreenOdds awards coverage across entertainment prediction markets."
+    },
+    {
+      "href": "/blog/polymarket-golden-globes",
+      "label": "Golden Globes Guide",
+      "description": "Compare music awards market behavior with film and TV awards signals."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/awards-hero.png",
+    "alt": "Editorial illustration of awards envelopes and market probability charts",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/awards-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [],
+  "infographics": [],
+  "slug": "polymarket-grammys",
+  "title": "Polymarket Grammys Odds: A Music Awards Prediction-Market Guide",
+  "description": "Learn how to read Polymarket Grammys odds, Grammy market movement, official results, liquidity, and music-awards signals on ScreenOdds.",
+  "primaryKeyword": "polymarket grammys",
+  "keywordVolume": 140,
+  "keywordDifficulty": 0,
+  "category": "Awards",
+  "updatedAt": "2026-06-11",
+  "heroImage": "/images/awards-hero.png",
+  "heroAlt": "Editorial illustration of awards envelopes and market probability charts",
+  "sections": [
+    {
+      "heading": "Why Grammys markets are different from film awards markets",
+      "paragraphs": [
+        "Grammys markets are part awards forecasting, part music-culture temperature check. They move around nominations, streaming narratives, fan attention, industry voting assumptions, and late ceremony momentum. That makes them related to Oscars markets, but not identical.",
+        "DataForSEO shows `polymarket grammys` with 140 US monthly searches and keyword difficulty of 0. The broader `grammy odds` query is larger, but the Polymarket-specific phrase is a cleaner fit for ScreenOdds because it matches prediction-market intent instead of generic betting intent."
+      ]
+    },
+    {
+      "heading": "Use official Grammy results as the anchor",
+      "paragraphs": [
+        "The Recording Academy's 2026 winners and nominees page lists the official results across the Grammy fields. It also explains that voting members determine winners across the categories revealed on Grammy night.",
+        "For ScreenOdds, that matters because market pages need a reliable resolution layer. A good Grammys market article should connect market movement to official categories such as Album of the Year, Record of the Year, Song of the Year, Best New Artist, and genre-specific awards."
+      ]
+    },
+    {
+      "heading": "Signals that can move Grammys markets",
+      "paragraphs": [
+        "Before nominations, markets can react to chart strength, streaming visibility, critic narratives, touring momentum, and category speculation. After nominations, the market usually has a cleaner field, but it can still misread voting blocs or overreact to fan intensity.",
+        "Unlike box office or TV ratings, Grammys outcomes are not decided by a public leaderboard. That makes official source discipline more important. Market prices can reflect informed expectations, but they can also reflect loud fan narratives that do not map cleanly to Recording Academy voting."
+      ]
+    },
+    {
+      "heading": "What ScreenOdds should show on a Grammys page",
+      "paragraphs": [
+        "A strong Grammys market page should show the current market question, the category being tracked, available liquidity, current probabilities, and the official resolution source. It should also explain whether the market is about a nomination, a win, or a broader ceremony outcome.",
+        "The page should then link readers back to the Awards hub and sideways to Golden Globes and Oscars pages. That builds a coherent awards authority cluster instead of isolated articles."
+      ]
+    },
+    {
+      "heading": "How to read Polymarket Grammys odds responsibly",
+      "paragraphs": [
+        "Treat a market price as a live consensus estimate, not a guarantee. A favorite can lose, a thin market can move on limited volume, and a high-profile artist can attract attention that is not matched by the actual voting process.",
+        "ScreenOdds covers Grammys odds as entertainment-market analysis. The goal is to make the market easier to understand by pairing prices with source-backed awards context."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the main keyword for this page?",
+      "answer": "The primary keyword is `polymarket grammys`, with `grammy odds` as a broader supporting keyword."
+    },
+    {
+      "question": "Do Grammys markets resolve from official results?",
+      "answer": "A well-structured market should name an official or clearly credible resolution source. ScreenOdds uses official Grammy pages as the editorial anchor for analysis."
+    },
+    {
+      "question": "Are fan narratives reliable for Grammys prediction markets?",
+      "answer": "They can influence attention and market movement, but they are not the same as Recording Academy voting. ScreenOdds treats them as one signal among many."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/polymarket-golden-globes",
+      "label": "Polymarket Golden Globes",
+      "description": "A film and TV awards-market guide for the broader awards cluster."
+    },
+    {
+      "href": "/blog/polymarket-oscars-odds",
+      "label": "Polymarket Oscars Odds",
+      "description": "The core ScreenOdds page for Oscars prediction-market analysis."
+    },
+    {
+      "href": "/blog/polymarket-oscars-2026",
+      "label": "Polymarket Oscars 2026",
+      "description": "A completed-cycle awards-market page tied to official Oscars results."
+    }
+  ]
+}

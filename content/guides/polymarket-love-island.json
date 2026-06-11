@@ -1,0 +1,129 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-11",
+  "sources": [
+    {
+      "title": "Love Island USA Season 8 release date, cast, and host details",
+      "url": "https://www.peacocktv.com/blog/love-island-usa-season-8-release-date-cast-application-host-details",
+      "publisher": "Peacock",
+      "accessedAt": "2026-06-11",
+      "sourceType": "official"
+    },
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-11",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "ScreenOdds DataForSEO topical authority keyword map",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-11",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/reality-tv",
+      "label": "Reality TV Markets",
+      "description": "Browse ScreenOdds coverage of reality TV prediction markets."
+    },
+    {
+      "href": "/markets/love-island-odds",
+      "label": "Love Island Market",
+      "description": "Open the ScreenOdds market page for Love Island prediction-market coverage."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/reality-tv-hero.png",
+    "alt": "Editorial illustration of a reality TV studio with prediction market graphics",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/reality-tv-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [],
+  "infographics": [],
+  "slug": "polymarket-love-island",
+  "title": "Polymarket Love Island Odds: Reality TV Market Guide",
+  "description": "A ScreenOdds guide to Polymarket Love Island odds, Love Island USA Season 8 market signals, public votes, episodes, liquidity, and reality TV prediction markets.",
+  "primaryKeyword": "polymarket love island",
+  "keywordVolume": 170,
+  "keywordDifficulty": 0,
+  "category": "Reality TV",
+  "updatedAt": "2026-06-11",
+  "heroImage": "/images/reality-tv-hero.png",
+  "heroAlt": "Editorial illustration of a reality TV studio with prediction market graphics",
+  "sections": [
+    {
+      "heading": "Why Love Island is a strong reality TV prediction-market page",
+      "paragraphs": [
+        "Love Island has the right shape for a reality TV market: frequent episodes, public voting, contestant movement, recouplings, dumpings, and a finale with a clear winner. That gives ScreenOdds many legitimate update hooks without relying on rumors or leaks.",
+        "DataForSEO shows `polymarket love island` at 170 US monthly searches with keyword difficulty of 0. The broader `love island odds` query is larger, but the Polymarket-specific phrase is the cleaner authority target for a prediction-market site."
+      ]
+    },
+    {
+      "heading": "Current official context for Love Island USA Season 8",
+      "paragraphs": [
+        "Peacock's official Season 8 guide says Love Island USA premiered on June 2, 2026, with new episodes streaming daily except Wednesdays after premiere week. Peacock also lists Ariana Madix as host and describes the season as filmed in real time with a short delay from the Fiji villa.",
+        "That schedule matters for markets because new episodes can create rapid information changes. A dumping, vote result, new bombshell, or recoupling can all change how viewers and market users rank the remaining contestants or couples."
+      ]
+    },
+    {
+      "heading": "Signals to watch before the finale",
+      "paragraphs": [
+        "The most useful public signals are episode outcomes, official app votes, screen time, couple stability, social-media attention, and whether a contestant is framed as a likely finalist. None of these is a guarantee, but together they create a practical reading list for market movement.",
+        "Thin reality TV markets can be volatile. If a price jumps after an episode, check whether volume also increased. If volume is low, the movement may be less meaningful than it looks."
+      ]
+    },
+    {
+      "heading": "How ScreenOdds should cover Love Island markets",
+      "paragraphs": [
+        "The main Love Island market page should stay focused on current probabilities and market rules. This evergreen guide should explain how to interpret those prices, what official sources to watch, and why public-vote shows behave differently from awards markets.",
+        "News posts should be low-risk and source-backed: official episode outcomes, Peacock schedule updates, voting windows, finale details, and visible market movement. Rumors, unaired leaks, and unverified contestant claims should stay drafts or be avoided."
+      ]
+    },
+    {
+      "heading": "Where Love Island fits in the Reality TV cluster",
+      "paragraphs": [
+        "Love Island should connect to Big Brother, Survivor, Dancing with the Stars, America's Got Talent, and I'm a Celebrity coverage as ScreenOdds expands. These shows share recurring market patterns: public votes, elimination risk, finale odds, and contestant-specific narratives.",
+        "For topical authority, the Reality TV hub should link to both the broad `Love Island odds` guide and this `Polymarket Love Island` guide. One targets general odds intent; the other targets prediction-market intent."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why is Love Island useful for prediction-market coverage?",
+      "answer": "It has frequent episodes, public-vote moments, contestant exits, and a clear finale outcome, which gives market users recurring signals to evaluate."
+    },
+    {
+      "question": "When did Love Island USA Season 8 premiere?",
+      "answer": "Peacock's official guide says Season 8 premiered on June 2, 2026, at 6 p.m. PT and 9 p.m. ET."
+    },
+    {
+      "question": "Should rumors move Love Island markets?",
+      "answer": "Rumors can move attention, but ScreenOdds should only publish low-risk updates when source checks pass. Unverified leaks should not be treated as confirmed market context."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/love-island-odds",
+      "label": "Love Island Odds",
+      "description": "The broader ScreenOdds guide to Love Island prediction-market signals."
+    },
+    {
+      "href": "/blog/big-brother-odds",
+      "label": "Big Brother Odds",
+      "description": "A related reality TV guide for eviction and finale market patterns."
+    },
+    {
+      "href": "/reality-tv",
+      "label": "Reality TV Hub",
+      "description": "Browse ScreenOdds reality TV markets and evergreen guides."
+    }
+  ]
+}
