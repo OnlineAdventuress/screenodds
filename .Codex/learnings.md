@@ -43,3 +43,9 @@ Read this before starting each task.
 - Pattern to remember: Clear `.next` before rendered verification when changing SSG provider logic; a clean rebuild showed live TMDb/TVmaze labels after stale static output initially masked the change.
 - What worked: Netlify deploy access now works with the `THEVINYLBYTE` token, and production deploy `6a2960300294f2411b524353` went live after stopping the lingering ScreenOdds `next start -p 3002` process.
 - Pattern to remember: Before Netlify deploys, search Node command lines for `screenodds` as well as checking the intended preview port; a hidden Next process on another port can still lock `.next` and trigger `Failed publishing static content`.
+
+## 2026-06-11 - Keyword Cluster Article Batch
+
+- What worked: Adding new evergreen guides as JSON files under `content/guides/` automatically generated the new `/blog/*` routes, sitemap entries, metadata, and article pages without routing changes.
+- What broke: `src/lib/articles.test.ts` was pinned to the original five launch article slugs, so new published guides require updating that registry expectation.
+- Pattern to remember: Netlify deploys for this site need `NETLIFY_PERSONAL_ACCESS_TOKEN_THEVINYLBYTE`; the generic Netlify token returns `Unauthorized: could not retrieve project`.
