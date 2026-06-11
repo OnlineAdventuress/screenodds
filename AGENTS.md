@@ -52,6 +52,8 @@ Read the entire file before editing these paths:
 - Styling: Tailwind CSS
 - Tests: Vitest
 - Data: Polymarket Gamma/CLOB APIs with local fixtures
+- Market discovery: Parlay API, optional and server-side only, with deterministic fallbacks
+- Social sentiment: xAI/Grok X Search is optional and must run from server-side scripts only
 - Keyword research: DataForSEO API
 - Images: Kie.ai ChatGPT Image 2 API
 - Hosting target: Netlify for `screenodds.com`

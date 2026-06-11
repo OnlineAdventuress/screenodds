@@ -49,3 +49,9 @@ Read this before starting each task.
 - What worked: Adding new evergreen guides as JSON files under `content/guides/` automatically generated the new `/blog/*` routes, sitemap entries, metadata, and article pages without routing changes.
 - What broke: `src/lib/articles.test.ts` was pinned to the original five launch article slugs, so new published guides require updating that registry expectation.
 - Pattern to remember: Netlify deploys for this site need `NETLIFY_PERSONAL_ACCESS_TOKEN_THEVINYLBYTE`; the generic Netlify token returns `Unauthorized: could not retrieve project`.
+
+## 2026-06-11 - Parlay and xAI Provider Setup
+
+- What worked: Parlay `/v1/event-markets/search` can discover relevant entertainment markets for `love island`, `box office`, `academy awards`, and `highest grossing movie` with `X-API-Key` auth; keep the key out of URLs.
+- What worked: xAI docs confirm X Search can access real-time X posts, but it is billed as a server-side tool invocation, so do not call it during page builds.
+- Pattern to remember: Treat Parlay and xAI as optional signal layers. They should enrich pages/scripts when keys are present but never block static builds or replace deterministic ScreenOdds fallbacks.

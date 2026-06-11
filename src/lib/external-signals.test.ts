@@ -6,6 +6,7 @@ import {
   buildTvmazeShowUrl,
   getExternalSignalsForMarket,
 } from "./external-signals";
+import { buildParlayEventMarketsSearchUrl } from "./parlay";
 
 const fixedNow = new Date("2026-06-10T00:00:00.000Z");
 
@@ -169,5 +170,44 @@ describe("external entertainment signals", () => {
     expect(fetcher).toHaveBeenCalledOnce();
     expect(signals.some((signal) => signal.sourceName === "TVmaze")).toBe(true);
     expect(JSON.stringify(signals)).not.toContain("tvmaze-secret");
+  });
+
+  it("adds Parlay prediction-market discovery signals without serializing secrets", async () => {
+    const fetcher = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+      const url = String(input);
+
+      expect(url).toContain("parlay-api.com/v1/event-markets/search");
+      expect(url).toContain("q=love+island");
+      expect(url).not.toContain("parlay-secret");
+      expect(init?.headers).toMatchObject({ "X-API-Key": "parlay-secret" });
+
+      return Response.json({
+        markets: [
+          {
+            source: "polymarket",
+            market_id: "2382065",
+            event_title: "Who will win Love Island USA Season 8? (Women)",
+            title: "Will Kayda Bosse win Love Island USA Season 8?",
+            volume: 980.9812,
+            match_confidence: 0.99,
+            prices: { best_bid: 0.2, best_ask: 0.3, last: 0.25 },
+            url: "https://polymarket.com/event/who-will-win-love-island-usa-season-8",
+          },
+        ],
+      });
+    });
+
+    const signals = await getExternalSignalsForMarket(market("love-island-odds"), {
+      env: { PARLAY_API_KEY: "parlay-secret" },
+      fetcher,
+      now: fixedNow,
+    });
+
+    expect(buildParlayEventMarketsSearchUrl({ query: "love island" }).toString()).not.toContain(
+      "parlay-secret",
+    );
+    expect(signals.some((signal) => signal.sourceName === "Parlay API")).toBe(true);
+    expect(signals.some((signal) => signal.kind === "prediction-market")).toBe(true);
+    expect(JSON.stringify(signals)).not.toContain("parlay-secret");
   });
 });

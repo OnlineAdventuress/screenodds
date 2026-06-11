@@ -1,4 +1,5 @@
 import { getServerEnv } from "./server-env";
+import { fetchParlayEventMarkets, summarizeParlayMarkets, type ParlayMarket } from "./parlay";
 import type { Market, MarketCategory } from "./markets";
 
 const TMDB_API_BASE = "https://api.themoviedb.org/3";
@@ -9,7 +10,8 @@ export type ExternalSignalKind =
   | "movie-metadata"
   | "tv-metadata"
   | "awards-context"
-  | "market-context";
+  | "market-context"
+  | "prediction-market";
 
 export type ExternalSignal = {
   id: string;
@@ -83,9 +85,10 @@ export async function getExternalSignalsForMarket(
   const checkedAt = (options.now ?? new Date()).toISOString();
   const fallback = getFallbackExternalSignals(market, checkedAt);
   const config = getSignalConfig(market);
+  const parlayQuery = getParlayQueryForMarket(market);
   const fetcher = options.fetcher ?? fetch;
 
-  if (!config) {
+  if (!config && !parlayQuery) {
     return fallback;
   }
 
@@ -96,15 +99,19 @@ export async function getExternalSignalsForMarket(
   ]);
   const omdbKey = readEnv("OMDB_API_KEY", options.env);
   const tvmazeKey = readEnv("TVMAZE_API_KEY", options.env);
+  const parlayKey = readEnv("PARLAY_API_KEY", options.env);
 
-  if (config.tmdb && tmdbCredentials.length > 0) {
+  if (config?.tmdb && tmdbCredentials.length > 0) {
     jobs.push(fetchTmdbSignalWithCredentials(config.tmdb, tmdbCredentials, fetcher, checkedAt));
   }
-  if (config.omdbTitle && omdbKey) {
+  if (config?.omdbTitle && omdbKey) {
     jobs.push(fetchOmdbSignal(config.omdbTitle, omdbKey, fetcher, checkedAt));
   }
-  if (config.tvmazeTitle && tvmazeKey) {
+  if (config?.tvmazeTitle && tvmazeKey) {
     jobs.push(fetchTvmazeSignal(config.tvmazeTitle, fetcher, checkedAt));
+  }
+  if (parlayQuery && parlayKey) {
+    jobs.push(fetchParlayDiscoverySignal(market, parlayQuery, parlayKey, fetcher, checkedAt));
   }
 
   if (jobs.length === 0) {
@@ -323,6 +330,50 @@ async function fetchTvmazeSignal(
   };
 }
 
+async function fetchParlayDiscoverySignal(
+  market: Market,
+  query: string,
+  apiKey: string,
+  fetcher: SignalFetch,
+  checkedAt: string,
+): Promise<ExternalSignal | null> {
+  const response = await fetchParlayEventMarkets({
+    query,
+    sources: ["polymarket", "kalshi", "novig"],
+    minConfidence: 0.1,
+    sort: "match",
+    limit: 25,
+    apiKey,
+    fetcher,
+  });
+
+  if (!response || response.markets.length === 0) {
+    return null;
+  }
+
+  const summary = summarizeParlayMarkets(response.markets);
+  const topMarket = summary.topMarket;
+  if (!topMarket) {
+    return null;
+  }
+
+  const sourceSummary = formatParlaySourceCounts(summary.sourceCounts);
+  const priceDetail = formatParlayPriceDetail(topMarket);
+  const marketLabel = response.markets.length === 1 ? "market" : "markets";
+
+  return {
+    id: `parlay-${market.slug}-${slugSegment(query)}`,
+    label: "Related prediction markets",
+    value: `${response.markets.length} related ${marketLabel}${sourceSummary ? ` across ${sourceSummary}` : ""}`,
+    detail: `Top Parlay match: ${topMarket.eventTitle}. ${topMarket.title}${topMarket.outcome ? ` Outcome: ${topMarket.outcome}.` : "."} Reported volume ${formatCompactNumber(topMarket.volume)}.${priceDetail} Use this as discovery context; always check the source market rules before relying on a price.`,
+    kind: "prediction-market",
+    sourceName: "Parlay API",
+    sourceUrl: topMarket.url,
+    checkedAt,
+    confidence: "live",
+  };
+}
+
 function getSignalConfig(market: Market): SignalConfig | null {
   switch (market.slug) {
     case "scary-movie-opening-weekend-box-office":
@@ -337,6 +388,37 @@ function getSignalConfig(market: Market): SignalConfig | null {
     default:
       return null;
   }
+}
+
+function getParlayQueryForMarket(market: Market): string | null {
+  const text = `${market.slug} ${market.title} ${market.description} ${market.tags.join(" ")}`.toLowerCase();
+
+  if (text.includes("love island")) {
+    return "love island";
+  }
+  if (text.includes("big brother")) {
+    return "big brother";
+  }
+  if (text.includes("highest grossing movie")) {
+    return "highest grossing movie";
+  }
+  if (text.includes("box office") || text.includes("opening weekend")) {
+    return "box office";
+  }
+  if (text.includes("oscar") || text.includes("academy awards") || text.includes("best picture")) {
+    return "academy awards";
+  }
+  if (text.includes("grammy")) {
+    return "grammys";
+  }
+  if (text.includes("golden globe")) {
+    return "golden globes";
+  }
+  if (text.includes("james bond")) {
+    return "james bond";
+  }
+
+  return null;
 }
 
 function readEnv(name: string, overrides?: Record<string, string | undefined>): string | undefined {
@@ -372,6 +454,37 @@ function slugSegment(value: string): string {
 
 function uniqueValues(values: Array<string | undefined>): string[] {
   return [...new Set(values.filter((value): value is string => Boolean(value)))];
+}
+
+function formatParlaySourceCounts(sourceCounts: Record<string, number>): string {
+  return Object.entries(sourceCounts)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([source, count]) => `${source} ${count}`)
+    .join(", ");
+}
+
+function formatParlayPriceDetail(market: ParlayMarket): string {
+  const last = market.prices?.last;
+  const bestBid = market.prices?.bestBid ?? market.prices?.yesBid;
+  const bestAsk = market.prices?.bestAsk ?? market.prices?.yesAsk;
+  if (typeof last === "number") {
+    return ` Last traded price ${formatProbabilityLikePrice(last)}.`;
+  }
+  if (typeof bestBid === "number" && typeof bestAsk === "number") {
+    return ` Current quoted range ${formatProbabilityLikePrice(bestBid)} to ${formatProbabilityLikePrice(bestAsk)}.`;
+  }
+  return "";
+}
+
+function formatProbabilityLikePrice(value: number): string {
+  return `${Math.round(value * 1000) / 10}%`;
+}
+
+function formatCompactNumber(value: number): string {
+  return new Intl.NumberFormat("en-US", {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(value);
 }
 
 const fallbackContextByCategory: Record<
