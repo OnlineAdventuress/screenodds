@@ -49,6 +49,9 @@ describe("ScreenOdds market utilities", () => {
     expect(market.category).toBe("Box Office");
     expect(market.probability).toBe(0.62);
     expect(market.volume1mo).toBe(308870.14);
+    expect(market.sourceUrl).toBe(
+      "https://polymarket.com/event/scary-movie-opening-weekend-box-office",
+    );
   });
 
   it("calculates market summary totals", () => {

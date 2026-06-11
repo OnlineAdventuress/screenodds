@@ -3,15 +3,19 @@ import {
   formatCompactCurrency,
   formatProbability,
   type Market,
-} from "@/lib/markets";
+} from "../lib/markets";
 
 type MarketCardProps = {
   market: Market;
 };
 
 export function MarketCard({ market }: MarketCardProps) {
-  return (
-    <Link href={`/markets/${market.slug}`} className="screen-panel block p-4">
+  const isLocalMarket = market.source === "fallback";
+  const href = isLocalMarket
+    ? `/markets/${market.slug}`
+    : (market.sourceUrl ?? `https://polymarket.com/event/${market.slug}`);
+  const content = (
+    <>
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="screen-kicker">{market.category}</p>
@@ -37,6 +41,30 @@ export function MarketCard({ market }: MarketCardProps) {
         <span>24H {formatCompactCurrency(market.volume24hr)}</span>
         <span>Liq {formatCompactCurrency(market.liquidity)}</span>
       </div>
+      {!isLocalMarket ? (
+        <p className="mt-3 text-xs font-semibold uppercase tracking-[0.12em] text-zinc-500">
+          Opens source market
+        </p>
+      ) : null}
+    </>
+  );
+
+  if (!isLocalMarket) {
+    return (
+      <a
+        href={href}
+        className="screen-panel block p-4"
+        rel="nofollow noopener noreferrer"
+        target="_blank"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className="screen-panel block p-4">
+      {content}
     </Link>
   );
 }

@@ -55,3 +55,9 @@ Read this before starting each task.
 - What worked: Parlay `/v1/event-markets/search` can discover relevant entertainment markets for `love island`, `box office`, `academy awards`, and `highest grossing movie` with `X-API-Key` auth; keep the key out of URLs.
 - What worked: xAI docs confirm X Search can access real-time X posts, but it is billed as a server-side tool invocation, so do not call it during page builds.
 - Pattern to remember: Treat Parlay and xAI as optional signal layers. They should enrich pages/scripts when keys are present but never block static builds or replace deterministic ScreenOdds fallbacks.
+
+## 2026-06-11 - Full Page Crawl Fix
+
+- What worked: A production crawl that strips scripts before checking visible error text avoids false positives from Next.js serialized `notFound` payloads.
+- What broke: Live Polymarket cards from hub/home pages linked to local `/markets/*` routes that are not generated for non-seeded markets, creating internal 404s.
+- Pattern to remember: Seeded fallback markets can link to local detail pages; live Polymarket-derived cards need to link to their external source URL unless a local detail page is explicitly generated.

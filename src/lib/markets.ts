@@ -23,6 +23,7 @@ export type Market = {
   endDate: string | null;
   updatedAt: string;
   source: "polymarket" | "fallback";
+  sourceUrl?: string;
 };
 
 export type RankedMarket = Market & {
@@ -102,6 +103,7 @@ export function normalizeGammaEvent(event: GammaEvent): Market {
     endDate: event.endDate ?? null,
     updatedAt: event.updatedAt ?? new Date(0).toISOString(),
     source: "polymarket",
+    sourceUrl: `https://polymarket.com/event/${slugify(event.slug ?? title)}`,
   };
 }
 
