@@ -11,6 +11,7 @@
     "images:launch": "node scripts/generate-launch-images.mjs",
     "images:infographics": "node scripts/generate-infographics.mjs",
     "keywords:dataforseo": "node scripts/dataforseo-keywords.mjs",
+    "keywords:topical": "node scripts/dataforseo-topical-authority.mjs",
     "media:tmdb": "node scripts/tmdb-media.mjs",
     "apis:check": "node scripts/check-entertainment-apis.mjs",
     "news:daily": "node scripts/daily-news-routine.mjs",

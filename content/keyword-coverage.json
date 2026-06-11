@@ -11,7 +11,7 @@
     "cpc": 2.26,
     "intent": "mixed",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by an existing ScreenOdds page and should receive internal links from news and hubs."
   },
   {
@@ -26,7 +26,7 @@
     "cpc": 7.89,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by an existing ScreenOdds page and should receive internal links from news and hubs."
   },
   {
@@ -41,7 +41,7 @@
     "cpc": 10.21,
     "intent": "mixed",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by an existing ScreenOdds page and should receive internal links from news and hubs."
   },
   {
@@ -56,7 +56,7 @@
     "cpc": null,
     "intent": "mixed",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by a ScreenOdds hub or market page; exact keyword was not returned by DataForSEO Keyword Overview in this refresh."
   },
   {
@@ -71,7 +71,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by a ScreenOdds hub or market page; exact keyword was not returned by DataForSEO Keyword Overview in this refresh."
   },
   {
@@ -86,7 +86,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Not returned by DataForSEO Keyword Overview; keep as planned until a refresh confirms search volume."
   },
   {
@@ -101,7 +101,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by an existing ScreenOdds page and should receive internal links from news and hubs."
   },
   {
@@ -116,7 +116,7 @@
     "cpc": null,
     "intent": "mixed",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by a ScreenOdds hub or market page; exact keyword was not returned by DataForSEO Keyword Overview in this refresh."
   },
   {
@@ -131,7 +131,7 @@
     "cpc": null,
     "intent": "mixed",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by a ScreenOdds hub or market page; exact keyword was not returned by DataForSEO Keyword Overview in this refresh."
   },
   {
@@ -146,7 +146,7 @@
     "cpc": 7.92,
     "intent": "mixed",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -161,7 +161,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by an existing ScreenOdds page and should receive internal links from news and hubs."
   },
   {
@@ -176,7 +176,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by an existing ScreenOdds page and should receive internal links from news and hubs."
   },
   {
@@ -191,7 +191,7 @@
     "cpc": null,
     "intent": "mixed",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Covered by a ScreenOdds hub or market page; exact keyword was not returned by DataForSEO Keyword Overview in this refresh."
   },
   {
@@ -206,7 +206,7 @@
     "cpc": 7.61,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -221,7 +221,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Not returned by DataForSEO Keyword Overview; keep as planned until a refresh confirms search volume."
   },
   {
@@ -236,7 +236,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -251,7 +251,7 @@
     "cpc": 7.69,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -266,7 +266,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -281,7 +281,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -296,7 +296,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -311,7 +311,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -326,7 +326,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -341,7 +341,7 @@
     "cpc": 5.28,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -356,7 +356,7 @@
     "cpc": null,
     "intent": "informational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "DataForSEO-tracked opportunity that should become an evergreen guide or dedicated hub module."
   },
   {
@@ -371,7 +371,7 @@
     "cpc": null,
     "intent": "navigational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Monitor typo demand only. Use correct Polymarket spelling in public copy unless search data proves a dedicated typo page is justified."
   },
   {
@@ -386,7 +386,7 @@
     "cpc": null,
     "intent": "navigational",
     "dataSource": "DataForSEO",
-    "checkedAt": "2026-06-09",
+    "checkedAt": "2026-06-11",
     "notes": "Monitor typo demand only. Use correct Polymarket spelling in public copy unless search data proves a dedicated typo page is justified."
   }
 ]
