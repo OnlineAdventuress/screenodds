@@ -132,6 +132,27 @@ export default async function Home() {
           },
         ]}
       />
+
+      <RelatedLinks
+        title="More specialist odds desks"
+        links={[
+          {
+            href: "https://odsage.com/",
+            label: "AI model and IPO odds",
+            description: "Odsage tracks AI model rankings, release timelines, AI IPOs, and AI bubble prediction markets.",
+          },
+          {
+            href: "https://macroodds.com/",
+            label: "Macro markets that shape media risk",
+            description: "MacroOdds follows Fed, inflation, recession, and rate markets that affect studios, streamers, and advertising cycles.",
+          },
+          {
+            href: "https://geoodds.com/",
+            label: "Geopolitical market context",
+            description: "GeoOdds covers election, policy, war, and world-headline markets that can move media narratives and platform risk.",
+          },
+        ]}
+      />
     </>
   );
 }
