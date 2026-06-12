@@ -1,0 +1,63 @@
+{
+  "marketSlug": "love-island-odds",
+  "query": "Love Island Polymarket",
+  "checkedAt": "2026-06-12T00:00:00.000Z",
+  "windowDays": 30,
+  "sentimentLabel": "mixed",
+  "summary": "X discussion is focused on Love Island markets becoming a visible culture-market test for Polymarket and Kalshi. The strongest signals are market-launch chatter, comparison-market activity, and audience curiosity rather than confident contestant forecasting.",
+  "topNarratives": [
+    "Polymarket added Love Island USA Season 8 markets and users noticed the culture-market expansion.",
+    "Kalshi is also active around Love Island outcomes, making this a useful comparison-market category.",
+    "Discussion treats reality TV markets as entertainment context and a test of prediction-market breadth.",
+    "Contestant-specific confidence remains weak without episode, vote, and liquidity confirmation."
+  ],
+  "sourceCounts": {
+    "x": 10,
+    "reddit": 0,
+    "polymarket": 2,
+    "kalshi": 3
+  },
+  "citedPosts": [
+    {
+      "source": "x",
+      "author": "launchaldrin",
+      "url": "https://x.com/launchaldrin/status/2062362515242205272",
+      "date": "2026-06-04",
+      "engagementLabel": "5 likes, 5 replies",
+      "text": "Love Island markets were added to Polymarket's U.S. app while Kalshi was also running Love Island event markets."
+    },
+    {
+      "source": "x",
+      "author": "PredictionNews_",
+      "url": "https://x.com/PredictionNews_/status/2062231921791541519",
+      "date": "2026-06-03",
+      "engagementLabel": "4 likes",
+      "text": "Polymarket is continuing to expand its U.S. app, with new culture markets including Love Island USA Season 8."
+    },
+    {
+      "source": "x",
+      "author": "pmkt_new",
+      "url": "https://x.com/pmkt_new/status/2060142499818017216",
+      "date": "2026-05-28",
+      "engagementLabel": "market link",
+      "text": "A direct post linked to the Love Island USA Season 8 winner market."
+    }
+  ],
+  "relatedMarkets": [
+    {
+      "source": "kalshi",
+      "title": "who will be eliminated",
+      "url": "https://kalshi.com/markets/KXLIUSAELIMINATION",
+      "priceLabel": "Series context",
+      "volumeLabel": "$65.4K volume"
+    },
+    {
+      "source": "polymarket",
+      "title": "Who will win Love Island USA Season 8? (Women)",
+      "url": "https://polymarket.com/event/who-will-win-love-island-usa-season-8-women",
+      "priceLabel": "Market active",
+      "volumeLabel": "$448 volume"
+    }
+  ],
+  "confidence": "live"
+}

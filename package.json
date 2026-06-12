@@ -15,7 +15,8 @@
     "media:tmdb": "node scripts/tmdb-media.mjs",
     "apis:check": "node scripts/check-entertainment-apis.mjs",
     "news:daily": "node scripts/daily-news-routine.mjs",
-    "news:scan": "node scripts/jina-news-scan.mjs"
+    "news:scan": "node scripts/jina-news-scan.mjs",
+    "sentiment:scan": "node scripts/social-sentiment-scan.mjs"
   },
   "dependencies": {
     "next": "16.2.7",

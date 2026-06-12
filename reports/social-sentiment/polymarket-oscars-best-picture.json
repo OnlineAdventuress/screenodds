@@ -1,0 +1,30 @@
+{
+  "marketSlug": "polymarket-oscars-best-picture",
+  "query": "Polymarket Oscars Best Picture Kalshi",
+  "checkedAt": "2026-06-12T00:00:00.000Z",
+  "windowDays": 30,
+  "sentimentLabel": "neutral",
+  "summary": "ScreenOdds has a starter Oscars sentiment snapshot, but the next live scan should refresh X chatter around Best Picture markets, Kalshi Oscars series volume, and early awards-season narratives.",
+  "topNarratives": [
+    "Best Picture market sentiment is usually weak before nominations narrow the field.",
+    "Kalshi has active public Oscars series that can provide comparison-market context.",
+    "Festival reactions, guild signals, and critic awards should be weighted above early social confidence."
+  ],
+  "sourceCounts": {
+    "x": 0,
+    "reddit": 0,
+    "polymarket": 0,
+    "kalshi": 1
+  },
+  "citedPosts": [],
+  "relatedMarkets": [
+    {
+      "source": "kalshi",
+      "title": "Oscar for Best Picture",
+      "url": "https://kalshi.com/markets/KXOSCARPIC",
+      "priceLabel": "Series context",
+      "volumeLabel": "$330.3K volume"
+    }
+  ],
+  "confidence": "fallback"
+}

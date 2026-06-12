@@ -1,0 +1,30 @@
+{
+  "marketSlug": "highest-grossing-movie-in-2026",
+  "query": "highest grossing movie Polymarket Kalshi",
+  "checkedAt": "2026-06-12T00:00:00.000Z",
+  "windowDays": 30,
+  "sentimentLabel": "neutral",
+  "summary": "ScreenOdds has a starter movie-chart sentiment snapshot. A live scan should refresh social discussion around 2026 box office leaders, Netflix/movie-chart Kalshi series, and Polymarket highest-grossing movie markets.",
+  "topNarratives": [
+    "Highest-grossing movie sentiment should be checked against release calendars and franchise comps.",
+    "Social buzz can flag attention spikes, but verified grosses determine durable movement.",
+    "Kalshi movie-chart series can add comparison-market context even without affiliate links."
+  ],
+  "sourceCounts": {
+    "x": 0,
+    "reddit": 0,
+    "polymarket": 0,
+    "kalshi": 1
+  },
+  "citedPosts": [],
+  "relatedMarkets": [
+    {
+      "source": "kalshi",
+      "title": "Netflix movie ranking",
+      "url": "https://kalshi.com/markets/KXNETFLIXRANKMOVIE",
+      "priceLabel": "Series context",
+      "volumeLabel": "$75K volume"
+    }
+  ],
+  "confidence": "fallback"
+}
