@@ -3,9 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ExternalSignals } from "@/components/external-signals";
 import { MarketCard } from "@/components/market-card";
+import { SentimentPulse } from "@/components/sentiment-pulse";
 import { getLaunchMarkets, getRelatedMarkets, getSeededMarket } from "@/lib/content";
 import { getExternalSignalsForMarket } from "@/lib/external-signals";
 import { formatCompactCurrency, formatProbability } from "@/lib/markets";
+import { getSentimentPulseForMarket } from "@/lib/sentiment";
 
 type MarketPageProps = {
   params: Promise<{ slug: string }>;
@@ -53,6 +55,7 @@ export default async function MarketPage({ params }: MarketPageProps) {
 
   const related = getRelatedMarkets(market);
   const externalSignals = await getExternalSignalsForMarket(market);
+  const sentimentPulse = await getSentimentPulseForMarket(market.slug);
 
   return (
     <>
@@ -125,6 +128,10 @@ export default async function MarketPage({ params }: MarketPageProps) {
 
       <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
         <ExternalSignals signals={externalSignals} />
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+        <SentimentPulse pulse={sentimentPulse} />
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
