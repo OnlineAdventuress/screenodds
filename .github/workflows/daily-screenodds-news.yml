@@ -1,0 +1,82 @@
+name: Daily ScreenOdds News
+
+on:
+  schedule:
+    # 16:30 UTC is late morning/noon US entertainment-news hours.
+    - cron: "30 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-screenodds-news
+  cancel-in-progress: false
+
+jobs:
+  daily-news:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+      JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+      TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+      TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+      OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+      TVMAZE_API_KEY: ${{ secrets.TVMAZE_API_KEY }}
+      PARLAY_API_KEY: ${{ secrets.PARLAY_API_KEY }}
+      XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_THEVINYLBYTE }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run daily news quality routine
+        run: npm run news:daily -- --publish
+
+      - name: Detect generated content changes
+        id: changed
+        shell: bash
+        run: |
+          if [[ -n "$(git status --porcelain -- content/news reports/news-research)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Verify generated site
+        if: steps.changed.outputs.changed == 'true'
+        run: |
+          npm run lint
+          npm run test
+          npm run build
+
+      - name: Commit generated news output
+        if: steps.changed.outputs.changed == 'true'
+        run: |
+          git config user.name "screenodds-news-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add content/news reports/news-research
+          git commit -m "content: add daily ScreenOdds news update"
+          git push
+
+      - name: Deploy to Netlify
+        if: steps.changed.outputs.changed == 'true' && env.NETLIFY_AUTH_TOKEN != ''
+        run: npx --yes netlify-cli@latest deploy --prod --site 5700712b-37ac-4967-b3a4-9231d35efeda
+
+      - name: Netlify deploy skipped
+        if: steps.changed.outputs.changed == 'true' && env.NETLIFY_AUTH_TOKEN == ''
+        run: |
+          echo "NETLIFY_AUTH_TOKEN_THEVINYLBYTE is not configured."
+          echo "The content commit was pushed; configure the secret if Netlify Git auto-deploy is not enabled."

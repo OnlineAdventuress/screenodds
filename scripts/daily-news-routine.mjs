@@ -4,6 +4,7 @@ import { spawn } from "node:child_process";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { scanJinaNews } from "./jina-news-scan.mjs";
+import { evaluateNewsCandidate } from "./news-quality-gate.mjs";
 
 const NETLIFY_SITE_ID = "5700712b-37ac-4967-b3a4-9231d35efeda";
 
@@ -15,16 +16,31 @@ async function main() {
   const force = process.argv.includes("--force");
 
   const scan = await scanJinaNews();
-  const candidate = buildNewsCandidate(scan, { publish });
+  const candidate = buildNewsCandidate(scan);
+  const decision = evaluateNewsCandidate(candidate, { requestedPublish: publish });
+  const decidedCandidate = applyDecision(candidate, decision);
   const outPath = resolve("content", "news", `${candidate.slug}.json`);
+  const reportPath = resolve("reports", "news-research", `daily-news-decision-${candidate.publishedAt}.json`);
+  const report = buildDecisionReport(scan, decidedCandidate, decision);
 
-  if (existsSync(outPath) && !force) {
+  if (dryRun) {
+    console.log(JSON.stringify(report, null, 2));
+  } else {
+    await writeJson(reportPath, report);
+    console.log(`Wrote daily news decision report: ${reportPath}`);
+  }
+
+  if (decision.action === "discard") {
+    console.log(
+      `Discarded daily news candidate ${candidate.slug} with score ${decision.score}: ${decision.reasons.join("; ")}`,
+    );
+  } else if (existsSync(outPath) && !force) {
     console.log(`Skipped existing news file: ${outPath}`);
   } else if (dryRun) {
-    console.log(JSON.stringify(candidate, null, 2));
+    console.log(JSON.stringify(decidedCandidate, null, 2));
   } else {
-    await writeJson(outPath, candidate);
-    console.log(`Wrote ${candidate.status} news post: ${outPath}`);
+    await writeJson(outPath, decidedCandidate);
+    console.log(`Wrote ${decidedCandidate.status} news post: ${outPath}`);
   }
 
   if (verify || deploy) {
@@ -42,16 +58,11 @@ async function main() {
   }
 }
 
-function buildNewsCandidate(scan, { publish }) {
+function buildNewsCandidate(scan) {
   const result = [...scan.results].sort((a, b) => b.sourceConfidence - a.sourceConfidence)[0];
   const date = new Date(scan.checkedAt).toISOString().slice(0, 10);
   const trustedSources = result.sources.filter(isAllowedNewsSource);
   const riskFlags = getRiskFlags(result, trustedSources);
-  const canPublish =
-    publish &&
-    result.sourceConfidence >= 0.75 &&
-    riskFlags.length === 0 &&
-    trustedSources.length >= 2;
   const categorySlug = slugify(result.category);
 
   return {
@@ -61,11 +72,11 @@ function buildNewsCandidate(scan, { publish }) {
     description:
       `A source-backed ScreenOdds market watch for ${result.category.toLowerCase()} prediction-market readers, generated from the daily Jina research scan.`,
     category: result.category,
-    status: canPublish ? "published" : "draft",
+    status: "draft",
     publishedAt: date,
     updatedAt: date,
     newsType: inferNewsType(result.category),
-    riskLevel: canPublish ? "low" : "review",
+    riskLevel: "review",
     sourceConfidence: result.sourceConfidence,
     riskFlags,
     heroImage: heroImageForCategory(result.category),
@@ -105,6 +116,38 @@ function buildNewsCandidate(scan, { publish }) {
     inlineImages: [],
     infographics: [],
     faqs: [],
+  };
+}
+
+function applyDecision(candidate, decision) {
+  if (decision.action === "publish") {
+    return {
+      ...candidate,
+      status: "published",
+      riskLevel: "low",
+    };
+  }
+
+  return {
+    ...candidate,
+    status: "draft",
+    riskLevel: "review",
+  };
+}
+
+function buildDecisionReport(scan, candidate, decision) {
+  return {
+    checkedAt: scan.checkedAt,
+    candidateSlug: candidate.slug,
+    category: candidate.category,
+    action: decision.action,
+    score: decision.score,
+    status: candidate.status,
+    sourceConfidence: candidate.sourceConfidence,
+    trustedSourceCount: candidate.sources.filter(isAllowedNewsSource).length,
+    riskFlags: candidate.riskFlags,
+    reasons: decision.reasons,
+    sourceUrls: candidate.sources.map((source) => source.url),
   };
 }
 

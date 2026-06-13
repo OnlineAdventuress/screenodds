@@ -67,3 +67,9 @@ Read this before starting each task.
 - What worked: A typed `site-network` registry plus a reusable component keeps owned-site links topical instead of adding a sitewide footer block.
 - What broke: Stale `.next` HTML initially hid that `gridodds.com` was missing from the generated homepage.
 - Pattern to remember: After changing static registry data used by SSG pages, remove `.next` and run a clean build before checking generated HTML.
+
+## 2026-06-13 - Daily News Cron Gate
+
+- What worked: A separate `news-quality-gate` module makes daily publish/draft/discard decisions testable instead of burying SEO rules in the cron script.
+- What broke: GitHub Actions `git diff` would miss newly generated JSON files because untracked files are ignored.
+- Pattern to remember: Use `git status --porcelain -- content/news reports/news-research` when a workflow needs to detect newly generated content files.
