@@ -4,10 +4,12 @@ import { notFound } from "next/navigation";
 import { ExternalSignals } from "@/components/external-signals";
 import { MarketCard } from "@/components/market-card";
 import { SentimentPulse } from "@/components/sentiment-pulse";
+import { SiteNetworkLinks } from "@/components/site-network-links";
 import { getLaunchMarkets, getRelatedMarkets, getSeededMarket } from "@/lib/content";
 import { getExternalSignalsForMarket } from "@/lib/external-signals";
 import { formatCompactCurrency, formatProbability } from "@/lib/markets";
 import { getSentimentPulseForMarket } from "@/lib/sentiment";
+import { getSiteNetworkLinks } from "@/lib/site-network";
 
 type MarketPageProps = {
   params: Promise<{ slug: string }>;
@@ -56,6 +58,11 @@ export default async function MarketPage({ params }: MarketPageProps) {
   const related = getRelatedMarkets(market);
   const externalSignals = await getExternalSignalsForMarket(market);
   const sentimentPulse = await getSentimentPulseForMarket(market.slug);
+  const networkLinks = getSiteNetworkLinks({
+    pageType: "market",
+    category: market.category,
+    tags: [market.title, market.description, ...market.tags],
+  });
 
   return (
     <>
@@ -142,6 +149,12 @@ export default async function MarketPage({ params }: MarketPageProps) {
           ))}
         </div>
       </section>
+
+      <SiteNetworkLinks
+        title="More odds research"
+        description="Useful sister sites for broader odds education, source checks, and adjacent market categories."
+        links={networkLinks}
+      />
     </>
   );
 }

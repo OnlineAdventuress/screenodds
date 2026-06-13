@@ -3,12 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { RelatedLinks } from "@/components/related-links";
+import { SiteNetworkLinks } from "@/components/site-network-links";
 import { articles, getArticleBySlug } from "@/lib/articles";
 import {
   buildArticleJsonLd,
   buildBreadcrumbJsonLd,
   buildFaqPageJsonLd,
 } from "@/lib/seo";
+import { getSiteNetworkLinks } from "@/lib/site-network";
 
 type ArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -66,6 +68,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       { name: article.title, path: `/blog/${article.slug}` },
     ]),
   ];
+  const networkLinks = getSiteNetworkLinks({
+    pageType: "article",
+    category: article.category,
+    tags: [article.primaryKeyword, article.title, ...article.sections.map((section) => section.heading)],
+  });
 
   return (
     <>
@@ -163,6 +170,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
       <RelatedLinks title="Market context" links={article.marketLinks} />
       <RelatedLinks links={article.related} />
+      <SiteNetworkLinks
+        title="More odds research"
+        description="Relevant sister projects for readers who want supporting odds education, source checks, or adjacent market context."
+        links={networkLinks}
+      />
     </>
   );
 }

@@ -4,15 +4,22 @@ import { LatestNews } from "@/components/latest-news";
 import { MarketCard } from "@/components/market-card";
 import { MetricCard } from "@/components/metric-card";
 import { RelatedLinks } from "@/components/related-links";
+import { SiteNetworkLinks } from "@/components/site-network-links";
 import { getCategoryCounts, getHomeStats, hubPages } from "@/lib/content";
 import { formatCompactCurrency } from "@/lib/markets";
 import { fetchEntertainmentMarkets } from "@/lib/polymarket";
+import { getSiteNetworkLinks } from "@/lib/site-network";
 
 export default async function Home() {
   const markets = await fetchEntertainmentMarkets();
   const { ranked, summary } = getHomeStats(markets);
   const topMarkets = ranked.slice(0, 6);
   const categoryCounts = getCategoryCounts(markets);
+  const networkLinks = getSiteNetworkLinks({
+    pageType: "home",
+    tags: ["entertainment", "box-office", "awards", "culture", "prediction-markets"],
+    maxLinks: 3,
+  });
 
   return (
     <>
@@ -152,6 +159,12 @@ export default async function Home() {
             description: "GeoOdds covers election, policy, war, and world-headline markets that can move media narratives and platform risk.",
           },
         ]}
+      />
+
+      <SiteNetworkLinks
+        title="Related odds and stats projects"
+        description="ScreenOdds is focused on entertainment markets; these owned research sites cover adjacent odds, stats, gaming, sports, macro, and geography angles."
+        links={networkLinks}
       />
     </>
   );

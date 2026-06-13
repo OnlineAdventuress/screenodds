@@ -3,11 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RelatedLinks } from "@/components/related-links";
+import { SiteNetworkLinks } from "@/components/site-network-links";
 import { getNewsPostBySlug, getPublishedNewsPosts } from "@/lib/editorial";
 import {
   buildBreadcrumbJsonLd,
   buildNewsArticleJsonLd,
 } from "@/lib/seo";
+import { getSiteNetworkLinks } from "@/lib/site-network";
 
 type NewsArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -66,6 +68,11 @@ export default async function NewsArticlePage({ params }: NewsArticlePageProps) 
       { name: post.title, path: `/news/${post.slug}` },
     ]),
   ];
+  const networkLinks = getSiteNetworkLinks({
+    pageType: "news",
+    category: post.category,
+    tags: [post.newsType, post.title, ...post.sections.map((section) => section.heading)],
+  });
 
   return (
     <>
@@ -149,6 +156,11 @@ export default async function NewsArticlePage({ params }: NewsArticlePageProps) 
 
       <RelatedLinks title="Market context" links={post.marketLinks} />
       <RelatedLinks links={post.related} />
+      <SiteNetworkLinks
+        title="More odds research"
+        description="Related owned research sites are included when they add useful context beyond ScreenOdds entertainment coverage."
+        links={networkLinks}
+      />
     </>
   );
 }

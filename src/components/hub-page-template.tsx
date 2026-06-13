@@ -4,8 +4,10 @@ import { LatestNews } from "@/components/latest-news";
 import { MarketCard } from "@/components/market-card";
 import { MetricCard } from "@/components/metric-card";
 import { RelatedLinks } from "@/components/related-links";
+import { SiteNetworkLinks } from "@/components/site-network-links";
 import { getHubMarkets, hubPages, type HubPage } from "@/lib/content";
 import { calculateMarketSummary, formatCompactCurrency, type Market } from "@/lib/markets";
+import { getSiteNetworkLinks } from "@/lib/site-network";
 
 type HubPageTemplateProps = {
   hub: HubPage;
@@ -15,6 +17,11 @@ type HubPageTemplateProps = {
 export function HubPageTemplate({ hub, markets }: HubPageTemplateProps) {
   const hubMarkets = getHubMarkets(hub.category, markets);
   const summary = calculateMarketSummary(hubMarkets);
+  const networkLinks = getSiteNetworkLinks({
+    pageType: "hub",
+    category: hub.category,
+    tags: [hub.primaryKeyword, hub.title],
+  });
 
   return (
     <>
@@ -101,6 +108,12 @@ export function HubPageTemplate({ hub, markets }: HubPageTemplateProps) {
             label: entry.title,
             description: entry.description,
           }))}
+      />
+
+      <SiteNetworkLinks
+        title={`More ${hub.category.toLowerCase()} research context`}
+        description="Selected sister projects are linked only when they add useful odds, source, or data context for this hub."
+        links={networkLinks}
       />
     </>
   );
