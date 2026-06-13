@@ -20,7 +20,7 @@ jobs:
       NEXT_TELEMETRY_DISABLED: "1"
       JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
       TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-      TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+      TMDB_API_READ_TOKEN: ${{ secrets.TMDB_API_READ_TOKEN }}
       OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
       TVMAZE_API_KEY: ${{ secrets.TVMAZE_API_KEY }}
       PARLAY_API_KEY: ${{ secrets.PARLAY_API_KEY }}
