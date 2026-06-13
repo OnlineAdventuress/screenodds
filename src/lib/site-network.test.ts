@@ -10,6 +10,7 @@ describe("site network registry", () => {
     expect(ownedNetworkDomains).toEqual([
       "odsage.com",
       "riftodds.lol",
+      "gridodds.com",
       "macroodds.com",
       "geoodds.com",
       "refstats.app",

@@ -61,3 +61,9 @@ Read this before starting each task.
 - What worked: A production crawl that strips scripts before checking visible error text avoids false positives from Next.js serialized `notFound` payloads.
 - What broke: Live Polymarket cards from hub/home pages linked to local `/markets/*` routes that are not generated for non-seeded markets, creating internal 404s.
 - Pattern to remember: Seeded fallback markets can link to local detail pages; live Polymarket-derived cards need to link to their external source URL unless a local detail page is explicitly generated.
+
+## 2026-06-13 - Owned Network Cross-Linking
+
+- What worked: A typed `site-network` registry plus a reusable component keeps owned-site links topical instead of adding a sitewide footer block.
+- What broke: Stale `.next` HTML initially hid that `gridodds.com` was missing from the generated homepage.
+- Pattern to remember: After changing static registry data used by SSG pages, remove `.next` and run a clean build before checking generated HTML.

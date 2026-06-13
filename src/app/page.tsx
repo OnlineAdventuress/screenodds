@@ -8,18 +8,19 @@ import { SiteNetworkLinks } from "@/components/site-network-links";
 import { getCategoryCounts, getHomeStats, hubPages } from "@/lib/content";
 import { formatCompactCurrency } from "@/lib/markets";
 import { fetchEntertainmentMarkets } from "@/lib/polymarket";
-import { getSiteNetworkLinks } from "@/lib/site-network";
+import { getAllNetworkSites } from "@/lib/site-network";
 
 export default async function Home() {
   const markets = await fetchEntertainmentMarkets();
   const { ranked, summary } = getHomeStats(markets);
   const topMarkets = ranked.slice(0, 6);
   const categoryCounts = getCategoryCounts(markets);
-  const networkLinks = getSiteNetworkLinks({
-    pageType: "home",
-    tags: ["entertainment", "box-office", "awards", "culture", "prediction-markets"],
-    maxLinks: 3,
-  });
+  const networkLinks = getAllNetworkSites().map((site) => ({
+    domain: site.domain,
+    href: site.href,
+    label: site.label,
+    description: site.description,
+  }));
 
   return (
     <>
@@ -136,27 +137,6 @@ export default async function Home() {
             href: "/movies",
             label: "Next James Bond actor odds",
             description: "A focused movie page with measurable search volume.",
-          },
-        ]}
-      />
-
-      <RelatedLinks
-        title="More specialist odds desks"
-        links={[
-          {
-            href: "https://odsage.com/",
-            label: "AI model and IPO odds",
-            description: "Odsage tracks AI model rankings, release timelines, AI IPOs, and AI bubble prediction markets.",
-          },
-          {
-            href: "https://macroodds.com/",
-            label: "Macro markets that shape media risk",
-            description: "MacroOdds follows Fed, inflation, recession, and rate markets that affect studios, streamers, and advertising cycles.",
-          },
-          {
-            href: "https://geoodds.com/",
-            label: "Geopolitical market context",
-            description: "GeoOdds covers election, policy, war, and world-headline markets that can move media narratives and platform risk.",
           },
         ]}
       />

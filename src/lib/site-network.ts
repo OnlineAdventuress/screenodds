@@ -3,6 +3,7 @@ import type { MarketCategory } from "./markets";
 export type NetworkDomain =
   | "odsage.com"
   | "riftodds.lol"
+  | "gridodds.com"
   | "macroodds.com"
   | "geoodds.com"
   | "refstats.app";
@@ -34,6 +35,7 @@ export type SiteNetworkLink = {
 export const ownedNetworkDomains: NetworkDomain[] = [
   "odsage.com",
   "riftodds.lol",
+  "gridodds.com",
   "macroodds.com",
   "geoodds.com",
   "refstats.app",
@@ -44,9 +46,9 @@ const networkSites: NetworkSite[] = [
     domain: "odsage.com",
     name: "Odsage",
     href: "https://odsage.com/",
-    label: "Odsage AI prediction-market research",
+    label: "Odsage prediction-market explainers",
     description:
-      "AI model, release, IPO, and AI bubble odds for readers comparing entertainment markets with frontier-tech prediction markets.",
+      "Plain-English odds, probability, and prediction-market education for readers who want the mechanics behind the markets.",
     terms: [
       "odds",
       "prediction-markets",
@@ -68,6 +70,16 @@ const networkSites: NetworkSite[] = [
       "League of Legends, gaming, and esports market context for readers moving from screen entertainment into competitive gaming.",
     terms: ["esports", "gaming", "league of legends", "lol", "twitch", "culture"],
     priority: 50,
+  },
+  {
+    domain: "gridodds.com",
+    name: "GridOdds",
+    href: "https://gridodds.com/",
+    label: "GridOdds sports and schedule odds",
+    description:
+      "Sports, fixture, and schedule-driven odds research for readers comparing entertainment markets with live competition markets.",
+    terms: ["sports", "football", "basketball", "schedule", "fixture", "competition"],
+    priority: 55,
   },
   {
     domain: "macroodds.com",
@@ -93,9 +105,9 @@ const networkSites: NetworkSite[] = [
     domain: "refstats.app",
     name: "RefStats",
     href: "https://refstats.app/",
-    label: "RefStats football referee stats",
+    label: "RefStats source-backed data checks",
     description:
-      "Football referee appointments, cards, fouls, and booking trends for readers comparing entertainment odds with source-backed sports data.",
+      "Reference statistics, source checks, and data-methodology support for box office, ratings, awards, and market research.",
     terms: [
       "data",
       "stats",
