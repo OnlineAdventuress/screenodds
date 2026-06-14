@@ -59,6 +59,28 @@ describe("sentiment pulse cache", () => {
               volumeLabel: "$65.4K volume",
             },
           ],
+          scoredItems: [
+            {
+              source: "x",
+              url: "https://x.com/PredictionNews_/status/2062231921791541519",
+              text: "Polymarket added Love Island markets.",
+              publishedAt: "2026-06-03T00:00:00.000Z",
+              engagement: 4,
+              relevance: 0.9,
+              stance: 0.7,
+              confidence: 0.75,
+            },
+            {
+              source: "web",
+              url: "http://example.com/rejected",
+              text: "This item should be rejected because the URL is not https.",
+              publishedAt: "2026-06-03T00:00:00.000Z",
+              engagement: 4,
+              relevance: 0.9,
+              stance: 0.7,
+              confidence: 0.75,
+            },
+          ],
           confidence: "live",
         }),
       );
@@ -69,6 +91,8 @@ describe("sentiment pulse cache", () => {
 
       expect(pulse.confidence).toBe("live");
       expect(pulse.citedPosts[0]?.author).toBe("PredictionNews_");
+      expect(pulse.scoredItems).toHaveLength(1);
+      expect(pulse.scoredItems[0]?.stance).toBe(0.7);
       expect(JSON.stringify(pulse)).not.toContain("xai-");
       expect(JSON.stringify(pulse)).not.toContain("apiKey");
     } finally {

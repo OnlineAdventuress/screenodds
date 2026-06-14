@@ -1,10 +1,13 @@
 import type { SentimentPulse as SentimentPulseModel } from "../lib/sentiment";
+import { formatProbability } from "../lib/markets";
+import { calculateSentimentSignal } from "../lib/sentiment-signal";
 
 type SentimentPulseProps = {
   pulse: SentimentPulseModel | null;
+  marketProbability?: number | null;
 };
 
-export function SentimentPulse({ pulse }: SentimentPulseProps) {
+export function SentimentPulse({ pulse, marketProbability = null }: SentimentPulseProps) {
   if (!pulse) {
     return null;
   }
@@ -15,6 +18,14 @@ export function SentimentPulse({ pulse }: SentimentPulseProps) {
     ["Polymarket", pulse.sourceCounts.polymarket],
     ["Kalshi", pulse.sourceCounts.kalshi],
   ];
+  const signal =
+    typeof marketProbability === "number"
+      ? calculateSentimentSignal({
+          marketProbability,
+          items: pulse.scoredItems,
+          now: parseDateOrNow(pulse.checkedAt),
+        })
+      : null;
 
   return (
     <div className="screen-panel p-5">
@@ -38,8 +49,46 @@ export function SentimentPulse({ pulse }: SentimentPulseProps) {
       <div className="mt-5 grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">
-            Checked {pulse.checkedAt.slice(0, 10)} · {pulse.windowDays}-day window
+            Checked {pulse.checkedAt.slice(0, 10)} / {pulse.windowDays}-day window
           </p>
+
+          {signal ? (
+            <div className="mt-4 border-y border-zinc-800 py-4">
+              <p className="text-sm font-semibold text-zinc-100">
+                Market vs social signal
+              </p>
+              {signal.socialProbability === null || signal.divergence === null ? (
+                <p className="mt-3 text-sm leading-6 text-zinc-500">
+                  Not enough scored items for a social-implied probability.
+                </p>
+              ) : (
+                <>
+                  <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                    <SignalMetric
+                      label="Market"
+                      value={formatProbability(signal.marketProbability)}
+                    />
+                    <SignalMetric
+                      label="Social-implied"
+                      value={formatProbability(signal.socialProbability)}
+                    />
+                    <SignalMetric
+                      label="Divergence"
+                      value={formatPercentagePointDivergence(signal.divergence)}
+                    />
+                    <SignalMetric label="Confidence" value={signal.confidenceLabel} />
+                  </div>
+                  <p className="mt-3 text-xs leading-5 text-zinc-500">
+                    Social-implied probability is stance-weighted and uncalibrated.
+                    {signal.signal
+                      ? " This clears the current ScreenOdds divergence threshold."
+                      : " This is context only, not a strong divergence signal."}
+                  </p>
+                </>
+              )}
+            </div>
+          ) : null}
+
           <p className="mt-3 text-sm leading-7 text-zinc-300">{pulse.summary}</p>
           <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-400">
             {pulse.topNarratives.map((narrative) => (
@@ -74,7 +123,7 @@ export function SentimentPulse({ pulse }: SentimentPulseProps) {
                     target="_blank"
                   >
                     <p className="text-xs uppercase tracking-[0.12em] text-zinc-500">
-                      {post.source} · {post.date} · {post.engagementLabel}
+                      {post.source} / {post.date} / {post.engagementLabel}
                     </p>
                     <p className="mt-2 text-sm font-semibold text-zinc-100">
                       {post.author}
@@ -110,7 +159,7 @@ export function SentimentPulse({ pulse }: SentimentPulseProps) {
                     </p>
                     <p className="mt-2 text-sm text-zinc-400">
                       {market.priceLabel}
-                      {market.volumeLabel ? ` · ${market.volumeLabel}` : ""}
+                      {market.volumeLabel ? ` / ${market.volumeLabel}` : ""}
                     </p>
                   </a>
                 ))
@@ -125,4 +174,23 @@ export function SentimentPulse({ pulse }: SentimentPulseProps) {
       </div>
     </div>
   );
+}
+
+function SignalMetric({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <p className="text-xs uppercase tracking-[0.12em] text-zinc-500">{label}</p>
+      <p className="mt-1 text-sm font-semibold text-zinc-100">{value}</p>
+    </div>
+  );
+}
+
+function parseDateOrNow(value: string): Date {
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? new Date() : date;
+}
+
+function formatPercentagePointDivergence(value: number): string {
+  const points = Math.round(value * 1000) / 10;
+  return `${points > 0 ? "+" : ""}${points}% pts`;
 }

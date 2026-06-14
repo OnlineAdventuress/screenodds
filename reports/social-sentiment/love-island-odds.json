@@ -59,5 +59,40 @@
       "volumeLabel": "$448 volume"
     }
   ],
+  "scoredItems": [
+    {
+      "source": "x",
+      "author": "launchaldrin",
+      "url": "https://x.com/launchaldrin/status/2062362515242205272",
+      "text": "Love Island markets were added to Polymarket's U.S. app while Kalshi was also running Love Island event markets.",
+      "publishedAt": "2026-06-04T00:00:00.000Z",
+      "engagement": 10,
+      "relevance": 0.86,
+      "stance": 0.34,
+      "confidence": 0.66
+    },
+    {
+      "source": "x",
+      "author": "PredictionNews_",
+      "url": "https://x.com/PredictionNews_/status/2062231921791541519",
+      "text": "Polymarket is continuing to expand its U.S. app, with new culture markets including Love Island USA Season 8.",
+      "publishedAt": "2026-06-03T00:00:00.000Z",
+      "engagement": 4,
+      "relevance": 0.82,
+      "stance": 0.28,
+      "confidence": 0.62
+    },
+    {
+      "source": "x",
+      "author": "pmkt_new",
+      "url": "https://x.com/pmkt_new/status/2060142499818017216",
+      "text": "A direct post linked to the Love Island USA Season 8 winner market.",
+      "publishedAt": "2026-05-28T00:00:00.000Z",
+      "engagement": 1,
+      "relevance": 0.72,
+      "stance": 0.16,
+      "confidence": 0.55
+    }
+  ],
   "confidence": "live"
 }

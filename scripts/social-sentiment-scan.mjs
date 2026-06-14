@@ -12,6 +12,8 @@ const scanTargets = [
     marketSlug: "love-island-odds",
     query: "Love Island Polymarket",
     kalshiSeriesHint: "KXLIUSAELIMINATION",
+    outcomePrompt:
+      "whether public discussion supports the active Love Island winner market moving higher",
     fallbackSummary:
       "Dry run snapshot for Love Island prediction-market sentiment. Run without --dry-run to refresh xAI X Search and Kalshi context.",
   },
@@ -19,6 +21,8 @@ const scanTargets = [
     marketSlug: "polymarket-oscars-best-picture",
     query: "Polymarket Oscars Best Picture Kalshi",
     kalshiSeriesHint: "KXOSCARPIC",
+    outcomePrompt:
+      "whether public discussion supports the active Best Picture market moving higher",
     fallbackSummary:
       "Dry run snapshot for Oscars Best Picture sentiment. Run without --dry-run to refresh awards-market chatter and Kalshi Oscars context.",
   },
@@ -26,6 +30,8 @@ const scanTargets = [
     marketSlug: "highest-grossing-movie-in-2026",
     query: "highest grossing movie Polymarket Kalshi",
     kalshiSeriesHint: "KXNETFLIXRANKMOVIE",
+    outcomePrompt:
+      "whether public discussion supports the active highest-grossing movie market moving higher",
     fallbackSummary:
       "Dry run snapshot for highest-grossing movie market sentiment. Run without --dry-run to refresh movie chart and comparison-market context.",
   },
@@ -95,6 +101,7 @@ export function buildDryRunSnapshot(target, { now = new Date() } = {}) {
     },
     citedPosts: [],
     relatedMarkets: [],
+    scoredItems: buildDryRunScoredItems(target, { now }),
     confidence: "fallback",
   };
 }
@@ -158,6 +165,7 @@ async function buildLiveSnapshot(target, env) {
     },
     citedPosts: xSummary.citedPosts,
     relatedMarkets: kalshiMarkets,
+    scoredItems: xSummary.scoredItems,
     confidence: "live",
   };
 }
@@ -179,7 +187,7 @@ async function fetchXaiSentimentSummary(target, env) {
         },
         {
           role: "user",
-          content: `Search X for the last 30 days for: ${target.query}. Return JSON with sentimentLabel, summary, topNarratives, and citedPosts. citedPosts must include source, author, url, date, engagementLabel, and text.`,
+          content: `Search X for the last 30 days for: ${target.query}. Return JSON with sentimentLabel, summary, topNarratives, citedPosts, and scoredItems. citedPosts must include source, author, url, date, engagementLabel, and text. scoredItems must include source, url, author, text, publishedAt, engagement, relevance, stance, and confidence. Score stance for this outcome only: ${target.outcomePrompt}. Stance is not generic tone: -1 strongly implies NO/lower, +1 strongly implies YES/higher, 0 neutral.`,
         },
       ],
       tools: [
@@ -228,6 +236,111 @@ function normalizeXaiSummary(content) {
       ? parsed.topNarratives.map(stringValue).filter(Boolean).slice(0, 5)
       : ["No dominant X narrative was returned."],
     citedPosts,
+    scoredItems: normalizeScoredItems(parsed.scoredItems, citedPosts),
+  };
+}
+
+function buildDryRunScoredItems(target, { now }) {
+  const dayMs = 24 * 60 * 60 * 1000;
+  const rows = [
+    {
+      source: "x",
+      daysAgo: 1,
+      engagement: 14,
+      relevance: 0.75,
+      stance: 0.22,
+      confidence: 0.65,
+      text: `${target.query} dry-run item: public discussion is directionally relevant but not decisive.`,
+    },
+    {
+      source: "web",
+      daysAgo: 4,
+      engagement: 6,
+      relevance: 0.68,
+      stance: 0.12,
+      confidence: 0.58,
+      text: `${target.query} dry-run item: coverage adds context without confirming a market edge.`,
+    },
+    {
+      source: "reddit",
+      daysAgo: 9,
+      engagement: 22,
+      relevance: 0.61,
+      stance: -0.04,
+      confidence: 0.52,
+      text: `${target.query} dry-run item: discussion is mixed and should remain low confidence.`,
+    },
+  ];
+
+  return rows.map((row) => ({
+    source: row.source,
+    text: row.text,
+    publishedAt: new Date(now.getTime() - row.daysAgo * dayMs).toISOString(),
+    engagement: row.engagement,
+    relevance: row.relevance,
+    stance: row.stance,
+    confidence: row.confidence,
+  }));
+}
+
+function normalizeScoredItems(value, citedPosts) {
+  const scoredItems = Array.isArray(value)
+    ? value.map(normalizeScoredItem).filter(Boolean).slice(0, 25)
+    : [];
+
+  if (scoredItems.length > 0) {
+    return scoredItems;
+  }
+
+  return citedPosts
+    .map((post) =>
+      normalizeScoredItem({
+        source: post.source,
+        author: post.author,
+        url: post.url,
+        text: post.text,
+        publishedAt: post.date,
+        engagement: parseEngagement(post.engagementLabel),
+        relevance: 0.65,
+        stance: 0.08,
+        confidence: 0.45,
+      }),
+    )
+    .filter(Boolean)
+    .slice(0, 10);
+}
+
+function normalizeScoredItem(item) {
+  if (!item || typeof item !== "object") {
+    return null;
+  }
+
+  const source = normalizeScoredItemSource(item.source);
+  const text = stringValue(item.text).slice(0, 280);
+  const publishedAt = normalizeDate(item.publishedAt);
+  const url = item.url === undefined ? undefined : safeHttpsUrl(item.url);
+  const relevance = unitNumber(item.relevance);
+  const stance = boundedNumber(item.stance, -1, 1);
+  const confidence = unitNumber(item.confidence);
+
+  if (!source || !text || !publishedAt || relevance === null || stance === null || confidence === null) {
+    return null;
+  }
+
+  if (item.url !== undefined && !url) {
+    return null;
+  }
+
+  return {
+    source,
+    url,
+    author: stringValue(item.author) || undefined,
+    text,
+    publishedAt,
+    engagement: optionalPositiveNumber(item.engagement) ?? 0,
+    relevance,
+    stance,
+    confidence,
   };
 }
 
@@ -318,6 +431,12 @@ function normalizeSentimentLabel(value) {
     : "neutral";
 }
 
+function normalizeScoredItemSource(value) {
+  return ["x", "reddit", "tiktok", "web", "news", "polymarket"].includes(value)
+    ? value
+    : null;
+}
+
 function stripEnvQuotes(value) {
   if (
     (value.startsWith('"') && value.endsWith('"')) ||
@@ -336,6 +455,20 @@ function safeHttpsUrl(value) {
   } catch {
     return "";
   }
+}
+
+function normalizeDate(value) {
+  const candidate = stringValue(value);
+  if (!candidate) {
+    return "";
+  }
+  const date = new Date(candidate);
+  return Number.isNaN(date.getTime()) ? "" : date.toISOString();
+}
+
+function parseEngagement(value) {
+  const match = stringValue(value).match(/\d+(?:\.\d+)?/);
+  return match ? Number(match[0]) : 0;
 }
 
 function formatProbability(value) {
@@ -359,6 +492,23 @@ function fixedPointDollarValue(value) {
 function optionalNumber(value) {
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : null;
+}
+
+function optionalPositiveNumber(value) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : null;
+}
+
+function unitNumber(value) {
+  return boundedNumber(value, 0, 1);
+}
+
+function boundedNumber(value, min, max) {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed)) {
+    return null;
+  }
+  return Math.min(max, Math.max(min, parsed));
 }
 
 function stringValue(value) {

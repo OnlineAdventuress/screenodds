@@ -35,13 +35,52 @@ const pulse: SentimentPulseModel = {
     },
   ],
   confidence: "live",
+  scoredItems: [
+    {
+      source: "x",
+      url: "https://x.com/PredictionNews_/status/2062231921791541519",
+      text: "Polymarket added Love Island markets.",
+      publishedAt: "2026-06-03T00:00:00.000Z",
+      engagement: 4,
+      relevance: 0.9,
+      stance: 0.7,
+      confidence: 0.75,
+    },
+    {
+      source: "web",
+      url: "https://example.com/love-island-signal",
+      text: "Audience discussion supports the active market direction.",
+      publishedAt: "2026-06-04T00:00:00.000Z",
+      engagement: 12,
+      relevance: 0.82,
+      stance: 0.54,
+      confidence: 0.72,
+    },
+    {
+      source: "reddit",
+      url: "https://www.reddit.com/r/LoveIslandUSA/comments/example",
+      text: "Fans are repeating the same finalist narrative.",
+      publishedAt: "2026-06-05T00:00:00.000Z",
+      engagement: 30,
+      relevance: 0.76,
+      stance: 0.48,
+      confidence: 0.68,
+    },
+  ],
 };
 
 describe("SentimentPulse", () => {
   it("renders sentiment summary, narratives, source counts, and links", () => {
-    const html = renderToStaticMarkup(<SentimentPulse pulse={pulse} />);
+    const html = renderToStaticMarkup(
+      <SentimentPulse pulse={pulse} marketProbability={0.16} />,
+    );
 
     expect(html).toContain("Sentiment pulse");
+    expect(html).toContain("Market vs social signal");
+    expect(html).toContain("Market");
+    expect(html).toContain("16%");
+    expect(html).toContain("Social-implied");
+    expect(html).toContain("Divergence");
     expect(html).toContain("mixed");
     expect(html).toContain("Checked 2026-06-12");
     expect(html).toContain("30-day window");
@@ -58,16 +97,19 @@ describe("SentimentPulse", () => {
   it("renders a fallback-safe panel without cited links", () => {
     const html = renderToStaticMarkup(
       <SentimentPulse
+        marketProbability={0.16}
         pulse={{
           ...pulse,
           confidence: "fallback",
           citedPosts: [],
           relatedMarkets: [],
+          scoredItems: [],
         }}
       />,
     );
 
     expect(html).toContain("fallback");
+    expect(html).toContain("Not enough scored items for a social-implied probability.");
     expect(html).toContain("No cited social posts cached yet.");
     expect(html).toContain("No related comparison markets cached yet.");
   });

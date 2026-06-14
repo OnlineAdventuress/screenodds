@@ -47,6 +47,12 @@ describe("social sentiment scan script helpers", () => {
       confidence: "fallback",
     });
     expect(snapshot.summary).toContain("Dry run");
+    expect(snapshot.scoredItems).toHaveLength(3);
+    expect(snapshot.scoredItems[0]).toMatchObject({
+      source: "x",
+      relevance: 0.75,
+      confidence: 0.65,
+    });
     expect(JSON.stringify(snapshot)).not.toContain("xai-");
   });
 

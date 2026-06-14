@@ -138,7 +138,7 @@ export default async function MarketPage({ params }: MarketPageProps) {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
-        <SentimentPulse pulse={sentimentPulse} />
+        <SentimentPulse pulse={sentimentPulse} marketProbability={market.probability} />
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">

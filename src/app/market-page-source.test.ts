@@ -12,6 +12,8 @@ describe("market page sentiment integration", () => {
     expect(source).toContain('import { SentimentPulse } from "@/components/sentiment-pulse"');
     expect(source).toContain('import { getSentimentPulseForMarket } from "@/lib/sentiment"');
     expect(source).toContain("await getSentimentPulseForMarket(market.slug)");
-    expect(source).toContain("<SentimentPulse pulse={sentimentPulse} />");
+    expect(source).toContain(
+      "<SentimentPulse pulse={sentimentPulse} marketProbability={market.probability} />",
+    );
   });
 });

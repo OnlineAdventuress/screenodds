@@ -1,5 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { normalizePublishedAt } from "./last30days";
+import type { ScoredSentimentItem, SentimentItemSource } from "./sentiment-signal";
 
 export type SentimentLabel = "positive" | "mixed" | "negative" | "neutral";
 
@@ -40,6 +42,7 @@ export type SentimentPulse = {
   sourceCounts: SentimentSourceCounts;
   citedPosts: CitedSentimentPost[];
   relatedMarkets: RelatedSentimentMarket[];
+  scoredItems: ScoredSentimentItem[];
   confidence: SentimentConfidence;
 };
 
@@ -138,6 +141,7 @@ export function getFallbackSentimentPulse(marketSlug: string): SentimentPulse {
     sourceCounts: { ...defaultSourceCounts },
     citedPosts: [],
     relatedMarkets: [],
+    scoredItems: [],
     confidence: "fallback",
   };
 }
@@ -167,6 +171,7 @@ export function normalizeSentimentSnapshot(raw: unknown): SentimentPulse | null 
     sourceCounts: normalizeSourceCounts(raw.sourceCounts),
     citedPosts: normalizeCitedPosts(raw.citedPosts),
     relatedMarkets: normalizeRelatedMarkets(raw.relatedMarkets),
+    scoredItems: normalizeScoredItems(raw.scoredItems),
     confidence: raw.confidence === "live" ? "live" : "fallback",
   };
 }
@@ -267,6 +272,56 @@ function normalizeRelatedMarkets(value: unknown): RelatedSentimentMarket[] {
     .slice(0, 4);
 }
 
+function normalizeScoredItems(value: unknown): ScoredSentimentItem[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .map((item): ScoredSentimentItem | null => {
+      if (!isRecord(item)) {
+        return null;
+      }
+
+      const source = normalizeScoredItemSource(item.source);
+      const text = stringValue(item.text);
+      const publishedAt = normalizePublishedAt(item.publishedAt);
+      const relevance = unitNumber(item.relevance);
+      const stance = boundedNumber(item.stance, -1, 1);
+      const confidence = unitNumber(item.confidence);
+      const url = item.url === undefined ? undefined : safeHttpsUrl(item.url);
+
+      if (
+        !source ||
+        !text ||
+        !publishedAt ||
+        relevance === null ||
+        stance === null ||
+        confidence === null
+      ) {
+        return null;
+      }
+
+      if (item.url !== undefined && !url) {
+        return null;
+      }
+
+      return {
+        source,
+        url,
+        author: stringValue(item.author) || undefined,
+        text,
+        publishedAt,
+        engagement: positiveNumber(item.engagement) ?? 0,
+        relevance,
+        stance,
+        confidence,
+      };
+    })
+    .filter((item): item is ScoredSentimentItem => Boolean(item))
+    .slice(0, 50);
+}
+
 function normalizePostSource(value: unknown): CitedSentimentPost["source"] | null {
   return value === "x" || value === "reddit" || value === "tiktok" || value === "web"
     ? value
@@ -275,6 +330,17 @@ function normalizePostSource(value: unknown): CitedSentimentPost["source"] | nul
 
 function normalizeMarketSource(value: unknown): RelatedSentimentMarket["source"] | null {
   return value === "polymarket" || value === "kalshi" || value === "parlay"
+    ? value
+    : null;
+}
+
+function normalizeScoredItemSource(value: unknown): SentimentItemSource | null {
+  return value === "x" ||
+    value === "reddit" ||
+    value === "tiktok" ||
+    value === "web" ||
+    value === "news" ||
+    value === "polymarket"
     ? value
     : null;
 }
@@ -300,6 +366,18 @@ function stringValue(value: unknown): string {
 function positiveNumber(value: unknown): number | null {
   const number = Number(value);
   return Number.isFinite(number) && number >= 0 ? number : null;
+}
+
+function unitNumber(value: unknown): number | null {
+  return boundedNumber(value, 0, 1);
+}
+
+function boundedNumber(value: unknown, min: number, max: number): number | null {
+  const number = Number(value);
+  if (!Number.isFinite(number)) {
+    return null;
+  }
+  return Math.min(max, Math.max(min, number));
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
