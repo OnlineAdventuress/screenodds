@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_TELEMETRY_DISABLED: "1"
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
       JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
       TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
       TMDB_API_READ_TOKEN: ${{ secrets.TMDB_API_READ_TOKEN }}
@@ -36,7 +37,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
