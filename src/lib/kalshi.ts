@@ -225,8 +225,17 @@ function formatProbability(value: number): string {
 }
 
 function formatCompactCurrency(value: number): string {
+  if (Math.abs(value) < 1000) {
+    return new Intl.NumberFormat("en-US", {
+      maximumFractionDigits: 0,
+      style: "currency",
+      currency: "USD",
+    }).format(value);
+  }
+
   return new Intl.NumberFormat("en-US", {
     notation: "compact",
+    minimumFractionDigits: 0,
     maximumFractionDigits: 1,
     style: "currency",
     currency: "USD",

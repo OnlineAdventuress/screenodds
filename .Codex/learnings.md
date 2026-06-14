@@ -73,3 +73,9 @@ Read this before starting each task.
 - What worked: A separate `news-quality-gate` module makes daily publish/draft/discard decisions testable instead of burying SEO rules in the cron script.
 - What broke: GitHub Actions `git diff` would miss newly generated JSON files because untracked files are ignored.
 - Pattern to remember: Use `git status --porcelain -- content/news reports/news-research` when a workflow needs to detect newly generated content files.
+
+## 2026-06-14 - GitHub Actions Locale Formatting
+
+- What worked: Manually triggering the daily cron exposed CI-only behavior before the scheduled run.
+- What broke: `Intl.NumberFormat` compact currency rendered `$37` on Windows but `$37.0` on Ubuntu for a sub-$1K Kalshi volume label.
+- Pattern to remember: For display strings asserted in tests, avoid compact `Intl.NumberFormat` for small currency values or force a deterministic formatting branch.
