@@ -1,17 +1,17 @@
 {
-  "checkedAt": "2026-06-14T01:42:52.328Z",
+  "checkedAt": "2026-06-14T02:00:42.647Z",
   "candidateSlug": "awards-market-watch-2026-06-14",
   "category": "Awards",
-  "action": "draft",
+  "action": "publish",
   "score": 100,
-  "status": "draft",
+  "status": "published",
   "sourceConfidence": 1,
-  "trustedSourceCount": 2,
+  "trustedSourceCount": 5,
   "riskFlags": [],
   "reasons": [
     "source confidence is high",
     "has at least two trusted sources",
-    "needs an official, market-data, or box-office source before auto-publication",
+    "has a primary signal source",
     "has no risk flags",
     "has ScreenOdds market context",
     "has internal related links",
@@ -19,7 +19,10 @@
     "adds ScreenOdds editorial context"
   ],
   "sourceUrls": [
+    "https://polymarket.com/predictions/oscars/2026",
     "https://www.hollywoodreporter.com/movies/movie-news/bet-on-oscars-best-actor-best-picture-kalshi-polymarket-1236530164/",
-    "https://variety.com/2026/film/news/chalamet-jordan-oscar-prediction-markets-1236686211/"
+    "https://polymarket.com/predictions/awards",
+    "https://variety.com/2026/film/news/chalamet-jordan-oscar-prediction-markets-1236686211/",
+    "https://polymarket.com/pop-culture/oscars"
   ]
 }
