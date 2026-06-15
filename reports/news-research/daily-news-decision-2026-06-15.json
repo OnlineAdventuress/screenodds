@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-06-15T20:02:50.721Z",
+  "candidateSlug": "movies-market-watch-2026-06-15",
+  "category": "Movies",
+  "action": "publish",
+  "score": 100,
+  "status": "published",
+  "sourceConfidence": 1,
+  "trustedSourceCount": 4,
+  "riskFlags": [],
+  "reasons": [
+    "source confidence is high",
+    "has at least two trusted sources",
+    "has a primary signal source",
+    "has no risk flags",
+    "has ScreenOdds market context",
+    "has internal related links",
+    "has image and alt text",
+    "adds ScreenOdds editorial context"
+  ],
+  "sourceUrls": [
+    "https://polymarket.com/predictions/movies",
+    "https://polymarket.com/predictions/box-office",
+    "https://www.hollywoodreporter.com/movies/movie-news/predictions-markets-oscars-80-percent-right-kalshi-polymarket-what-paid-out-1236534573/",
+    "https://polymarket.com/predictions/acting"
+  ]
+}

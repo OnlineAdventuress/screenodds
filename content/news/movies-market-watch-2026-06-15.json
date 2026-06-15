@@ -1,0 +1,98 @@
+{
+  "kind": "news",
+  "slug": "movies-market-watch-2026-06-15",
+  "title": "Movies Market Watch: Source Signals for 2026-06-15",
+  "description": "A source-backed ScreenOdds market watch for movies prediction-market readers, generated from the daily Jina research scan.",
+  "category": "Movies",
+  "status": "published",
+  "publishedAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "newsType": "market-move",
+  "riskLevel": "low",
+  "sourceConfidence": 1,
+  "riskFlags": [],
+  "heroImage": "/images/movies-hero.png",
+  "heroAlt": "Movies prediction-market editorial dashboard",
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/movies-hero.png",
+    "alt": "Movies prediction-market editorial dashboard",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/movies-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial placeholder. Replace with TMDb/official real media when source metadata is available."
+  },
+  "sections": [
+    {
+      "heading": "What the scan found",
+      "paragraphs": [
+        "Jina returned 5 candidate sources for the movies watchlist with 4 trusted sources and a source-confidence score of 100%.",
+        "This routine only publishes when source confidence is high, the story type is low risk, and image attribution metadata is present. Otherwise the item remains a draft for editorial review."
+      ]
+    },
+    {
+      "heading": "Market context",
+      "paragraphs": [
+        "ScreenOdds treats these updates as informational context for prediction-market readers. The goal is to explain public signals, market movement, and upcoming catalysts without presenting probabilities as advice.",
+        "Official announcements, box office data, market data, nominations, results, and reliable trade reporting are eligible for low-risk publication. Rumors, leaks, allegations, and unclear sourcing are not."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Movies Predictions & Real-Time Odds | Polymarket",
+      "url": "https://polymarket.com/predictions/movies",
+      "publisher": "Polymarket",
+      "sourceType": "market-data",
+      "accessedAt": "2026-06-15"
+    },
+    {
+      "title": "Box Office Predictions & Real-Time Odds | Polymarket",
+      "url": "https://polymarket.com/predictions/box-office",
+      "publisher": "Polymarket",
+      "sourceType": "market-data",
+      "accessedAt": "2026-06-15"
+    },
+    {
+      "title": "Polymarket and Kalshi Got the Oscars About 80 Percent Right",
+      "url": "https://www.hollywoodreporter.com/movies/movie-news/predictions-markets-oscars-80-percent-right-kalshi-polymarket-what-paid-out-1236534573/",
+      "publisher": "Hollywoodreporter",
+      "sourceType": "trade-reporting",
+      "accessedAt": "2026-06-15"
+    },
+    {
+      "title": "Acting Predictions & Real-Time Odds | Polymarket",
+      "url": "https://polymarket.com/predictions/acting",
+      "publisher": "Polymarket",
+      "sourceType": "market-data",
+      "accessedAt": "2026-06-15"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/movies",
+      "label": "Movie Prediction Markets",
+      "description": "Casting and release-market coverage."
+    },
+    {
+      "href": "/blog/next-james-bond-actor-odds",
+      "label": "Next James Bond actor odds",
+      "description": "Movie casting market guide."
+    }
+  ],
+  "related": [
+    {
+      "href": "/news",
+      "label": "ScreenOdds News",
+      "description": "All source-backed market notes."
+    },
+    {
+      "href": "/movies",
+      "label": "Movies hub",
+      "description": "ScreenOdds movies coverage."
+    }
+  ],
+  "inlineImages": [],
+  "infographics": [],
+  "faqs": []
+}
