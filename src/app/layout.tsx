@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "wJCSxmDxdl6KULOhe7ki1dOiSkoF2Qegq2KumXfFKtk",
+  },
   openGraph: {
     title: "ScreenOdds | Entertainment Prediction Markets",
     description: siteConfig.description,

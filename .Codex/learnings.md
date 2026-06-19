@@ -91,3 +91,9 @@ Read this before starting each task.
 - What worked: New guide JSON files can reference Jina screenshots and Kie-generated infographics under `public/blog/{slug}/...`, and the existing sitemap/static route generation picks them up automatically.
 - What broke: The blog article page previously rendered only the hero image and ignored `inlineImages` and `infographics`, so adding media metadata alone would not show the assets.
 - Pattern to remember: When adding content visuals, verify both sides: local files exist above minimum size and the rendered `.next` route contains the screenshot/infographic paths.
+
+## 2026-06-19 - ScreenOdds GSC Setup
+
+- What worked: The shared GSC submitter can generate a Google verification token and IndexNow key for ScreenOdds once the site is live on Netlify.
+- What broke: ScreenOdds was not in the verified GSC property list, so the global submit run skipped it even though the production sitemap was valid.
+- Pattern to remember: For new Netlify SEO sites, add `metadata.verification.google`, deploy it, run `submit.py verify`, and only then expect `submit.py submit` to include the domain.
