@@ -1,0 +1,105 @@
+{
+  "kind": "news",
+  "slug": "awards-market-watch-2026-06-19",
+  "title": "Awards Market Watch: Source Signals for 2026-06-19",
+  "description": "A source-backed ScreenOdds market watch for awards prediction-market readers, generated from the daily Jina research scan.",
+  "category": "Awards",
+  "status": "published",
+  "publishedAt": "2026-06-19",
+  "updatedAt": "2026-06-19",
+  "newsType": "awards-signal",
+  "riskLevel": "low",
+  "sourceConfidence": 1,
+  "riskFlags": [],
+  "heroImage": "/images/awards-hero.png",
+  "heroAlt": "Awards prediction-market editorial dashboard",
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/images/awards-hero.png",
+    "alt": "Awards prediction-market editorial dashboard",
+    "provider": "Kie.ai",
+    "sourceUrl": "/images/awards-hero.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial placeholder. Replace with TMDb/official real media when source metadata is available."
+  },
+  "sections": [
+    {
+      "heading": "What the scan found",
+      "paragraphs": [
+        "Jina returned 5 candidate sources for the awards watchlist with 5 trusted sources and a source-confidence score of 100%.",
+        "This routine only publishes when source confidence is high, the story type is low risk, and image attribution metadata is present. Otherwise the item remains a draft for editorial review."
+      ]
+    },
+    {
+      "heading": "Market context",
+      "paragraphs": [
+        "ScreenOdds treats these updates as informational context for prediction-market readers. The goal is to explain public signals, market movement, and upcoming catalysts without presenting probabilities as advice.",
+        "Official announcements, box office data, market data, nominations, results, and reliable trade reporting are eligible for low-risk publication. Rumors, leaks, allegations, and unclear sourcing are not."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Oscars predictions & odds (2026) | Polymarket",
+      "url": "https://polymarket.com/predictions/oscars/2026",
+      "publisher": "Polymarket",
+      "sourceType": "market-data",
+      "accessedAt": "2026-06-19"
+    },
+    {
+      "title": "More Than $116 Million Has Already Been Bet on the Oscars — and It’s Only Friday Afternoon",
+      "url": "https://www.hollywoodreporter.com/movies/movie-news/bet-on-oscars-best-actor-best-picture-kalshi-polymarket-1236530164/",
+      "publisher": "Hollywoodreporter",
+      "sourceType": "trade-reporting",
+      "accessedAt": "2026-06-19"
+    },
+    {
+      "title": "Awards Predictions & Real-Time Odds | Polymarket",
+      "url": "https://polymarket.com/predictions/awards",
+      "publisher": "Polymarket",
+      "sourceType": "market-data",
+      "accessedAt": "2026-06-19"
+    },
+    {
+      "title": "Chalamet or Jordan? Now, Oscar Watchers Can Put Serious Money on It",
+      "url": "https://variety.com/2026/film/news/chalamet-jordan-oscar-prediction-markets-1236686211/",
+      "publisher": "Variety",
+      "sourceType": "trade-reporting",
+      "accessedAt": "2026-06-19"
+    },
+    {
+      "title": "Pop Culture Odds & Predictions 2026 | Polymarket",
+      "url": "https://polymarket.com/culture/oscars",
+      "publisher": "Polymarket",
+      "sourceType": "market-data",
+      "accessedAt": "2026-06-19"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/awards",
+      "label": "Awards Prediction Markets",
+      "description": "Live awards market context."
+    },
+    {
+      "href": "/oscars",
+      "label": "Oscars Odds",
+      "description": "The focused Oscars authority page."
+    }
+  ],
+  "related": [
+    {
+      "href": "/news",
+      "label": "ScreenOdds News",
+      "description": "All source-backed market notes."
+    },
+    {
+      "href": "/awards",
+      "label": "Awards hub",
+      "description": "ScreenOdds awards coverage."
+    }
+  ],
+  "inlineImages": [],
+  "infographics": [],
+  "faqs": []
+}
