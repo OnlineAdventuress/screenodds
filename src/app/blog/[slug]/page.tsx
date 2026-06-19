@@ -10,6 +10,7 @@ import {
   buildBreadcrumbJsonLd,
   buildFaqPageJsonLd,
 } from "@/lib/seo";
+import type { InfographicAsset, MediaAsset } from "@/lib/editorial";
 import { getSiteNetworkLinks } from "@/lib/site-network";
 
 type ArticlePageProps = {
@@ -119,7 +120,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <p className="mt-3 text-xs leading-5 text-zinc-500">{article.heroMedia.credit}</p>
 
         <div className="mt-10 space-y-10">
-          {article.sections.map((section) => (
+          {article.sections.map((section, index) => (
             <section key={section.heading}>
               <h2 className="text-2xl font-semibold text-zinc-50">{section.heading}</h2>
               <div className="mt-4 space-y-4">
@@ -129,6 +130,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   </p>
                 ))}
               </div>
+              {article.inlineImages[index] ? (
+                <InlineMediaFigure asset={article.inlineImages[index]} />
+              ) : null}
+              {article.infographics[index] ? (
+                <InfographicFigure asset={article.infographics[index]} />
+              ) : null}
             </section>
           ))}
         </div>
@@ -176,5 +183,41 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         links={networkLinks}
       />
     </>
+  );
+}
+
+function InlineMediaFigure({ asset }: { asset: MediaAsset }) {
+  return (
+    <figure className="mt-8 overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950">
+      <Image
+        src={asset.url}
+        alt={asset.alt}
+        width={1200}
+        height={675}
+        sizes="(min-width: 768px) 56rem, 100vw"
+        className="max-h-[760px] w-full object-contain"
+      />
+      <figcaption className="border-t border-zinc-800 px-4 py-3 text-xs leading-5 text-zinc-500">
+        {asset.credit} {asset.usageNote}
+      </figcaption>
+    </figure>
+  );
+}
+
+function InfographicFigure({ asset }: { asset: InfographicAsset }) {
+  return (
+    <figure className="mt-8 overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950">
+      <Image
+        src={asset.url}
+        alt={asset.alt}
+        width={1200}
+        height={675}
+        sizes="(min-width: 768px) 56rem, 100vw"
+        className="aspect-[16/9] w-full object-cover"
+      />
+      <figcaption className="border-t border-zinc-800 px-4 py-3 text-xs leading-5 text-zinc-500">
+        {asset.usageNote}
+      </figcaption>
+    </figure>
   );
 }

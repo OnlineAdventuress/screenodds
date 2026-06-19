@@ -1,0 +1,161 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-19",
+  "sources": [
+    {
+      "title": "Survivor on CBS",
+      "url": "https://www.cbs.com/shows/survivor",
+      "publisher": "CBS",
+      "accessedAt": "2026-06-19",
+      "sourceType": "official"
+    },
+    {
+      "title": "Survivor TVmaze listing",
+      "url": "https://www.tvmaze.com/shows/114/survivor",
+      "publisher": "TVmaze",
+      "accessedAt": "2026-06-19",
+      "sourceType": "reference"
+    },
+    {
+      "title": "ScreenOdds DataForSEO topical authority keyword map",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-19",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/reality-tv",
+      "label": "Reality TV Markets",
+      "description": "Browse ScreenOdds reality competition market coverage."
+    },
+    {
+      "href": "/tv",
+      "label": "TV and Streaming Markets",
+      "description": "Compare reality TV signals with broader TV market coverage."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/survivor-odds/images/featured-og.png",
+    "alt": "Editorial reality TV market board for Survivor odds",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/survivor-odds/images/featured-og.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/survivor-odds/screenshots/cbs-survivor.jpg",
+      "alt": "CBS Survivor page showing Season 50 streaming and episode context",
+      "provider": "Jina",
+      "sourceUrl": "https://www.cbs.com/shows/survivor",
+      "credit": "Jina screenshot of the official CBS Survivor page.",
+      "usageNote": "Used as contextual source evidence for show format, current season framing, and official episode context."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/survivor-odds/images/infographic-1.png",
+      "alt": "Survivor odds signal stack infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Survivor odds signal stack covering edit visibility, alliances, immunity, jury path, and market liquidity.",
+      "usageNote": "AI-generated infographic explaining how ScreenOdds reads Survivor winner signals."
+    },
+    {
+      "url": "/blog/survivor-odds/images/infographic-2.png",
+      "alt": "Survivor winner odds catalyst calendar infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Survivor winner odds calendar showing premiere, merge, finale, public discourse, and market checkpoints.",
+      "usageNote": "AI-generated infographic summarizing the Survivor season catalyst calendar."
+    }
+  ],
+  "slug": "survivor-odds",
+  "title": "Survivor Odds: Winner Market Signals",
+  "description": "Survivor odds explained through winner-market signals, CBS season context, edit momentum, jury paths, and ScreenOdds liquidity checks.",
+  "primaryKeyword": "survivor odds",
+  "keywordVolume": 210,
+  "keywordDifficulty": 0,
+  "category": "Reality TV",
+  "updatedAt": "2026-06-19",
+  "heroImage": "/blog/survivor-odds/images/featured-og.png",
+  "heroAlt": "Editorial reality TV market board for Survivor odds",
+  "sections": [
+    {
+      "heading": "Why Survivor odds are a clean reality TV target",
+      "paragraphs": [
+        "DataForSEO shows `survivor odds` at 210 US monthly searches with keyword difficulty of 0, and `survivor winner odds` at 170 searches with keyword difficulty of 2. That makes Survivor one of the strongest reality TV pages ScreenOdds can add without fighting the same intent as Love Island or Big Brother.",
+        "The searcher is usually asking who is most likely to win, not looking for a generic TV recap. That lets ScreenOdds build a page around winner probability, season structure, and signal quality instead of repeating episode summaries."
+      ]
+    },
+    {
+      "heading": "What official show data tells us",
+      "paragraphs": [
+        "CBS describes Survivor as a reality competition where players battle for the title of Sole Survivor and a $1 million prize. The current CBS page also frames Season 50 as a milestone season built around legendary returning players, surprise twists, and audience impact.",
+        "TVmaze lists Survivor as a CBS reality show with a Wednesday 8 p.m. schedule and a 90-minute runtime. Those details matter because markets can move after episodes, challenge outcomes, finale scheduling, and high-visibility clips."
+      ]
+    },
+    {
+      "heading": "How to read Survivor winner odds",
+      "paragraphs": [
+        "A Survivor price should be read as a market estimate of winning probability, but the show has more hidden information than most entertainment markets. Alliances, jury sentiment, edit visibility, challenge strength, and production timing can all affect how confident a price should feel.",
+        "The biggest mistake is treating popularity as the same thing as win equity. A popular player can be a threat, a decoy, or an easy final tribal opponent depending on the season's structure."
+      ]
+    },
+    {
+      "heading": "Signals that usually move the market",
+      "paragraphs": [
+        "The most important Survivor signals are merge position, immunity challenge performance, social control, jury management, and the edit. A player who gets strategic confessionals and survives key votes can move even before the public sees a direct win path.",
+        "Late-season markets should be checked against liquidity. If a market has little recent volume, one fan-driven trade can create a misleading move. Stronger signals combine recent episode evidence with enough trading activity to confirm that the market is still paying attention."
+      ]
+    },
+    {
+      "heading": "Where Survivor fits in ScreenOdds",
+      "paragraphs": [
+        "Survivor should become a cornerstone page in the Reality TV cluster. It links naturally to Big Brother, Love Island, Dancing With the Stars, and any future The Traitors or The Voice pages because all of those markets depend on episode timing and audience interpretation.",
+        "When a season is live, daily or weekly news posts can cover episode outcomes and link back here. The evergreen guide explains the model; the news post explains what changed this week."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use Survivor odds to compare market belief with the season's actual signal stack. If one player shortens after a major vote, ask whether the move reflects a stronger jury path, a better edit, or just short-term fan excitement.",
+        "ScreenOdds treats Survivor markets as entertainment forecasting tools. They can help organize the season, but they are not certain predictions."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between Survivor odds and Survivor winner odds?",
+      "answer": "They usually point to the same search intent, but `survivor winner odds` is more explicit about the final outcome. This page targets both."
+    },
+    {
+      "question": "Why do Survivor odds move after episodes?",
+      "answer": "Markets can react to challenge wins, alliance shifts, confessionals, jury signals, and whether a player looks protected or exposed after the episode."
+    },
+    {
+      "question": "Is the favorite always the best Survivor player?",
+      "answer": "No. The favorite is the market's current estimate, and it can reflect visibility, fan attention, liquidity, or hidden assumptions that later prove wrong."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/big-brother-odds",
+      "label": "Big Brother Odds",
+      "description": "Another strategy-heavy reality TV winner market."
+    },
+    {
+      "href": "/blog/love-island-odds",
+      "label": "Love Island Odds",
+      "description": "A reality TV market driven by public voting and couple momentum."
+    },
+    {
+      "href": "/blog/polymarket-love-island",
+      "label": "Polymarket Love Island Odds",
+      "description": "Platform-specific reality TV prediction-market context."
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-19",
+  "sources": [
+    {
+      "title": "The 98th Academy Awards winners and nominees",
+      "url": "https://www.oscars.org/oscars/ceremonies/2026",
+      "publisher": "Academy of Motion Picture Arts and Sciences",
+      "accessedAt": "2026-06-19",
+      "sourceType": "official"
+    },
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-19",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "ScreenOdds DataForSEO topical authority keyword map",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-19",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/awards",
+      "label": "Awards Markets",
+      "description": "Browse ScreenOdds awards prediction-market coverage."
+    },
+    {
+      "href": "/oscars",
+      "label": "Oscars Hub",
+      "description": "Follow Oscars market context, news, and category guides."
+    },
+    {
+      "href": "/blog/polymarket-oscars-odds",
+      "label": "Polymarket Oscars Odds",
+      "description": "The broader ScreenOdds guide to Oscars prediction markets."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/best-actor-oscars-odds/images/featured-og.png",
+    "alt": "Editorial awards market board for Best Actor Oscars odds",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/best-actor-oscars-odds/images/featured-og.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/best-actor-oscars-odds/screenshots/academy-2026.jpg",
+      "alt": "Academy Oscars 2026 ceremony page showing the official Best Actor category context",
+      "provider": "Jina",
+      "sourceUrl": "https://www.oscars.org/oscars/ceremonies/2026",
+      "credit": "Jina screenshot of the Academy's official 98th Oscars page.",
+      "usageNote": "Used as contextual source evidence for the official category and ceremony data."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/best-actor-oscars-odds/images/infographic-1.png",
+      "alt": "Best Actor Oscars odds signal stack infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Best Actor Oscars odds signal stack with market price, nominations, awards precursors, and liquidity checks.",
+      "usageNote": "AI-generated infographic explaining how ScreenOdds reads Best Actor market signals."
+    },
+    {
+      "url": "/blog/best-actor-oscars-odds/images/infographic-2.png",
+      "alt": "Best Actor Oscars odds catalyst calendar infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Best Actor Oscars odds catalyst calendar for festivals, nominations, guild awards, and final voting.",
+      "usageNote": "AI-generated infographic summarizing the Best Actor awards-season catalyst calendar."
+    }
+  ],
+  "slug": "best-actor-oscars-odds",
+  "title": "Best Actor Oscars Odds: Polymarket Guide",
+  "description": "Best Actor Oscars odds explained through Polymarket prices, Academy category data, precursor signals, and ScreenOdds market context.",
+  "primaryKeyword": "best actor oscars odds",
+  "keywordVolume": 1300,
+  "keywordDifficulty": 12,
+  "category": "Awards",
+  "updatedAt": "2026-06-19",
+  "heroImage": "/blog/best-actor-oscars-odds/images/featured-og.png",
+  "heroAlt": "Editorial awards market board for Best Actor Oscars odds",
+  "sections": [
+    {
+      "heading": "Why Best Actor deserves its own odds page",
+      "paragraphs": [
+        "DataForSEO shows `best actor oscars odds` at 1,300 US monthly searches with keyword difficulty of 12, while the exact ScreenOdds-friendly variant `polymarket best actor` shows 210 searches with keyword difficulty of 0. That is the kind of category-specific gap we want: clear search intent, strong volume, and less competition than a broad Oscars page.",
+        "This guide should not compete with the main Polymarket Oscars guide. The broader guide explains how awards markets work; this page focuses on the Actor in a Leading Role category, what moves it, and how to read market prices when the field is still changing."
+      ]
+    },
+    {
+      "heading": "What official Academy data tells us",
+      "paragraphs": [
+        "The Academy's 98th Oscars page lists Actor in a Leading Role as its own category and records Michael B. Jordan as the 2026 winner for Sinners, with Timothee Chalamet, Leonardo DiCaprio, Ethan Hawke, and Wagner Moura among the nominees. That official category structure matters because markets resolve against specific wording, not general awards chatter.",
+        "For future cycles, ScreenOdds should treat the official Academy page as the resolution anchor and separate it from softer signals such as festival buzz, critic lists, social momentum, or studio campaign visibility. A market can move on narrative, but the final settlement still depends on the published category result."
+      ]
+    },
+    {
+      "heading": "How to read Best Actor odds",
+      "paragraphs": [
+        "A Best Actor price is an implied probability, not a critic score. A 35 percent market price means the market is saying roughly one chance in three at that moment, assuming the market is liquid enough to trust. Thin markets can exaggerate confidence, especially before nominations are official.",
+        "The best ScreenOdds read combines price, volume, market age, and source confidence. If a contender moves after a guild award, festival prize, or major review wave, that is stronger than a move caused by one rumor account or a small trade in a quiet market."
+      ]
+    },
+    {
+      "heading": "Signals that usually move the category",
+      "paragraphs": [
+        "Best Actor markets often react to four signal groups: festival reception, precursor awards, campaign strength, and nomination math. A fall festival breakout can create the first market move, but later guild and critics results usually decide whether the move holds.",
+        "The category is also vulnerable to vote-splitting and narrative timing. A performance can be widely admired while another actor owns the season's story. That is why ScreenOdds should track not only who is favored, but why the market believes the favorite has momentum."
+      ]
+    },
+    {
+      "heading": "Where this page fits in the Awards cluster",
+      "paragraphs": [
+        "This page should link upward to the Oscars hub and sideways to Best Picture, Polymarket Oscars, and future category pages such as Best Actress and Best Director. That gives Google and readers a clean category map instead of one overloaded Oscars article.",
+        "During awards season, news posts about nominations, guild results, or sharp market moves should link back here. The evergreen page carries the explanation; news posts carry the timely update."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use Best Actor Oscars odds to compare market belief against official signals. If a contender is priced like a favorite before nominations, check whether that confidence is backed by source-backed awards momentum or only by early hype.",
+        "ScreenOdds treats these markets as informational entertainment signals. They can help explain awards-season expectations, but they are not guarantees and they should not be read as financial advice."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the best keyword target for this page?",
+      "answer": "The primary target is `best actor oscars odds`, supported by `polymarket best actor` and `polymarket oscars best actor`."
+    },
+    {
+      "question": "Do Best Actor odds predict the Oscar winner?",
+      "answer": "They estimate market belief at a point in time. The price can be useful, but it should be checked against official nominees, precursor awards, volume, and market rules."
+    },
+    {
+      "question": "Why not put Best Actor inside the main Oscars odds page?",
+      "answer": "The search intent is category-specific and the DataForSEO numbers are strong enough to justify a dedicated page that links back to the Oscars hub."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/best-picture-odds",
+      "label": "Best Picture Odds",
+      "description": "Compare category movement with the main Oscars race."
+    },
+    {
+      "href": "/markets/polymarket-oscars-best-picture",
+      "label": "Polymarket Oscars Best Picture",
+      "description": "A live market page for the highest-profile Oscars category."
+    },
+    {
+      "href": "/blog/polymarket-oscars-2026",
+      "label": "Polymarket Oscars 2026",
+      "description": "Completed-cycle lessons from the 98th Academy Awards."
+    }
+  ]
+}

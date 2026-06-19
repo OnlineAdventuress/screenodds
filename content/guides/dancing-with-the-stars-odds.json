@@ -1,0 +1,161 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-19",
+  "sources": [
+    {
+      "title": "Dancing with the Stars on ABC",
+      "url": "https://abc.com/show/f66d60e7-29f2-49cf-85dd-44a11bce42e4",
+      "publisher": "ABC",
+      "accessedAt": "2026-06-19",
+      "sourceType": "official"
+    },
+    {
+      "title": "Dancing with the Stars TVmaze listing",
+      "url": "https://www.tvmaze.com/shows/71/dancing-with-the-stars",
+      "publisher": "TVmaze",
+      "accessedAt": "2026-06-19",
+      "sourceType": "reference"
+    },
+    {
+      "title": "ScreenOdds DataForSEO topical authority keyword map",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-19",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/reality-tv",
+      "label": "Reality TV Markets",
+      "description": "Browse ScreenOdds reality competition market coverage."
+    },
+    {
+      "href": "/tv",
+      "label": "TV and Streaming Markets",
+      "description": "Track TV, streaming, and entertainment market signals."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/dancing-with-the-stars-odds/images/featured-og.png",
+    "alt": "Editorial ballroom prediction-market board for Dancing With the Stars odds",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/dancing-with-the-stars-odds/images/featured-og.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/dancing-with-the-stars-odds/screenshots/abc-dwts.jpg",
+      "alt": "ABC Dancing with the Stars page showing official show context",
+      "provider": "Jina",
+      "sourceUrl": "https://abc.com/show/f66d60e7-29f2-49cf-85dd-44a11bce42e4",
+      "credit": "Jina screenshot of the official ABC Dancing with the Stars page.",
+      "usageNote": "Used as contextual source evidence for show format, cast, and streaming context."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/dancing-with-the-stars-odds/images/infographic-1.png",
+      "alt": "Dancing With the Stars odds signal stack infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Dancing With the Stars odds signal stack for judges, public vote, dance scores, fandom, and market liquidity.",
+      "usageNote": "AI-generated infographic explaining how ScreenOdds reads Dancing With the Stars winner signals."
+    },
+    {
+      "url": "/blog/dancing-with-the-stars-odds/images/infographic-2.png",
+      "alt": "Dancing With the Stars odds market movement checklist infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Dancing With the Stars odds checklist for weekly scores, elimination risk, public vote strength, and finale path.",
+      "usageNote": "AI-generated infographic summarizing Dancing With the Stars market movement checks."
+    }
+  ],
+  "slug": "dancing-with-the-stars-odds",
+  "title": "Dancing With the Stars Odds: Winner Guide",
+  "description": "Dancing With the Stars odds explained through judges' scores, public vote signals, cast momentum, finale paths, and ScreenOdds market checks.",
+  "primaryKeyword": "dancing with the stars odds",
+  "keywordVolume": 210,
+  "keywordDifficulty": 0,
+  "category": "Reality TV",
+  "updatedAt": "2026-06-19",
+  "heroImage": "/blog/dancing-with-the-stars-odds/images/featured-og.png",
+  "heroAlt": "Editorial ballroom prediction-market board for Dancing With the Stars odds",
+  "sections": [
+    {
+      "heading": "A low-KD reality TV opportunity",
+      "paragraphs": [
+        "DataForSEO shows `dancing with the stars odds` at 210 US monthly searches with keyword difficulty of 0, plus `dancing with the stars winner odds` at 20 searches with keyword difficulty of 0. That is enough to justify a dedicated ScreenOdds guide inside the Reality TV cluster.",
+        "The page should target winner-market intent, not celebrity gossip. Readers need a framework for judging whether scores, public vote strength, fandom, and market price are telling the same story."
+      ]
+    },
+    {
+      "heading": "What official show sources tell us",
+      "paragraphs": [
+        "ABC describes Dancing with the Stars as a series where celebrities perform choreographed dance routines judged by ballroom experts. The ABC page also lists cast and show context, while TVmaze identifies the show as a running ABC reality series with a Tuesday schedule.",
+        "Those details are useful for market timing. Weekly episodes, clips, cast announcements, judge reactions, and finale scheduling can all create search demand and market movement."
+      ]
+    },
+    {
+      "heading": "How to read Dancing With the Stars odds",
+      "paragraphs": [
+        "A Dancing With the Stars market has two forces: judged performance and public support. A technically strong dancer can still be vulnerable if the fan vote is weak, while a celebrity with an intense fan base can survive a middling score.",
+        "ScreenOdds should separate the current favorite from the best value signal. If the market overreacts to one high score, the better question is whether the same contestant has a finale path and enough public support to survive future eliminations."
+      ]
+    },
+    {
+      "heading": "Signals that move the market",
+      "paragraphs": [
+        "The most useful signals are leaderboard position, bottom-two history, dance assignment, judges' comments, social engagement, and finale narrative. A contestant who improves at the right time can become more dangerous than an early favorite who has already peaked.",
+        "Liquidity is important because reality TV markets can be thin. A small trade after a viral clip can look like a meaningful move even when the broader market has not confirmed it."
+      ]
+    },
+    {
+      "heading": "How this page supports topical authority",
+      "paragraphs": [
+        "Dancing With the Stars fills a different reality TV lane from Survivor, Big Brother, and Love Island. It is not only strategy or public voting; it blends judges' scoring, celebrity familiarity, and weekly performance arcs.",
+        "That makes the page useful for internal linking. It should link up to Reality TV, sideways to Survivor and Big Brother, and forward to weekly news posts whenever cast or finale signals change."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use Dancing With the Stars odds to compare market belief with episode evidence. A favorite with score strength, fan support, and a clear finale story is different from a favorite with only one of those signals.",
+        "ScreenOdds presents these odds as entertainment prediction-market context. They are useful for understanding market expectations, not as a guarantee of the winner."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What moves Dancing With the Stars odds?",
+      "answer": "Weekly scores, elimination risk, public vote strength, viral clips, injuries, and finale narratives can all move the market."
+    },
+    {
+      "question": "Do judges' scores decide the market?",
+      "answer": "No. Scores matter, but public voting and fan support can be just as important depending on the season format."
+    },
+    {
+      "question": "Why does this page link to other reality TV odds guides?",
+      "answer": "Reality TV markets share timing, audience, and public-sentiment signals, so related guides help readers compare similar market behavior."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/survivor-odds",
+      "label": "Survivor Odds",
+      "description": "A strategy-heavy reality TV winner market."
+    },
+    {
+      "href": "/blog/big-brother-odds",
+      "label": "Big Brother Odds",
+      "description": "Reality TV odds driven by alliances, evictions, and social positioning."
+    },
+    {
+      "href": "/blog/love-island-odds",
+      "label": "Love Island Odds",
+      "description": "Public vote and couple-momentum prediction-market context."
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-19",
+  "sources": [
+    {
+      "title": "Weekend domestic box office chart",
+      "url": "https://www.the-numbers.com/weekend-box-office-chart",
+      "publisher": "The Numbers",
+      "accessedAt": "2026-06-19",
+      "sourceType": "box-office-data"
+    },
+    {
+      "title": "Domestic 2026 Weekend 24",
+      "url": "https://www.boxofficemojo.com/weekend/2026W24",
+      "publisher": "Box Office Mojo",
+      "accessedAt": "2026-06-19",
+      "sourceType": "box-office-data"
+    },
+    {
+      "title": "ScreenOdds DataForSEO topical authority keyword map",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-19",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/box-office",
+      "label": "Box Office Markets",
+      "description": "Browse ScreenOdds box office prediction-market coverage."
+    },
+    {
+      "href": "/movies",
+      "label": "Movie Markets",
+      "description": "Compare box office movement with broader movie-market context."
+    },
+    {
+      "href": "/markets/highest-grossing-movie-in-2026",
+      "label": "Highest Grossing Movie Market",
+      "description": "A ScreenOdds market page tied to annual box office performance."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/weekend-box-office-predictions/images/featured-og.png",
+    "alt": "Editorial box office prediction dashboard with weekend charts",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/weekend-box-office-predictions/images/featured-og.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/weekend-box-office-predictions/screenshots/the-numbers-weekend.jpg",
+      "alt": "The Numbers weekend box office chart showing domestic weekend grosses",
+      "provider": "Jina",
+      "sourceUrl": "https://www.the-numbers.com/weekend-box-office-chart",
+      "credit": "Jina screenshot of The Numbers weekend domestic box office chart.",
+      "usageNote": "Used as contextual source evidence for weekly box office data and chart structure."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/weekend-box-office-predictions/images/infographic-1.png",
+      "alt": "Weekend box office predictions signal stack infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds weekend box office predictions signal stack for tracking, presales, theater count, reviews, audience scores, and market odds.",
+      "usageNote": "AI-generated infographic explaining how ScreenOdds reads weekend box office prediction signals."
+    },
+    {
+      "url": "/blog/weekend-box-office-predictions/images/infographic-2.png",
+      "alt": "Weekend box office prediction timeline infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds weekend box office prediction timeline from tracking to previews, Saturday estimates, Sunday projections, and Monday actuals.",
+      "usageNote": "AI-generated infographic summarizing the weekend box office data timeline."
+    }
+  ],
+  "slug": "weekend-box-office-predictions",
+  "title": "Weekend Box Office Predictions: Market Guide",
+  "description": "Weekend box office predictions explained through The Numbers data, Box Office Mojo charts, market pricing, theater counts, and ScreenOdds signals.",
+  "primaryKeyword": "weekend box office predictions",
+  "keywordVolume": 2400,
+  "keywordDifficulty": 32,
+  "category": "Box Office",
+  "updatedAt": "2026-06-19",
+  "heroImage": "/blog/weekend-box-office-predictions/images/featured-og.png",
+  "heroAlt": "Editorial box office prediction dashboard with weekend charts",
+  "sections": [
+    {
+      "heading": "Why this higher-KD keyword still matters",
+      "paragraphs": [
+        "DataForSEO shows `weekend box office predictions` at 2,400 US monthly searches with keyword difficulty of 32. That is more competitive than the first reality TV pages, but it is too important to ignore because it anchors the Box Office cluster.",
+        "ScreenOdds needs one evergreen explainer that can absorb weekly news links, market movement summaries, and movie-specific prediction pages. This guide is that anchor."
+      ]
+    },
+    {
+      "heading": "What current box office data shows",
+      "paragraphs": [
+        "The Numbers weekend chart for June 12, 2026 lists Disclosure Day first with $44,530,925, followed by Obsession at $19,008,015 and Scary Movie at $14,203,348. The same chart reports 52 movies and $124,716,120 in total weekend domestic box office.",
+        "Box Office Mojo's Weekend 24 page confirms the same top-line weekend frame and gives distributor, theater count, average, total gross, and week-count context. Using both sources gives ScreenOdds a stronger data base than market price alone."
+      ]
+    },
+    {
+      "heading": "How to read weekend box office predictions",
+      "paragraphs": [
+        "A weekend prediction is usually built from presales, theater count, preview grosses, reviews, audience scores, holiday timing, competition, and franchise history. Prediction markets add another layer by showing how traders price those signals before final numbers arrive.",
+        "The key is not to treat one estimate as final. Thursday previews, Friday actuals, Saturday holds, and Sunday estimates can all change the shape of a weekend."
+      ]
+    },
+    {
+      "heading": "Signals that move box office markets",
+      "paragraphs": [
+        "Opening weekend markets react to tracking reports, presale pace, premium-format availability, review embargoes, audience scores, theater count, and direct competition. A film with strong previews but weak word of mouth can move differently from a film with slower previews and a strong Saturday hold.",
+        "Annual markets, such as highest-grossing movie markets, need a longer read. They depend on global release calendars, franchise legs, competition windows, and whether a title can keep screens after the first two weekends."
+      ]
+    },
+    {
+      "heading": "How this supports the ScreenOdds authority plan",
+      "paragraphs": [
+        "This guide should become the central explainer for weekly box office posts. Every weekend update can link back here for methodology, while this page links forward to specific movie and annual-gross markets.",
+        "It also creates a bridge between Movies and Box Office. A James Bond casting market is narrative-driven; a weekend box office market is data-driven. ScreenOdds should show readers the difference."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use weekend box office predictions to compare reported data with market expectations. If a market has not reacted to a theater-count change, a preview number, or a sharp second-weekend drop, that gap is worth understanding.",
+        "ScreenOdds presents box office markets as informational entertainment signals. The strongest pages cite source-backed grosses, explain timing, and separate market movement from final reported results."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the best source for weekend box office data?",
+      "answer": "The Numbers and Box Office Mojo are useful public references for weekend grosses, theater counts, averages, and total grosses."
+    },
+    {
+      "question": "Why is this page worth building even with KD 32?",
+      "answer": "The keyword has 2,400 monthly searches and anchors the Box Office cluster, so it supports weekly news and specific market pages."
+    },
+    {
+      "question": "What usually changes weekend box office predictions?",
+      "answer": "Presales, previews, theater count, reviews, audience scores, competition, and day-by-day holds can all change the forecast."
+    }
+  ],
+  "related": [
+    {
+      "href": "/box-office",
+      "label": "Box Office Odds",
+      "description": "The ScreenOdds hub for box office prediction markets."
+    },
+    {
+      "href": "/markets/highest-grossing-movie-in-2026",
+      "label": "Highest Grossing Movie in 2026",
+      "description": "A market page for annual box office performance."
+    },
+    {
+      "href": "/blog/next-james-bond-actor-odds",
+      "label": "Next James Bond Actor Odds",
+      "description": "A movie-market guide that contrasts narrative signals with box office data."
+    }
+  ]
+}

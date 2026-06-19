@@ -1,0 +1,161 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-19",
+  "sources": [
+    {
+      "title": "Netflix Top 10",
+      "url": "https://www.netflix.com/tudum/top10",
+      "publisher": "Netflix Tudum",
+      "accessedAt": "2026-06-19",
+      "sourceType": "official"
+    },
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-19",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "ScreenOdds DataForSEO topical authority keyword map",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-19",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/tv",
+      "label": "TV and Streaming Markets",
+      "description": "Browse ScreenOdds coverage for streaming and TV prediction markets."
+    },
+    {
+      "href": "/movies",
+      "label": "Movie Markets",
+      "description": "Compare streaming signals with broader movie-market context."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/polymarket-netflix-odds/images/featured-og.png",
+    "alt": "Editorial streaming market dashboard for Polymarket Netflix odds",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/polymarket-netflix-odds/images/featured-og.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/polymarket-netflix-odds/screenshots/netflix-top-10.jpg",
+      "alt": "Netflix Tudum Top 10 page showing weekly global movie rankings",
+      "provider": "Jina",
+      "sourceUrl": "https://www.netflix.com/tudum/top10",
+      "credit": "Jina screenshot of Netflix Tudum Top 10.",
+      "usageNote": "Used as contextual source evidence for official streaming ranking data."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/polymarket-netflix-odds/images/infographic-1.png",
+      "alt": "Polymarket Netflix odds signal stack infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Polymarket Netflix odds signal stack covering Top 10 rank, views, hours viewed, renewal odds, and market liquidity.",
+      "usageNote": "AI-generated infographic explaining streaming-market signal quality."
+    },
+    {
+      "url": "/blog/polymarket-netflix-odds/images/infographic-2.png",
+      "alt": "Netflix prediction-market catalyst calendar infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Netflix odds catalyst calendar with release date, Top 10 week, renewal news, awards buzz, and market close.",
+      "usageNote": "AI-generated infographic summarizing Netflix prediction-market timing."
+    }
+  ],
+  "slug": "polymarket-netflix-odds",
+  "title": "Polymarket Netflix Odds: Streaming Signals",
+  "description": "Polymarket Netflix odds explained through official Top 10 data, streaming demand, renewal catalysts, market liquidity, and ScreenOdds context.",
+  "primaryKeyword": "polymarket netflix",
+  "keywordVolume": 70,
+  "keywordDifficulty": 0,
+  "category": "TV & Streaming",
+  "updatedAt": "2026-06-19",
+  "heroImage": "/blog/polymarket-netflix-odds/images/featured-og.png",
+  "heroAlt": "Editorial streaming market dashboard for Polymarket Netflix odds",
+  "sections": [
+    {
+      "heading": "Why Polymarket Netflix deserves a guide",
+      "paragraphs": [
+        "DataForSEO shows `polymarket netflix` at 70 US monthly searches with keyword difficulty of 0. The volume is smaller than Oscars or reality TV, but the query is highly specific and gives ScreenOdds a low-competition streaming-market page.",
+        "This page should not replace the broader TV hub. It should explain how Netflix-specific signals work: weekly Top 10 rankings, hours viewed, regional strength, renewal announcements, cancellation risk, and awards momentum."
+      ]
+    },
+    {
+      "heading": "What official Netflix data can tell us",
+      "paragraphs": [
+        "Netflix Tudum publishes weekly Top 10 lists with rankings, views, runtime, and hours viewed. In the 6/8/26 to 6/14/26 global movies table, Office Romance ranked first with 24.6 million views and 47.1 million hours viewed.",
+        "Those numbers can be useful for markets tied to popularity, renewals, cultural reach, or streaming milestones. They are still only one signal. A title can be high in a weekly chart and still have weak long-term odds if production costs, completion rates, or strategic fit are poor."
+      ]
+    },
+    {
+      "heading": "How to read Netflix prediction markets",
+      "paragraphs": [
+        "A Netflix market often asks a different question from a box-office or awards market. It may be about a renewal, a Top 10 ranking, a release-date outcome, a most-watched title, or whether a show reaches a public milestone.",
+        "The first step is always the resolution source. If a market depends on Netflix Top 10 data, the official Netflix page is stronger than social screenshots or third-party charts. If the resolution depends on a corporate announcement, the official source should be a Netflix press or Tudum page."
+      ]
+    },
+    {
+      "heading": "Signals that usually matter",
+      "paragraphs": [
+        "The strongest streaming signals are views, hours viewed, week-over-week retention, country spread, franchise value, completion likelihood, production cost, and release timing. Awards buzz can help prestige titles, while genre titles may depend more on retention and global reach.",
+        "Markets can also move on renewal rumors or cast comments. ScreenOdds should treat those as lower-confidence signals unless they are backed by official announcements or consistent trade reporting."
+      ]
+    },
+    {
+      "heading": "Where this fits in the ScreenOdds site",
+      "paragraphs": [
+        "Polymarket Netflix belongs under TV and Streaming, with sideways links to movies, reality TV, and box office pages. Streaming can affect awards and culture markets, but it needs its own framework because public data is different from theatrical grosses.",
+        "News posts about Netflix Top 10 changes, renewal announcements, or streaming market movement should link back here for evergreen explanation."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use Polymarket Netflix odds to compare market belief with official streaming data. A title that is high in views but low in retention may deserve a different read than a title with smaller opening numbers and a stronger hold.",
+        "ScreenOdds treats these markets as informational entertainment signals. The goal is to understand why the market moved, not to imply certainty."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What does Polymarket Netflix mean?",
+      "answer": "It usually refers to prediction markets involving Netflix shows, movies, rankings, releases, renewals, or streaming milestones."
+    },
+    {
+      "question": "Is Netflix Top 10 data enough to predict renewals?",
+      "answer": "No. Top 10 data is useful, but renewals can also depend on completion rate, cost, strategic value, licensing terms, and production timing."
+    },
+    {
+      "question": "Why should Netflix markets have their own page?",
+      "answer": "Streaming markets rely on different public data than box office, awards, or reality TV markets, so they need a separate signal framework."
+    }
+  ],
+  "related": [
+    {
+      "href": "/tv",
+      "label": "TV and Streaming Markets",
+      "description": "The ScreenOdds hub for TV and streaming prediction markets."
+    },
+    {
+      "href": "/movies",
+      "label": "Movie Markets",
+      "description": "Compare streaming outcomes with broader movie market signals."
+    },
+    {
+      "href": "/blog/polymarket-love-island",
+      "label": "Polymarket Love Island Odds",
+      "description": "A reality TV market guide with streaming-adjacent audience signals."
+    }
+  ]
+}

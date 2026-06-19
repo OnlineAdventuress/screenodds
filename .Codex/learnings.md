@@ -85,3 +85,9 @@ Read this before starting each task.
 - What worked: A fresh DataForSEO topical pass plus an exact keyword overview pass surfaced low-KD ScreenOdds opportunities such as `polymarket best actor`, `survivor winner odds`, and `dancing with the stars odds`.
 - What broke: The topical script's static target map marked several already-published guides as `build`, including Polymarket Golden Globes, Grammys, Love Island, and Oscars 2026.
 - Pattern to remember: Before creating new article files from DataForSEO output, compare target URLs against `content/guides/` and convert already-covered intents into refresh/internal-link tasks to avoid cannibalization.
+
+## 2026-06-19 - Guide Media Rendering
+
+- What worked: New guide JSON files can reference Jina screenshots and Kie-generated infographics under `public/blog/{slug}/...`, and the existing sitemap/static route generation picks them up automatically.
+- What broke: The blog article page previously rendered only the hero image and ignored `inlineImages` and `infographics`, so adding media metadata alone would not show the assets.
+- Pattern to remember: When adding content visuals, verify both sides: local files exist above minimum size and the rendered `.next` route contains the screenshot/infographic paths.
