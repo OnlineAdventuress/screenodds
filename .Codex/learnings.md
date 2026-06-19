@@ -79,3 +79,9 @@ Read this before starting each task.
 - What worked: Manually triggering the daily cron exposed CI-only behavior before the scheduled run.
 - What broke: `Intl.NumberFormat` compact currency rendered `$37` on Windows but `$37.0` on Ubuntu for a sub-$1K Kalshi volume label.
 - Pattern to remember: For display strings asserted in tests, avoid compact `Intl.NumberFormat` for small currency values or force a deterministic formatting branch.
+
+## 2026-06-19 - Niche Keyword Article Planning
+
+- What worked: A fresh DataForSEO topical pass plus an exact keyword overview pass surfaced low-KD ScreenOdds opportunities such as `polymarket best actor`, `survivor winner odds`, and `dancing with the stars odds`.
+- What broke: The topical script's static target map marked several already-published guides as `build`, including Polymarket Golden Globes, Grammys, Love Island, and Oscars 2026.
+- Pattern to remember: Before creating new article files from DataForSEO output, compare target URLs against `content/guides/` and convert already-covered intents into refresh/internal-link tasks to avoid cannibalization.
