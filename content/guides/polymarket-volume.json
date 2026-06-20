@@ -1,0 +1,166 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-20",
+  "sources": [
+    {
+      "title": "Polymarket US API Documentation",
+      "url": "https://docs.polymarket.us/getting-started/welcome",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-20",
+      "sourceType": "official"
+    },
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-20",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "ScreenOdds DataForSEO prediction-market keyword pull",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-20",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/blog/polymarket-analytics",
+      "label": "Polymarket Analytics",
+      "description": "Use volume as one part of the broader analytics stack."
+    },
+    {
+      "href": "/blog/polymarket-tracker",
+      "label": "Polymarket Tracker",
+      "description": "Apply volume checks to watchlist alerts."
+    },
+    {
+      "href": "/blog/prediction-market-arbitrage",
+      "label": "Prediction Market Arbitrage",
+      "description": "Compare volume quality before trusting cross-market spreads."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/polymarket-volume/images/featured-og.svg",
+    "alt": "ScreenOdds Polymarket volume and liquidity illustration",
+    "provider": "ScreenOdds",
+    "sourceUrl": "/blog/polymarket-volume/images/featured-og.svg",
+    "credit": "ScreenOdds editorial infographic.",
+    "usageNote": "Original ScreenOdds visual explaining volume and liquidity quality."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/polymarket-volume/screenshots/polymarket-api-docs.jpg",
+      "alt": "Polymarket API documentation showing developer access to market data",
+      "provider": "Jina",
+      "sourceUrl": "https://docs.polymarket.us/getting-started/welcome",
+      "credit": "Jina screenshot of Polymarket API documentation.",
+      "usageNote": "Used as contextual source evidence for structured Polymarket data access."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/polymarket-volume/images/infographic-1.svg",
+      "alt": "Polymarket volume signal map for liquidity, spread, depth, and market age",
+      "provider": "ScreenOdds",
+      "promptSummary": "Signal map for reading Polymarket volume and liquidity.",
+      "usageNote": "ScreenOdds infographic showing which volume signals matter most."
+    },
+    {
+      "url": "/blog/polymarket-volume/images/infographic-2.svg",
+      "alt": "Polymarket volume workflow for separating real moves from thin-market noise",
+      "provider": "ScreenOdds",
+      "promptSummary": "Workflow for verifying whether volume supports a market move.",
+      "usageNote": "ScreenOdds infographic showing a step-by-step volume review process."
+    }
+  ],
+  "slug": "polymarket-volume",
+  "title": "Polymarket Volume: Liquidity Guide",
+  "description": "Polymarket volume explained through liquidity, depth, spreads, market age, false moves, and ScreenOdds prediction-market signal checks.",
+  "primaryKeyword": "polymarket volume",
+  "keywordVolume": 210,
+  "keywordDifficulty": 16,
+  "category": "Culture",
+  "updatedAt": "2026-06-20",
+  "heroImage": "/blog/polymarket-volume/images/featured-og.svg",
+  "heroAlt": "ScreenOdds Polymarket volume and liquidity illustration",
+  "sections": [
+    {
+      "heading": "Why volume is a separate ranking angle",
+      "paragraphs": [
+        "DataForSEO shows `polymarket volume` at 210 US monthly searches with keyword difficulty of 16 and a CPC near $60. That makes it a smaller but commercially meaningful page inside the ScreenOdds prediction-market cluster.",
+        "Volume deserves its own guide because it is the fastest way to tell whether a price movement has support. A market can show a dramatic probability change while still being too thin to trust."
+      ]
+    },
+    {
+      "heading": "What volume can and cannot prove",
+      "paragraphs": [
+        "Volume proves that trading activity happened. It does not prove that the market is correct, that the move is informed, or that the price will hold.",
+        "The useful question is whether volume arrived with liquidity, tighter spreads, and an identifiable catalyst. When those line up, the move deserves more attention."
+      ]
+    },
+    {
+      "heading": "Liquidity matters more than a headline number",
+      "paragraphs": [
+        "Liquidity tells readers how much depth exists around the current price. A market with shallow liquidity can move quickly because there is not much standing between one order and a new displayed probability.",
+        "That is why ScreenOdds should pair every volume discussion with a liquidity note. Volume without depth can create false confidence."
+      ]
+    },
+    {
+      "heading": "How to compare volume across markets",
+      "paragraphs": [
+        "Do not compare a mature election market with a niche entertainment market as if they are the same. A small entertainment market can have meaningful movement at lower volume if the question is specific and close to resolution.",
+        "The better comparison is category-relative: Oscars market against Oscars market, Netflix market against Netflix market, and reality TV market against reality TV market."
+      ]
+    },
+    {
+      "heading": "Where this fits in ScreenOdds",
+      "paragraphs": [
+        "Polymarket volume should support market pages and tracker alerts. If a price move appears on a ScreenOdds market page, this guide explains why volume and liquidity are checked before assigning meaning.",
+        "It also supports arbitrage content. Cross-market spreads are less useful when one side has weak depth or unclear execution quality."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use volume as a quality filter. When volume, liquidity, timing, and source-backed catalysts agree, a market move becomes more interesting.",
+        "When they do not agree, ScreenOdds treats the move as a note to monitor rather than a conclusion."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What does Polymarket volume mean?",
+      "answer": "It refers to trading activity in a market over a period of time, usually used to judge whether a price move has participation behind it."
+    },
+    {
+      "question": "Is high volume always good?",
+      "answer": "No. High volume is useful context, but readers should also check liquidity, spreads, timing, and the market's resolution rules."
+    },
+    {
+      "question": "Why does ScreenOdds separate volume from analytics?",
+      "answer": "Volume is important enough to deserve its own guide because it affects every tracker alert, market update, and arbitrage check."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/polymarket-analytics",
+      "label": "Polymarket Analytics",
+      "description": "The broader analytics framework that includes volume quality."
+    },
+    {
+      "href": "/blog/prediction-market-arbitrage",
+      "label": "Prediction Market Arbitrage",
+      "description": "A guide to cross-market spreads where liquidity quality matters."
+    },
+    {
+      "href": "/blog/weekend-box-office-predictions",
+      "label": "Weekend Box Office Predictions",
+      "description": "A data-led entertainment guide where volume and timing help interpret market movement."
+    }
+  ]
+}

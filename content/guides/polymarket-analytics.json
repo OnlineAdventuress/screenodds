@@ -1,0 +1,166 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-20",
+  "sources": [
+    {
+      "title": "Polymarket Analytics",
+      "url": "https://polymarketanalytics.com/",
+      "publisher": "Polymarket Analytics",
+      "accessedAt": "2026-06-20",
+      "sourceType": "reference"
+    },
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-20",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "ScreenOdds DataForSEO prediction-market keyword pull",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-20",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/blog/polymarket-tracker",
+      "label": "Polymarket Tracker",
+      "description": "Track market movement after you understand the analytics signals."
+    },
+    {
+      "href": "/blog/polymarket-volume",
+      "label": "Polymarket Volume",
+      "description": "Read why volume and liquidity quality matter before trusting a price move."
+    },
+    {
+      "href": "/blog/prediction-market-arbitrage",
+      "label": "Prediction Market Arbitrage",
+      "description": "Compare analytics signals with cross-market spread checks."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/polymarket-analytics/images/featured-og.svg",
+    "alt": "ScreenOdds Polymarket analytics dashboard illustration",
+    "provider": "ScreenOdds",
+    "sourceUrl": "/blog/polymarket-analytics/images/featured-og.svg",
+    "credit": "ScreenOdds editorial infographic.",
+    "usageNote": "Original ScreenOdds visual explaining prediction-market analytics signals."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/polymarket-analytics/screenshots/polymarket-analytics-home.jpg",
+      "alt": "Polymarket Analytics homepage showing prediction-market data dashboards",
+      "provider": "Jina",
+      "sourceUrl": "https://polymarketanalytics.com/",
+      "credit": "Jina screenshot of Polymarket Analytics.",
+      "usageNote": "Used as contextual source evidence for third-party Polymarket data dashboards."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/polymarket-analytics/images/infographic-1.svg",
+      "alt": "Polymarket analytics signal stack for holders, liquidity, volume, and price movement",
+      "provider": "ScreenOdds",
+      "promptSummary": "Signal stack for reading Polymarket analytics pages.",
+      "usageNote": "ScreenOdds infographic showing the analytics signals to check before trusting a market move."
+    },
+    {
+      "url": "/blog/polymarket-analytics/images/infographic-2.svg",
+      "alt": "Polymarket analytics workflow for separating signal from noise",
+      "provider": "ScreenOdds",
+      "promptSummary": "Workflow for using analytics dashboards without overreacting to a single metric.",
+      "usageNote": "ScreenOdds infographic showing a practical analytics review workflow."
+    }
+  ],
+  "slug": "polymarket-analytics",
+  "title": "Polymarket Analytics: Market Data Guide",
+  "description": "Polymarket analytics explained through volume, liquidity, top holders, market movement, data dashboards, and ScreenOdds signal checks.",
+  "primaryKeyword": "polymarket analytics",
+  "keywordVolume": 1000,
+  "keywordDifficulty": 1,
+  "category": "Culture",
+  "updatedAt": "2026-06-20",
+  "heroImage": "/blog/polymarket-analytics/images/featured-og.svg",
+  "heroAlt": "ScreenOdds Polymarket analytics dashboard illustration",
+  "sections": [
+    {
+      "heading": "Why Polymarket analytics is a high-value page",
+      "paragraphs": [
+        "DataForSEO shows `polymarket analytics` at 1,000 US monthly searches with keyword difficulty of 1 and a CPC above $47. That is the exact type of query ScreenOdds should target: commercial intent, low organic difficulty, and a reader who wants data rather than a generic prediction-market definition.",
+        "This page should sit above narrower pages such as Polymarket tracker, Polymarket volume, and prediction-market arbitrage. Analytics is the broad workflow; those pages explain specific checks inside that workflow."
+      ]
+    },
+    {
+      "heading": "What good analytics should show",
+      "paragraphs": [
+        "A useful Polymarket analytics view should show more than the current yes price. The minimum useful stack is recent price movement, volume, liquidity, open interest, top holder concentration, and market age.",
+        "The reason is simple: a market can move sharply on low volume, and that move can look important on a chart. ScreenOdds treats volume and liquidity as the first context layer before interpreting any headline price change."
+      ]
+    },
+    {
+      "heading": "How to read top-holder and trader data",
+      "paragraphs": [
+        "Top-holder data can help readers spot concentration risk. If one account owns a large share of the yes side, the market may be less representative than the headline percentage suggests.",
+        "Trader data is useful, but it should not be treated as a magic ranking system. A strong historical record in one category does not automatically transfer to politics, entertainment, crypto, or macro markets."
+      ]
+    },
+    {
+      "heading": "Where analytics pages can mislead readers",
+      "paragraphs": [
+        "The most common mistake is reading every price change as information. Some moves are information, some are liquidity, and some are simply a small order moving a thin market.",
+        "Another mistake is ignoring resolution rules. Analytics can show market behavior, but the final outcome still depends on how the market resolves. A data dashboard cannot fix vague wording or an ambiguous source of truth."
+      ]
+    },
+    {
+      "heading": "How ScreenOdds will use this cluster",
+      "paragraphs": [
+        "ScreenOdds should use this page as the central guide for analytics intent, then link downward to tracker, volume, and arbitrage pages. That gives Google a clear cluster instead of four pages competing for the same query.",
+        "Entertainment pages can link here when a market move needs explanation. If an Oscars, Netflix, or Love Island market jumps, this guide explains how to evaluate whether the move has enough supporting data."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use Polymarket analytics to verify whether a market move has substance. Check volume, liquidity, holder concentration, market age, and resolution rules before deciding whether the chart tells a real story.",
+        "ScreenOdds presents this as market literacy, not trading advice. The goal is to understand why a price moved and whether the move deserves attention."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is Polymarket analytics?",
+      "answer": "It is the process of reading market data such as price movement, volume, liquidity, holders, open interest, and market history around Polymarket events."
+    },
+    {
+      "question": "Is Polymarket analytics the same as a tracker?",
+      "answer": "No. Analytics is the broader interpretation layer, while a tracker is a watchlist or monitoring workflow for specific markets."
+    },
+    {
+      "question": "What is the first metric to check?",
+      "answer": "Volume and liquidity should be checked before price movement because thin markets can move sharply without much real information."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/polymarket-tracker",
+      "label": "Polymarket Tracker",
+      "description": "A focused guide to watchlists, alerts, and market movement."
+    },
+    {
+      "href": "/blog/polymarket-volume",
+      "label": "Polymarket Volume",
+      "description": "A guide to volume, liquidity, depth, and false price moves."
+    },
+    {
+      "href": "/blog/polymarket-netflix-odds",
+      "label": "Polymarket Netflix Odds",
+      "description": "An entertainment-market page where analytics signals can be applied."
+    }
+  ]
+}

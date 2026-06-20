@@ -108,6 +108,10 @@ const jinaImageAllowlist = new Set([
   "theacademy.org",
   "www.emmys.com",
   "emmys.com",
+  "www.televisionacademy.com",
+  "televisionacademy.com",
+  "www.grammy.com",
+  "grammy.com",
   "www.cbs.com",
   "cbs.com",
   "www.abc.com",
@@ -120,8 +124,16 @@ const jinaImageAllowlist = new Set([
   "tonyawards.com",
   "www.the-numbers.com",
   "the-numbers.com",
+  "www.boxofficemojo.com",
+  "boxofficemojo.com",
   "www.itv.com",
   "itv.com",
+  "polymarketanalytics.com",
+  "www.polymarketanalytics.com",
+  "www.oddpool.com",
+  "oddpool.com",
+  "docs.kalshi.com",
+  "docs.polymarket.us",
 ]);
 
 function readContentDirectory<T>(directory: "guides" | "news"): T[] {

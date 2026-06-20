@@ -1,0 +1,161 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-20",
+  "sources": [
+    {
+      "title": "Kalshi API Documentation",
+      "url": "https://docs.kalshi.com/welcome",
+      "publisher": "Kalshi",
+      "accessedAt": "2026-06-20",
+      "sourceType": "official"
+    },
+    {
+      "title": "Polymarket Gamma API",
+      "url": "https://gamma-api.polymarket.com/events",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-20",
+      "sourceType": "market-data"
+    },
+    {
+      "title": "ScreenOdds DataForSEO prediction-market keyword pull",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-20",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/blog/polymarket-analytics",
+      "label": "Polymarket Analytics",
+      "description": "Start with the broader analytics framework before building a tracker."
+    },
+    {
+      "href": "/blog/polymarket-volume",
+      "label": "Polymarket Volume",
+      "description": "Use volume quality to decide which tracker alerts matter."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/polymarket-tracker/images/featured-og.svg",
+    "alt": "ScreenOdds Polymarket tracker workflow illustration",
+    "provider": "ScreenOdds",
+    "sourceUrl": "/blog/polymarket-tracker/images/featured-og.svg",
+    "credit": "ScreenOdds editorial infographic.",
+    "usageNote": "Original ScreenOdds visual explaining market tracking workflows."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/polymarket-tracker/screenshots/kalshi-api-docs.jpg",
+      "alt": "Kalshi API documentation showing market data access patterns",
+      "provider": "Jina",
+      "sourceUrl": "https://docs.kalshi.com/welcome",
+      "credit": "Jina screenshot of Kalshi API documentation.",
+      "usageNote": "Used as contextual source evidence for market-data tracking workflows."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/polymarket-tracker/images/infographic-1.svg",
+      "alt": "Polymarket tracker signal workflow for watchlists, catalysts, moves, and review",
+      "provider": "ScreenOdds",
+      "promptSummary": "Workflow for tracking prediction-market movement.",
+      "usageNote": "ScreenOdds infographic showing how to structure a prediction-market watchlist."
+    },
+    {
+      "url": "/blog/polymarket-tracker/images/infographic-2.svg",
+      "alt": "Polymarket tracker alert workflow infographic",
+      "provider": "ScreenOdds",
+      "promptSummary": "Alert workflow for market watchlists and catalyst timing.",
+      "usageNote": "ScreenOdds infographic showing when a tracker alert deserves follow-up."
+    }
+  ],
+  "slug": "polymarket-tracker",
+  "title": "Polymarket Tracker: Watchlist Guide",
+  "description": "Polymarket tracker guide for watchlists, price alerts, volume checks, market catalysts, and ScreenOdds prediction-market monitoring.",
+  "primaryKeyword": "polymarket tracker",
+  "keywordVolume": 140,
+  "keywordDifficulty": 5,
+  "category": "Culture",
+  "updatedAt": "2026-06-20",
+  "heroImage": "/blog/polymarket-tracker/images/featured-og.svg",
+  "heroAlt": "ScreenOdds Polymarket tracker workflow illustration",
+  "sections": [
+    {
+      "heading": "Why Polymarket tracker deserves its own page",
+      "paragraphs": [
+        "DataForSEO shows `polymarket tracker` at 140 US monthly searches with keyword difficulty of 5 and a CPC close to $49. The volume is not huge, but the intent is clear: the reader wants a way to monitor markets, not another basic explanation of prediction markets.",
+        "This page should not compete with Polymarket analytics. Analytics explains how to interpret the data; a tracker explains what to watch and when to react."
+      ]
+    },
+    {
+      "heading": "What a tracker should monitor",
+      "paragraphs": [
+        "A practical tracker starts with a short list of markets, then watches price change, volume change, liquidity, time to resolution, and external catalysts. A long list is less useful because every small move starts to look important.",
+        "For ScreenOdds, a tracker page can support entertainment categories by showing when an Oscars, Netflix, reality TV, or box office market has moved enough to deserve a news update."
+      ]
+    },
+    {
+      "heading": "How to set alert thresholds",
+      "paragraphs": [
+        "A one-cent move is usually noise unless the market is highly liquid or the timing is important. A better rule is to pair price movement with volume, liquidity, and a known catalyst.",
+        "For example, a five-point move after an official nominations announcement carries a different meaning from a five-point move in a thin market at 2 a.m. with no new public source."
+      ]
+    },
+    {
+      "heading": "Why APIs matter for tracking",
+      "paragraphs": [
+        "Public APIs and documented market-data endpoints make trackers more reliable because they reduce manual checking. Kalshi's documentation shows how market data can be exposed through structured endpoints, and Polymarket's public event data gives ScreenOdds a fallback model for static market pages.",
+        "The site should always keep deterministic fallbacks so builds do not fail when an upstream endpoint is slow or unavailable."
+      ]
+    },
+    {
+      "heading": "How this page supports topical authority",
+      "paragraphs": [
+        "Polymarket tracker is a tool-intent page. It should link up to Polymarket analytics and sideways to Polymarket volume because most tracking mistakes come from misreading thin volume.",
+        "It should also link down into entertainment examples. Readers learn faster when the abstract workflow is connected to Oscars, Netflix, Love Island, and box office markets."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use a Polymarket tracker to avoid missing meaningful market movement. The goal is not to react to every tick; it is to create a repeatable process for deciding which moves deserve a deeper read.",
+        "ScreenOdds should treat tracker alerts as prompts for source checks, not as conclusions."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is a Polymarket tracker?",
+      "answer": "It is a watchlist or monitoring workflow for tracking market prices, volume, liquidity, timing, and catalysts."
+    },
+    {
+      "question": "What should trigger an alert?",
+      "answer": "A useful alert usually combines price movement with volume, liquidity, and a public catalyst rather than price movement alone."
+    },
+    {
+      "question": "How is a tracker different from analytics?",
+      "answer": "A tracker monitors markets over time, while analytics explains how to interpret the data when a market moves."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/polymarket-analytics",
+      "label": "Polymarket Analytics",
+      "description": "The broader data-analysis guide for prediction-market movement."
+    },
+    {
+      "href": "/blog/polymarket-volume",
+      "label": "Polymarket Volume",
+      "description": "A focused guide to liquidity, depth, and false signals."
+    },
+    {
+      "href": "/blog/best-actor-oscars-odds",
+      "label": "Best Actor Oscars Odds",
+      "description": "An awards guide where tracker alerts can identify market movement."
+    }
+  ]
+}

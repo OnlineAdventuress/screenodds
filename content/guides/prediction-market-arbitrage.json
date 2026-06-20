@@ -1,0 +1,161 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-20",
+  "sources": [
+    {
+      "title": "Prediction Market Arbitrage Scanner",
+      "url": "https://www.oddpool.com/arb-dashboard",
+      "publisher": "Oddpool",
+      "accessedAt": "2026-06-20",
+      "sourceType": "reference"
+    },
+    {
+      "title": "Kalshi API Documentation",
+      "url": "https://docs.kalshi.com/welcome",
+      "publisher": "Kalshi",
+      "accessedAt": "2026-06-20",
+      "sourceType": "official"
+    },
+    {
+      "title": "ScreenOdds DataForSEO prediction-market keyword pull",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-20",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/blog/polymarket-analytics",
+      "label": "Polymarket Analytics",
+      "description": "Use analytics before interpreting cross-market spreads."
+    },
+    {
+      "href": "/blog/polymarket-volume",
+      "label": "Polymarket Volume",
+      "description": "Check liquidity before assuming an arbitrage spread is actionable."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/prediction-market-arbitrage/images/featured-og.svg",
+    "alt": "ScreenOdds prediction-market arbitrage checklist illustration",
+    "provider": "ScreenOdds",
+    "sourceUrl": "/blog/prediction-market-arbitrage/images/featured-og.svg",
+    "credit": "ScreenOdds editorial infographic.",
+    "usageNote": "Original ScreenOdds visual explaining cross-market arbitrage checks."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/prediction-market-arbitrage/screenshots/oddpool-arb-dashboard.jpg",
+      "alt": "Oddpool prediction-market arbitrage dashboard showing cross-market scanning",
+      "provider": "Jina",
+      "sourceUrl": "https://www.oddpool.com/arb-dashboard",
+      "credit": "Jina screenshot of Oddpool arbitrage dashboard.",
+      "usageNote": "Used as contextual source evidence for prediction-market arbitrage scanning."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/prediction-market-arbitrage/images/infographic-1.svg",
+      "alt": "Prediction-market arbitrage checklist for spreads, fees, rules, and execution",
+      "provider": "ScreenOdds",
+      "promptSummary": "Checklist for evaluating cross-market arbitrage spreads.",
+      "usageNote": "ScreenOdds infographic showing the minimum checks before interpreting an arbitrage spread."
+    },
+    {
+      "url": "/blog/prediction-market-arbitrage/images/infographic-2.svg",
+      "alt": "Prediction-market arbitrage workflow for comparing Polymarket and Kalshi",
+      "provider": "ScreenOdds",
+      "promptSummary": "Workflow for comparing cross-market prices and risks.",
+      "usageNote": "ScreenOdds infographic showing why fees, rules, liquidity, and timing all matter."
+    }
+  ],
+  "slug": "prediction-market-arbitrage",
+  "title": "Prediction Market Arbitrage Guide",
+  "description": "Prediction market arbitrage explained through Polymarket, Kalshi, spreads, fees, liquidity, resolution rules, and ScreenOdds risk checks.",
+  "primaryKeyword": "prediction market arbitrage",
+  "keywordVolume": 320,
+  "keywordDifficulty": 0,
+  "category": "Culture",
+  "updatedAt": "2026-06-20",
+  "heroImage": "/blog/prediction-market-arbitrage/images/featured-og.svg",
+  "heroAlt": "ScreenOdds prediction-market arbitrage checklist illustration",
+  "sections": [
+    {
+      "heading": "Why arbitrage is the strongest low-KD opportunity",
+      "paragraphs": [
+        "DataForSEO shows `prediction market arbitrage` at 320 US monthly searches with keyword difficulty of 0. Related terms are also attractive: `kalshi polymarket arbitrage` has 260 searches, KD 0, and a CPC above $42.",
+        "The SERP is still messy. It includes Reddit, GitHub projects, news coverage, dashboards, and thin explainers. A ScreenOdds page can compete by being clearer about the checks that make a spread real or misleading."
+      ]
+    },
+    {
+      "heading": "What arbitrage means in prediction markets",
+      "paragraphs": [
+        "Prediction-market arbitrage usually means finding a price difference between two markets that appear to resolve to the same outcome. In theory, a trader could buy the cheaper side and sell or offset the expensive side.",
+        "In practice, the hard part is proving the markets are truly equivalent. Similar wording is not enough. Resolution rules, fees, limits, liquidity, timing, and platform eligibility can change the result."
+      ]
+    },
+    {
+      "heading": "The four checks before trusting a spread",
+      "paragraphs": [
+        "First, compare resolution rules. Second, calculate fees. Third, check liquidity and order-book depth. Fourth, check execution timing and withdrawal or settlement constraints.",
+        "If any one of those checks fails, the displayed spread may be informational rather than actionable. ScreenOdds should explain those risks instead of presenting arbitrage as free money."
+      ]
+    },
+    {
+      "heading": "Why Kalshi and Polymarket spreads get attention",
+      "paragraphs": [
+        "Kalshi and Polymarket often attract comparison searches because their platforms, eligibility rules, funding methods, and market menus differ. That makes cross-market prices interesting, but also harder to compare cleanly.",
+        "A market that sounds equivalent may still resolve under different sources or timing. That is why the arbitrage cluster should link to API, fee, and volume pages as those pages are added."
+      ]
+    },
+    {
+      "heading": "How ScreenOdds should cover arbitrage",
+      "paragraphs": [
+        "ScreenOdds should frame arbitrage pages as education and market literacy. The best content explains how to evaluate a spread, how to spot false positives, and why liquidity can matter more than the headline gap.",
+        "Entertainment markets can use the same logic when similar questions appear across platforms or categories. The page should become the internal reference for any future spread analysis."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use this guide to slow down before trusting an apparent mismatch. If the rules, fees, liquidity, and timing all line up, the spread may deserve more research.",
+        "If they do not line up, the spread is likely just a signal that two markets are pricing different risk."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is prediction market arbitrage?",
+      "answer": "It is the attempt to exploit price differences between markets that appear to resolve to the same outcome."
+    },
+    {
+      "question": "Why can arbitrage be misleading?",
+      "answer": "Resolution rules, platform fees, liquidity, eligibility, and timing can make two similar-looking markets behave differently."
+    },
+    {
+      "question": "Does ScreenOdds provide trading advice?",
+      "answer": "No. ScreenOdds explains market structure and public signals for informational purposes."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/polymarket-analytics",
+      "label": "Polymarket Analytics",
+      "description": "Use analytics to understand whether market movement has data behind it."
+    },
+    {
+      "href": "/blog/polymarket-volume",
+      "label": "Polymarket Volume",
+      "description": "Liquidity quality is one of the main arbitrage checks."
+    },
+    {
+      "href": "/blog/polymarket-tracker",
+      "label": "Polymarket Tracker",
+      "description": "A tracker can flag spreads, but source checks decide whether they matter."
+    }
+  ]
+}

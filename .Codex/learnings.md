@@ -97,3 +97,9 @@ Read this before starting each task.
 - What worked: The shared GSC submitter can generate a Google verification token and IndexNow key for ScreenOdds once the site is live on Netlify.
 - What broke: ScreenOdds was not in the verified GSC property list, so the global submit run skipped it even though the production sitemap was valid.
 - Pattern to remember: For new Netlify SEO sites, add `metadata.verification.google`, deploy it, run `submit.py verify`, and only then expect `submit.py submit` to include the domain.
+
+## 2026-06-20 - Prediction Market Authority Batch
+
+- What worked: Adding prediction-market guides as JSON files plus local assets generated new static `/blog/*` pages without changing the article renderer.
+- What broke: The exact article slug-list test was brittle when unrelated untracked guide files existed locally; it now asserts required slugs and uniqueness while `editorial.test.ts` handles metadata validation.
+- Pattern to remember: Before updating `src/lib/articles.test.ts`, run `git status --short` and separate unrelated untracked content from the batch being committed.
