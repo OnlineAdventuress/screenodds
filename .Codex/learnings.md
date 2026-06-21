@@ -109,3 +109,9 @@ Read this before starting each task.
 - What worked: The Kie infographic pipeline can upgrade older ScreenOdds-generated SVG guide art to larger PNG hero and inline assets without routing changes.
 - What broke: `assets.test.ts` correctly caught four published guides whose hero images still pointed at small SVG placeholders below the 10 KB quality floor.
 - Pattern to remember: When a guide receives generated PNG replacements, update `heroImage`, `heroMedia.url`, `heroMedia.sourceUrl`, and each infographic URL/provider together so tests and rendered pages agree.
+
+## 2026-06-21 - Signal Lab Calculator
+
+- What worked: Building Signal Lab as a deterministic model plus a client calculator kept paid APIs out of render paths while adding useful market-page interactivity.
+- What broke: A component test that searched raw HTML for prohibited action words matched Tailwind class names; visible-text checks are safer for copy assertions.
+- Pattern to remember: Market-page tools should consume existing server-normalized models and keep user-entered estimates browser-local.
