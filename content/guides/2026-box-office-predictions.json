@@ -1,0 +1,166 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-20",
+  "sources": [
+    {
+      "title": "2026 Worldwide Box Office",
+      "url": "https://www.boxofficemojo.com/year/world",
+      "publisher": "Box Office Mojo",
+      "accessedAt": "2026-06-20",
+      "sourceType": "box-office-data"
+    },
+    {
+      "title": "Weekend domestic box office chart",
+      "url": "https://www.the-numbers.com/weekend-box-office-chart",
+      "publisher": "The Numbers",
+      "accessedAt": "2026-06-20",
+      "sourceType": "box-office-data"
+    },
+    {
+      "title": "ScreenOdds DataForSEO prediction keyword pull",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-20",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/box-office",
+      "label": "Box Office Markets",
+      "description": "Browse ScreenOdds box office prediction-market coverage."
+    },
+    {
+      "href": "/blog/weekend-box-office-predictions",
+      "label": "Weekend Box Office Predictions",
+      "description": "Read the weekly box office prediction methodology guide."
+    },
+    {
+      "href": "/markets/highest-grossing-movie-in-2026",
+      "label": "Highest Grossing Movie Market",
+      "description": "Compare annual box office movement with the ScreenOdds market page."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/2026-box-office-predictions/images/featured-og.png",
+    "alt": "Editorial 2026 box office predictions dashboard with worldwide grosses and market signals",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/2026-box-office-predictions/images/featured-og.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/2026-box-office-predictions/screenshots/box-office-mojo-world-2026.jpg",
+      "alt": "Box Office Mojo 2026 worldwide box office chart showing annual grosses",
+      "provider": "Jina",
+      "sourceUrl": "https://www.boxofficemojo.com/year/world",
+      "credit": "Jina screenshot of Box Office Mojo's 2026 worldwide box office chart.",
+      "usageNote": "Used as contextual source evidence for 2026 worldwide box office rankings."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/2026-box-office-predictions/images/infographic-1.png",
+      "alt": "2026 box office predictions annual signal stack infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds 2026 box office predictions signal stack for worldwide grosses, domestic share, franchise legs, release calendar, and market odds.",
+      "usageNote": "AI-generated infographic explaining annual box office prediction signals."
+    },
+    {
+      "url": "/blog/2026-box-office-predictions/images/infographic-2.png",
+      "alt": "2026 box office predictions market timeline infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds 2026 box office market timeline from release calendar to opening weekends, holdover grosses, global totals, and annual rankings.",
+      "usageNote": "AI-generated infographic summarizing the 2026 box office prediction timeline."
+    }
+  ],
+  "slug": "2026-box-office-predictions",
+  "title": "2026 Box Office Predictions: Market Signals",
+  "description": "2026 box office predictions explained with worldwide grosses, domestic share, release-calendar signals, and ScreenOdds market context.",
+  "primaryKeyword": "2026 box office predictions",
+  "keywordVolume": 590,
+  "keywordDifficulty": 0,
+  "category": "Box Office",
+  "updatedAt": "2026-06-20",
+  "heroImage": "/blog/2026-box-office-predictions/images/featured-og.png",
+  "heroAlt": "Editorial 2026 box office predictions dashboard with worldwide grosses and market signals",
+  "sections": [
+    {
+      "heading": "Why 2026 box office predictions are rankable",
+      "paragraphs": [
+        "DataForSEO shows `2026 box office predictions` at 590 US monthly searches with keyword difficulty of 0. That is smaller than the weekend box office keyword, but much easier to rank for.",
+        "This page should own annual prediction intent while the existing weekend guide handles week-to-week forecasting."
+      ]
+    },
+    {
+      "heading": "What current worldwide grosses show",
+      "paragraphs": [
+        "Box Office Mojo's 2026 worldwide chart lists The Super Mario Galaxy Movie at $1,005,795,740 worldwide, followed by Michael at $933,994,878 and Project Hail Mary at $682,311,153.",
+        "Those figures are useful because annual prediction markets are not only about opening weekends. They depend on global legs, domestic share, international breakout, and whether a film can keep screens over time."
+      ]
+    },
+    {
+      "heading": "How to read annual box office predictions",
+      "paragraphs": [
+        "Annual box office predictions should combine current grosses, release calendar, franchise history, genre demand, theater count, international rollout, and competitive windows.",
+        "A film can win a weekend and still lose the annual race. The annual page should explain the difference between short-term opening strength and long-term global totals."
+      ]
+    },
+    {
+      "heading": "Signals that move annual box office markets",
+      "paragraphs": [
+        "The biggest annual-market signals are worldwide gross pace, domestic-to-foreign split, holiday timing, premium-format availability, sequel fatigue, audience scores, and whether a competitor is about to take screens.",
+        "Prediction markets can react before final grosses arrive, but ScreenOdds should tie those moves back to public box office data whenever possible."
+      ]
+    },
+    {
+      "heading": "How this connects to weekend predictions",
+      "paragraphs": [
+        "The annual page should link to the weekend prediction guide because every yearly race is built from individual weekends. The weekend guide explains the short-term signals; this page explains the full-year market.",
+        "Together they create a stronger Box Office cluster than a single generic box office page."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use 2026 box office predictions to compare live worldwide grosses with market expectations. If a title is leading worldwide but a market still prices another title higher, the reason should be visible in release timing or upcoming catalysts.",
+        "ScreenOdds should keep this page refreshed as the annual chart changes, because box office prediction pages can decay quickly if they are not updated."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why target 2026 box office predictions?",
+      "answer": "DataForSEO reports 590 US monthly searches with keyword difficulty of 0, making it a strong annual box office prediction keyword."
+    },
+    {
+      "question": "How is this different from weekend box office predictions?",
+      "answer": "Weekend predictions focus on short-term grosses, while 2026 box office predictions focus on annual worldwide performance and market positioning."
+    },
+    {
+      "question": "What source should annual box office pages cite?",
+      "answer": "Box Office Mojo and The Numbers are useful public references for annual grosses, weekend grosses, domestic share, and worldwide totals."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/weekend-box-office-predictions",
+      "label": "Weekend Box Office Predictions",
+      "description": "The ScreenOdds guide to weekly box office forecasting."
+    },
+    {
+      "href": "/markets/highest-grossing-movie-in-2026",
+      "label": "Highest Grossing Movie in 2026",
+      "description": "A ScreenOdds market page for annual box office performance."
+    },
+    {
+      "href": "/box-office",
+      "label": "Box Office Odds",
+      "description": "The ScreenOdds box office market hub."
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-20",
+  "sources": [
+    {
+      "title": "Tony Award nominations",
+      "url": "https://www.tonyawards.com/nominees",
+      "publisher": "Tony Awards",
+      "accessedAt": "2026-06-20",
+      "sourceType": "official"
+    },
+    {
+      "title": "Tony Awards winners",
+      "url": "https://www.tonyawards.com/winners",
+      "publisher": "Tony Awards",
+      "accessedAt": "2026-06-20",
+      "sourceType": "official"
+    },
+    {
+      "title": "ScreenOdds DataForSEO prediction keyword pull",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-20",
+      "sourceType": "keyword-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/awards",
+      "label": "Awards Markets",
+      "description": "Browse ScreenOdds awards prediction-market coverage."
+    },
+    {
+      "href": "/blog/tony-awards-odds",
+      "label": "Tony Awards Odds",
+      "description": "Read the ScreenOdds Tony odds guide for market-specific context."
+    },
+    {
+      "href": "/blog/grammys-predictions",
+      "label": "Grammys Predictions",
+      "description": "Compare theater and music awards prediction signals."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/tony-awards-predictions/images/featured-og.png",
+    "alt": "Editorial Tony Awards predictions board with Broadway categories and market signals",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/tony-awards-predictions/images/featured-og.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/tony-awards-predictions/screenshots/tony-nominees-2026.jpg",
+      "alt": "Official Tony Awards nominations page showing 2026 nominees and winners",
+      "provider": "Jina",
+      "sourceUrl": "https://www.tonyawards.com/nominees",
+      "credit": "Jina screenshot of the official Tony Awards nominations page.",
+      "usageNote": "Used as contextual source evidence for Tony Awards category and nominee data."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/tony-awards-predictions/images/infographic-1.png",
+      "alt": "Tony Awards predictions Broadway signal stack infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Tony Awards predictions signal stack for nominations, reviews, Broadway grosses, critics, and market pricing.",
+      "usageNote": "AI-generated infographic explaining Tony Awards prediction signals."
+    },
+    {
+      "url": "/blog/tony-awards-predictions/images/infographic-2.png",
+      "alt": "Tony Awards predictions category flow infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Tony Awards prediction category flow from nominees to ceremony outcomes and market resolution.",
+      "usageNote": "AI-generated infographic summarizing Tony Awards prediction timing."
+    }
+  ],
+  "slug": "tony-awards-predictions",
+  "title": "Tony Awards Predictions: Broadway Signals",
+  "description": "Tony Awards predictions explained with official nominees, Broadway category signals, market timing, and ScreenOdds awards context.",
+  "primaryKeyword": "tony awards predictions",
+  "keywordVolume": 1900,
+  "keywordDifficulty": 1,
+  "category": "Awards",
+  "updatedAt": "2026-06-20",
+  "heroImage": "/blog/tony-awards-predictions/images/featured-og.png",
+  "heroAlt": "Editorial Tony Awards predictions board with Broadway categories and market signals",
+  "sections": [
+    {
+      "heading": "Why Tony Awards predictions deserve their own page",
+      "paragraphs": [
+        "DataForSEO shows `tony awards predictions` at 1,900 US monthly searches with keyword difficulty of 1. That is much larger than the Tony odds keyword and still extremely rankable.",
+        "The existing Tony Awards odds guide should stay focused on market odds. This page should catch broader prediction demand and explain the Broadway signals behind those markets."
+      ]
+    },
+    {
+      "heading": "What official Tony data tells us",
+      "paragraphs": [
+        "The official Tony nominees page lists 2026 categories and nominees, while the winners page resolves each category after the ceremony. That gives ScreenOdds a clean source path from nomination signal to final market outcome.",
+        "For example, the nominations page shows categories such as Best Play, Best Musical, acting categories, design categories, direction, choreography, and orchestrations. Those categories should not be collapsed into a single broad prediction."
+      ]
+    },
+    {
+      "heading": "How to read Tony Awards predictions",
+      "paragraphs": [
+        "Tony predictions depend on nominations, critical reception, Broadway gross momentum, production visibility, category competition, and theater-industry narratives.",
+        "A show can have a strong top-category narrative but split technical or acting categories. Prediction pages should make that distinction clear instead of treating every nomination as equal."
+      ]
+    },
+    {
+      "heading": "Signals that move Broadway markets",
+      "paragraphs": [
+        "The biggest Broadway market catalysts are nomination count, review strength, Drama Desk and Outer Critics signals, Broadway grosses, cast visibility, and ceremony-week press.",
+        "Because theater markets can be thin, ScreenOdds should explain liquidity and volume whenever market odds are referenced."
+      ]
+    },
+    {
+      "heading": "How this avoids Tony odds cannibalization",
+      "paragraphs": [
+        "The Tony odds page answers `tony awards odds`; this page answers `tony awards predictions`. They should link together, but the title, H1, and sections should stay distinct.",
+        "That lets ScreenOdds cover both a betting-style query and an informational prediction query without creating duplicate pages."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use Tony Awards predictions to understand why a category favorite is priced the way it is. If the official nominee field, Broadway signals, and market price all point in the same direction, the prediction is more durable.",
+        "If those signals disagree, ScreenOdds should call out the uncertainty instead of turning a thin market move into a false certainty."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why target Tony Awards predictions?",
+      "answer": "DataForSEO reports 1,900 US monthly searches with keyword difficulty of 1, making it a strong low-competition awards prediction page."
+    },
+    {
+      "question": "Is this different from Tony Awards odds?",
+      "answer": "Yes. Tony Awards predictions targets broader informational search intent, while Tony Awards odds focuses on market pricing."
+    },
+    {
+      "question": "What source should Tony prediction pages cite?",
+      "answer": "The official Tony Awards nominees and winners pages are the best source for category names and outcomes."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/tony-awards-odds",
+      "label": "Tony Awards Odds",
+      "description": "The market-specific companion page for Tony Awards prediction-market odds."
+    },
+    {
+      "href": "/awards",
+      "label": "Awards Odds",
+      "description": "The ScreenOdds hub for entertainment awards markets."
+    },
+    {
+      "href": "/blog/grammys-predictions",
+      "label": "Grammys Predictions",
+      "description": "A related awards prediction guide with low keyword difficulty."
+    }
+  ]
+}

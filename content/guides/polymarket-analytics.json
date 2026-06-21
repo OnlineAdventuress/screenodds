@@ -44,11 +44,11 @@
   ],
   "heroMedia": {
     "kind": "generated",
-    "url": "/blog/polymarket-analytics/images/featured-og.svg",
+    "url": "/blog/polymarket-analytics/images/featured-og.png",
     "alt": "ScreenOdds Polymarket analytics dashboard illustration",
-    "provider": "ScreenOdds",
-    "sourceUrl": "/blog/polymarket-analytics/images/featured-og.svg",
-    "credit": "ScreenOdds editorial infographic.",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/polymarket-analytics/images/featured-og.png",
+    "credit": "Kie.ai image generated for ScreenOdds.",
     "usageNote": "Original ScreenOdds visual explaining prediction-market analytics signals."
   },
   "inlineImages": [
@@ -64,16 +64,16 @@
   ],
   "infographics": [
     {
-      "url": "/blog/polymarket-analytics/images/infographic-1.svg",
+      "url": "/blog/polymarket-analytics/images/infographic-1.png",
       "alt": "Polymarket analytics signal stack for holders, liquidity, volume, and price movement",
-      "provider": "ScreenOdds",
+      "provider": "Kie.ai",
       "promptSummary": "Signal stack for reading Polymarket analytics pages.",
       "usageNote": "ScreenOdds infographic showing the analytics signals to check before trusting a market move."
     },
     {
-      "url": "/blog/polymarket-analytics/images/infographic-2.svg",
+      "url": "/blog/polymarket-analytics/images/infographic-2.png",
       "alt": "Polymarket analytics workflow for separating signal from noise",
-      "provider": "ScreenOdds",
+      "provider": "Kie.ai",
       "promptSummary": "Workflow for using analytics dashboards without overreacting to a single metric.",
       "usageNote": "ScreenOdds infographic showing a practical analytics review workflow."
     }
@@ -86,7 +86,7 @@
   "keywordDifficulty": 1,
   "category": "Culture",
   "updatedAt": "2026-06-20",
-  "heroImage": "/blog/polymarket-analytics/images/featured-og.svg",
+  "heroImage": "/blog/polymarket-analytics/images/featured-og.png",
   "heroAlt": "ScreenOdds Polymarket analytics dashboard illustration",
   "sections": [
     {

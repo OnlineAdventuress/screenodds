@@ -44,11 +44,11 @@
   ],
   "heroMedia": {
     "kind": "generated",
-    "url": "/blog/polymarket-volume/images/featured-og.svg",
+    "url": "/blog/polymarket-volume/images/featured-og.png",
     "alt": "ScreenOdds Polymarket volume and liquidity illustration",
-    "provider": "ScreenOdds",
-    "sourceUrl": "/blog/polymarket-volume/images/featured-og.svg",
-    "credit": "ScreenOdds editorial infographic.",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/polymarket-volume/images/featured-og.png",
+    "credit": "Kie.ai image generated for ScreenOdds.",
     "usageNote": "Original ScreenOdds visual explaining volume and liquidity quality."
   },
   "inlineImages": [
@@ -64,16 +64,16 @@
   ],
   "infographics": [
     {
-      "url": "/blog/polymarket-volume/images/infographic-1.svg",
+      "url": "/blog/polymarket-volume/images/infographic-1.png",
       "alt": "Polymarket volume signal map for liquidity, spread, depth, and market age",
-      "provider": "ScreenOdds",
+      "provider": "Kie.ai",
       "promptSummary": "Signal map for reading Polymarket volume and liquidity.",
       "usageNote": "ScreenOdds infographic showing which volume signals matter most."
     },
     {
-      "url": "/blog/polymarket-volume/images/infographic-2.svg",
+      "url": "/blog/polymarket-volume/images/infographic-2.png",
       "alt": "Polymarket volume workflow for separating real moves from thin-market noise",
-      "provider": "ScreenOdds",
+      "provider": "Kie.ai",
       "promptSummary": "Workflow for verifying whether volume supports a market move.",
       "usageNote": "ScreenOdds infographic showing a step-by-step volume review process."
     }
@@ -86,7 +86,7 @@
   "keywordDifficulty": 16,
   "category": "Culture",
   "updatedAt": "2026-06-20",
-  "heroImage": "/blog/polymarket-volume/images/featured-og.svg",
+  "heroImage": "/blog/polymarket-volume/images/featured-og.png",
   "heroAlt": "ScreenOdds Polymarket volume and liquidity illustration",
   "sections": [
     {

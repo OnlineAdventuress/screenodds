@@ -39,11 +39,11 @@
   ],
   "heroMedia": {
     "kind": "generated",
-    "url": "/blog/polymarket-tracker/images/featured-og.svg",
+    "url": "/blog/polymarket-tracker/images/featured-og.png",
     "alt": "ScreenOdds Polymarket tracker workflow illustration",
-    "provider": "ScreenOdds",
-    "sourceUrl": "/blog/polymarket-tracker/images/featured-og.svg",
-    "credit": "ScreenOdds editorial infographic.",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/polymarket-tracker/images/featured-og.png",
+    "credit": "Kie.ai image generated for ScreenOdds.",
     "usageNote": "Original ScreenOdds visual explaining market tracking workflows."
   },
   "inlineImages": [
@@ -59,16 +59,16 @@
   ],
   "infographics": [
     {
-      "url": "/blog/polymarket-tracker/images/infographic-1.svg",
+      "url": "/blog/polymarket-tracker/images/infographic-1.png",
       "alt": "Polymarket tracker signal workflow for watchlists, catalysts, moves, and review",
-      "provider": "ScreenOdds",
+      "provider": "Kie.ai",
       "promptSummary": "Workflow for tracking prediction-market movement.",
       "usageNote": "ScreenOdds infographic showing how to structure a prediction-market watchlist."
     },
     {
-      "url": "/blog/polymarket-tracker/images/infographic-2.svg",
+      "url": "/blog/polymarket-tracker/images/infographic-2.png",
       "alt": "Polymarket tracker alert workflow infographic",
-      "provider": "ScreenOdds",
+      "provider": "Kie.ai",
       "promptSummary": "Alert workflow for market watchlists and catalyst timing.",
       "usageNote": "ScreenOdds infographic showing when a tracker alert deserves follow-up."
     }
@@ -81,7 +81,7 @@
   "keywordDifficulty": 5,
   "category": "Culture",
   "updatedAt": "2026-06-20",
-  "heroImage": "/blog/polymarket-tracker/images/featured-og.svg",
+  "heroImage": "/blog/polymarket-tracker/images/featured-og.png",
   "heroAlt": "ScreenOdds Polymarket tracker workflow illustration",
   "sections": [
     {

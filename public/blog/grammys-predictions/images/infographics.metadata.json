@@ -1,0 +1,23 @@
+[
+  {
+    "url": "/blog/grammys-predictions/images/featured-og.png",
+    "alt": "Grammys Predictions: Awards Market Signals editorial market signal graphic",
+    "provider": "Kie.ai",
+    "promptSummary": "Create a premium editorial featured editorial image for ScreenOdds. Topic: Grammys Predictions: Awards Market Signals. Category: Awards. Key ideas: Why Grammys predictions are a priority; What official Grammy data gives us; How to read Gram",
+    "usageNote": "AI-generated editorial infographic. Review for factual neutrality and absence of logos/text artifacts before publishing inline."
+  },
+  {
+    "url": "/blog/grammys-predictions/images/infographic-1.png",
+    "alt": "Grammys Predictions: Awards Market Signals prediction-market infographic 1",
+    "provider": "Kie.ai",
+    "promptSummary": "Create a premium editorial inline infographic 1 for ScreenOdds. Topic: Grammys Predictions: Awards Market Signals. Category: Awards. Key ideas: Why Grammys predictions are a priority; What official Grammy data gives us; How to read Grammys ",
+    "usageNote": "AI-generated editorial infographic. Review for factual neutrality and absence of logos/text artifacts before publishing inline."
+  },
+  {
+    "url": "/blog/grammys-predictions/images/infographic-2.png",
+    "alt": "Grammys Predictions: Awards Market Signals prediction-market infographic 2",
+    "provider": "Kie.ai",
+    "promptSummary": "Create a premium editorial inline infographic 2 for ScreenOdds. Topic: Grammys Predictions: Awards Market Signals. Category: Awards. Key ideas: Why Grammys predictions are a priority; What official Grammy data gives us; How to read Grammys ",
+    "usageNote": "AI-generated editorial infographic. Review for factual neutrality and absence of logos/text artifacts before publishing inline."
+  }
+]

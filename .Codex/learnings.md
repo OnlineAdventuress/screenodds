@@ -103,3 +103,9 @@ Read this before starting each task.
 - What worked: Adding prediction-market guides as JSON files plus local assets generated new static `/blog/*` pages without changing the article renderer.
 - What broke: The exact article slug-list test was brittle when unrelated untracked guide files existed locally; it now asserts required slugs and uniqueness while `editorial.test.ts` handles metadata validation.
 - Pattern to remember: Before updating `src/lib/articles.test.ts`, run `git status --short` and separate unrelated untracked content from the batch being committed.
+
+## 2026-06-21 - Prediction Guide Media Upgrade
+
+- What worked: The Kie infographic pipeline can upgrade older ScreenOdds-generated SVG guide art to larger PNG hero and inline assets without routing changes.
+- What broke: `assets.test.ts` correctly caught four published guides whose hero images still pointed at small SVG placeholders below the 10 KB quality floor.
+- Pattern to remember: When a guide receives generated PNG replacements, update `heroImage`, `heroMedia.url`, `heroMedia.sourceUrl`, and each infographic URL/provider together so tests and rendered pages agree.

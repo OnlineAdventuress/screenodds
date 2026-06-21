@@ -1,0 +1,23 @@
+[
+  {
+    "url": "/blog/tony-awards-predictions/images/featured-og.png",
+    "alt": "Tony Awards Predictions: Broadway Signals editorial market signal graphic",
+    "provider": "Kie.ai",
+    "promptSummary": "Create a premium editorial featured editorial image for ScreenOdds. Topic: Tony Awards Predictions: Broadway Signals. Category: Awards. Key ideas: Why Tony Awards predictions deserve their own page; What official Tony data tells us; How to ",
+    "usageNote": "AI-generated editorial infographic. Review for factual neutrality and absence of logos/text artifacts before publishing inline."
+  },
+  {
+    "url": "/blog/tony-awards-predictions/images/infographic-1.png",
+    "alt": "Tony Awards Predictions: Broadway Signals prediction-market infographic 1",
+    "provider": "Kie.ai",
+    "promptSummary": "Create a premium editorial inline infographic 1 for ScreenOdds. Topic: Tony Awards Predictions: Broadway Signals. Category: Awards. Key ideas: Why Tony Awards predictions deserve their own page; What official Tony data tells us; How to read",
+    "usageNote": "AI-generated editorial infographic. Review for factual neutrality and absence of logos/text artifacts before publishing inline."
+  },
+  {
+    "url": "/blog/tony-awards-predictions/images/infographic-2.png",
+    "alt": "Tony Awards Predictions: Broadway Signals prediction-market infographic 2",
+    "provider": "Kie.ai",
+    "promptSummary": "Create a premium editorial inline infographic 2 for ScreenOdds. Topic: Tony Awards Predictions: Broadway Signals. Category: Awards. Key ideas: Why Tony Awards predictions deserve their own page; What official Tony data tells us; How to read",
+    "usageNote": "AI-generated editorial infographic. Review for factual neutrality and absence of logos/text artifacts before publishing inline."
+  }
+]

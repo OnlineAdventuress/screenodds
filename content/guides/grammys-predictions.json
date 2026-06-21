@@ -1,0 +1,166 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-20",
+  "sources": [
+    {
+      "title": "68th Annual Grammy Awards 2026",
+      "url": "https://www.grammy.com/awards/68th-annual-grammy-awards-2025",
+      "publisher": "GRAMMY.com",
+      "accessedAt": "2026-06-20",
+      "sourceType": "official"
+    },
+    {
+      "title": "ScreenOdds DataForSEO prediction keyword pull",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-20",
+      "sourceType": "keyword-data"
+    },
+    {
+      "title": "Polymarket market context",
+      "url": "https://polymarket.com",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-20",
+      "sourceType": "market-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/awards",
+      "label": "Awards Markets",
+      "description": "Browse ScreenOdds awards prediction-market coverage."
+    },
+    {
+      "href": "/blog/polymarket-grammys",
+      "label": "Polymarket Grammys",
+      "description": "Read the ScreenOdds guide to Grammy prediction markets."
+    },
+    {
+      "href": "/blog/tony-awards-predictions",
+      "label": "Tony Awards Predictions",
+      "description": "Compare music and theater awards prediction signals."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/grammys-predictions/images/featured-og.png",
+    "alt": "Editorial Grammys predictions dashboard with music awards signals",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/grammys-predictions/images/featured-og.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/grammys-predictions/screenshots/grammy-awards-2026.jpg",
+      "alt": "GRAMMY.com 68th Annual Grammy Awards 2026 category page",
+      "provider": "Jina",
+      "sourceUrl": "https://www.grammy.com/awards/68th-annual-grammy-awards-2025",
+      "credit": "Jina screenshot of the official GRAMMY.com 2026 awards page.",
+      "usageNote": "Used as contextual source evidence for official Grammy category and winner data."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/grammys-predictions/images/infographic-1.png",
+      "alt": "Grammys predictions signal stack infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Grammys predictions signal stack for nominations, genre fields, chart momentum, cultural impact, and market pricing.",
+      "usageNote": "AI-generated infographic explaining Grammy prediction-market signals."
+    },
+    {
+      "url": "/blog/grammys-predictions/images/infographic-2.png",
+      "alt": "Grammys predictions category map infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Grammys prediction map showing general field, genre categories, nomination timing, and market resolution.",
+      "usageNote": "AI-generated infographic summarizing Grammy prediction categories."
+    }
+  ],
+  "slug": "grammys-predictions",
+  "title": "Grammys Predictions: Awards Market Signals",
+  "description": "Grammys predictions explained with GRAMMY.com category data, music awards signals, market timing, and ScreenOdds Polymarket context.",
+  "primaryKeyword": "grammys predictions",
+  "keywordVolume": 1600,
+  "keywordDifficulty": 1,
+  "category": "Awards",
+  "updatedAt": "2026-06-20",
+  "heroImage": "/blog/grammys-predictions/images/featured-og.png",
+  "heroAlt": "Editorial Grammys predictions dashboard with music awards signals",
+  "sections": [
+    {
+      "heading": "Why Grammys predictions are a priority",
+      "paragraphs": [
+        "DataForSEO shows `grammys predictions` at 1,600 US monthly searches with keyword difficulty of 1. That is a rare combination: clear intent, meaningful volume, and very low difficulty.",
+        "ScreenOdds already has a Polymarket Grammys guide, so this page should catch broader prediction search demand and send readers to the market-specific explainer when they want odds context."
+      ]
+    },
+    {
+      "heading": "What official Grammy data gives us",
+      "paragraphs": [
+        "GRAMMY.com lists the 68th Annual Grammy Awards 2026 telecast and category results, including Record of the Year for `luther`, Album of the Year for `DeBÍ TiRAR MáS FOToS`, Song of the Year for `WILDFLOWER`, and Best New Artist for Olivia Dean.",
+        "Official category data matters because Grammy predictions are field-specific. A general-field favorite can behave differently from a genre-field favorite, and markets need to resolve against exact category names."
+      ]
+    },
+    {
+      "heading": "How to read Grammys predictions",
+      "paragraphs": [
+        "Music awards predictions should weigh nominations, general-field placement, genre-field strength, chart momentum, cultural reach, industry narratives, and campaign visibility.",
+        "A market can overprice public popularity if the voting body is likely to reward a different signal. That is why ScreenOdds should explain the difference between fan consensus and awards-voter behavior."
+      ]
+    },
+    {
+      "heading": "Signals that move Grammy markets",
+      "paragraphs": [
+        "Major category nominations, televised performances, artist momentum, critic lists, genre-field sweeps, and surprise eligibility decisions can all move Grammy prediction markets.",
+        "Because Grammy markets can cover many categories, the best ScreenOdds pages should separate general-field markets from narrower genre markets."
+      ]
+    },
+    {
+      "heading": "How this connects to Polymarket Grammys",
+      "paragraphs": [
+        "This page should use the broader `grammys predictions` query while the existing Polymarket Grammys page handles platform-specific market context. The two pages should link to each other with distinct anchor text.",
+        "That avoids cannibalization: one page answers prediction intent, while the other explains how Polymarket odds work."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use Grammys predictions to understand category signals before comparing them with market pricing. If a market price moves, ask whether the signal came from nominations, media coverage, chart performance, or market liquidity.",
+        "ScreenOdds should keep the page informational and source-backed, especially because music awards markets can attract fan-driven overreactions."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why target Grammys predictions?",
+      "answer": "DataForSEO reports 1,600 US monthly searches with keyword difficulty of 1, making it one of the best awards prediction opportunities."
+    },
+    {
+      "question": "How is this different from Polymarket Grammys?",
+      "answer": "This page targets broad prediction intent, while the Polymarket Grammys page explains market odds and platform-specific context."
+    },
+    {
+      "question": "What source should Grammy markets use?",
+      "answer": "GRAMMY.com category pages are the cleanest official source for category names, nominees, winners, and telecast data."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/polymarket-grammys",
+      "label": "Polymarket Grammys",
+      "description": "The ScreenOdds guide to Grammy prediction-market odds."
+    },
+    {
+      "href": "/awards",
+      "label": "Awards Odds",
+      "description": "The main ScreenOdds awards hub."
+    },
+    {
+      "href": "/blog/tony-awards-predictions",
+      "label": "Tony Awards Predictions",
+      "description": "A related low-KD awards prediction page."
+    }
+  ]
+}

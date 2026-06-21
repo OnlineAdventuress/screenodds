@@ -39,11 +39,11 @@
   ],
   "heroMedia": {
     "kind": "generated",
-    "url": "/blog/prediction-market-arbitrage/images/featured-og.svg",
+    "url": "/blog/prediction-market-arbitrage/images/featured-og.png",
     "alt": "ScreenOdds prediction-market arbitrage checklist illustration",
-    "provider": "ScreenOdds",
-    "sourceUrl": "/blog/prediction-market-arbitrage/images/featured-og.svg",
-    "credit": "ScreenOdds editorial infographic.",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/prediction-market-arbitrage/images/featured-og.png",
+    "credit": "Kie.ai image generated for ScreenOdds.",
     "usageNote": "Original ScreenOdds visual explaining cross-market arbitrage checks."
   },
   "inlineImages": [
@@ -59,16 +59,16 @@
   ],
   "infographics": [
     {
-      "url": "/blog/prediction-market-arbitrage/images/infographic-1.svg",
+      "url": "/blog/prediction-market-arbitrage/images/infographic-1.png",
       "alt": "Prediction-market arbitrage checklist for spreads, fees, rules, and execution",
-      "provider": "ScreenOdds",
+      "provider": "Kie.ai",
       "promptSummary": "Checklist for evaluating cross-market arbitrage spreads.",
       "usageNote": "ScreenOdds infographic showing the minimum checks before interpreting an arbitrage spread."
     },
     {
-      "url": "/blog/prediction-market-arbitrage/images/infographic-2.svg",
+      "url": "/blog/prediction-market-arbitrage/images/infographic-2.png",
       "alt": "Prediction-market arbitrage workflow for comparing Polymarket and Kalshi",
-      "provider": "ScreenOdds",
+      "provider": "Kie.ai",
       "promptSummary": "Workflow for comparing cross-market prices and risks.",
       "usageNote": "ScreenOdds infographic showing why fees, rules, liquidity, and timing all matter."
     }
@@ -81,7 +81,7 @@
   "keywordDifficulty": 0,
   "category": "Culture",
   "updatedAt": "2026-06-20",
-  "heroImage": "/blog/prediction-market-arbitrage/images/featured-og.svg",
+  "heroImage": "/blog/prediction-market-arbitrage/images/featured-og.png",
   "heroAlt": "ScreenOdds prediction-market arbitrage checklist illustration",
   "sections": [
     {

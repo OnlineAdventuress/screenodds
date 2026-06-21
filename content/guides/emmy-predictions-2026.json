@@ -1,0 +1,166 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-20",
+  "sources": [
+    {
+      "title": "Emmy Awards",
+      "url": "https://www.televisionacademy.com/awards/emmys",
+      "publisher": "Television Academy",
+      "accessedAt": "2026-06-20",
+      "sourceType": "official"
+    },
+    {
+      "title": "ScreenOdds DataForSEO prediction keyword pull",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-20",
+      "sourceType": "keyword-data"
+    },
+    {
+      "title": "Polymarket market context",
+      "url": "https://polymarket.com",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-20",
+      "sourceType": "market-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/awards",
+      "label": "Awards Markets",
+      "description": "Browse ScreenOdds awards prediction-market coverage."
+    },
+    {
+      "href": "/tv",
+      "label": "TV Markets",
+      "description": "Compare Emmy movement with broader television and streaming market context."
+    },
+    {
+      "href": "/blog/polymarket-golden-globes",
+      "label": "Golden Globes Markets",
+      "description": "A related awards guide for film and television categories."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/emmy-predictions-2026/images/featured-og.png",
+    "alt": "Editorial Emmy predictions dashboard with TV awards calendar and market signals",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/emmy-predictions-2026/images/featured-og.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/emmy-predictions-2026/screenshots/television-academy-emmys.jpg",
+      "alt": "Television Academy Emmy Awards page showing 2026 calendar dates",
+      "provider": "Jina",
+      "sourceUrl": "https://www.televisionacademy.com/awards/emmys",
+      "credit": "Jina screenshot of the official Television Academy Emmy Awards page.",
+      "usageNote": "Used as contextual source evidence for Emmy nominations, voting, and ceremony timing."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/emmy-predictions-2026/images/infographic-1.png",
+      "alt": "Emmy predictions 2026 calendar signal infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Emmy predictions calendar with nominations, final-round voting, and awards ceremony dates.",
+      "usageNote": "AI-generated infographic explaining the Emmy prediction timeline."
+    },
+    {
+      "url": "/blog/emmy-predictions-2026/images/infographic-2.png",
+      "alt": "Emmy predictions 2026 TV category signal stack",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Emmy prediction signal stack for nominations, category rules, network momentum, reviews, and market pricing.",
+      "usageNote": "AI-generated infographic summarizing Emmy market signals."
+    }
+  ],
+  "slug": "emmy-predictions-2026",
+  "title": "Emmy Predictions 2026: TV Market Signals",
+  "description": "Emmy predictions 2026 explained with Television Academy dates, nomination timing, TV category signals, and ScreenOdds market context.",
+  "primaryKeyword": "emmy predictions 2026",
+  "keywordVolume": 720,
+  "keywordDifficulty": 0,
+  "category": "Awards",
+  "updatedAt": "2026-06-20",
+  "heroImage": "/blog/emmy-predictions-2026/images/featured-og.png",
+  "heroAlt": "Editorial Emmy predictions dashboard with TV awards calendar and market signals",
+  "sections": [
+    {
+      "heading": "Why Emmy predictions 2026 is a low-KD win",
+      "paragraphs": [
+        "DataForSEO shows `emmy predictions 2026` at 720 US monthly searches with keyword difficulty of 0. That is the kind of awards keyword ScreenOdds should build before larger competitors notice it.",
+        "The searcher intent is clear: people want a category-by-category prediction framework. ScreenOdds can answer that while linking into prediction-market pages and TV/streaming hubs."
+      ]
+    },
+    {
+      "heading": "What the official Emmy calendar tells us",
+      "paragraphs": [
+        "The Television Academy Emmy Awards page lists nominations on July 8, 2026, final-round voting on August 17, 2026, and the 78th Emmy Awards on September 14, 2026. Those dates are the backbone of any 2026 Emmy prediction page.",
+        "That timing matters because Emmy markets should move in phases. The nomination reveal can reprice entire categories, while final voting usually rewards cleaner category narratives."
+      ]
+    },
+    {
+      "heading": "How to read Emmy predictions before nominations",
+      "paragraphs": [
+        "Before nominations, the market has to price eligibility, campaign visibility, critic momentum, network strategy, and category placement. A show can be strong in general conversation but weak in the exact category where it is submitted.",
+        "ScreenOdds should avoid pretending early predictions are final. The strongest page explains what is known now, what changes after nominations, and which signals deserve the most weight."
+      ]
+    },
+    {
+      "heading": "Signals that move Emmy markets",
+      "paragraphs": [
+        "The biggest Emmy catalysts are official nominations, category rules, guild overlap, review strength, streamer campaign intensity, and whether a show is competing in drama, comedy, limited series, or variety.",
+        "Market liquidity matters here. Television awards markets can be thinner than Oscars markets, so a price move needs context before it is treated as a consensus signal."
+      ]
+    },
+    {
+      "heading": "How this page links the TV and Awards clusters",
+      "paragraphs": [
+        "Emmy predictions belong in Awards, but they should also link to TV and Streaming because the underlying shows come from networks, streamers, and cable. That makes this page a useful bridge between ScreenOdds' verticals.",
+        "It should receive links from future daily news posts around nominations, category changes, and market movement."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use Emmy predictions to compare the official calendar with market movement. If odds move before nominations, ask what source or signal caused the move.",
+        "A good ScreenOdds prediction page should help readers separate actual awards information from speculative chatter."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "When are the 2026 Emmy nominations?",
+      "answer": "The Television Academy page lists nominations on July 8, 2026."
+    },
+    {
+      "question": "When are the 78th Emmy Awards?",
+      "answer": "The Television Academy lists the 78th Emmy Awards for September 14, 2026."
+    },
+    {
+      "question": "Why target Emmy predictions 2026?",
+      "answer": "DataForSEO reports 720 US monthly searches with keyword difficulty of 0, making it a strong low-competition awards prediction page."
+    }
+  ],
+  "related": [
+    {
+      "href": "/awards",
+      "label": "Awards Odds",
+      "description": "The ScreenOdds hub for entertainment awards markets."
+    },
+    {
+      "href": "/tv",
+      "label": "TV Prediction Markets",
+      "description": "A hub for TV and streaming market coverage."
+    },
+    {
+      "href": "/blog/polymarket-golden-globes",
+      "label": "Polymarket Golden Globes",
+      "description": "A related film and TV awards-market guide."
+    }
+  ]
+}

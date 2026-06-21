@@ -1,0 +1,166 @@
+{
+  "kind": "guide",
+  "status": "published",
+  "publishedAt": "2026-06-20",
+  "sources": [
+    {
+      "title": "The 98th Academy Awards | 2026",
+      "url": "https://www.oscars.org/oscars/ceremonies/2026",
+      "publisher": "Academy of Motion Picture Arts and Sciences",
+      "accessedAt": "2026-06-20",
+      "sourceType": "official"
+    },
+    {
+      "title": "ScreenOdds DataForSEO prediction keyword pull",
+      "url": "https://dataforseo.com/apis/keywords-data-api",
+      "publisher": "DataForSEO",
+      "accessedAt": "2026-06-20",
+      "sourceType": "keyword-data"
+    },
+    {
+      "title": "Polymarket Oscars market context",
+      "url": "https://polymarket.com",
+      "publisher": "Polymarket",
+      "accessedAt": "2026-06-20",
+      "sourceType": "market-data"
+    }
+  ],
+  "marketLinks": [
+    {
+      "href": "/oscars",
+      "label": "Oscars Markets",
+      "description": "Browse ScreenOdds Oscars prediction-market coverage."
+    },
+    {
+      "href": "/blog/polymarket-oscars-odds",
+      "label": "Polymarket Oscars Odds",
+      "description": "Read the core ScreenOdds guide to Oscars prediction markets."
+    },
+    {
+      "href": "/markets/polymarket-oscars-best-picture",
+      "label": "Best Picture Market",
+      "description": "Compare predictions with the ScreenOdds Best Picture market page."
+    }
+  ],
+  "heroMedia": {
+    "kind": "generated",
+    "url": "/blog/oscar-predictions-2026/images/featured-og.png",
+    "alt": "Editorial Oscars predictions dashboard with awards categories and market signals",
+    "provider": "Kie.ai",
+    "sourceUrl": "/blog/oscar-predictions-2026/images/featured-og.png",
+    "credit": "ScreenOdds editorial image generated with Kie.ai / ChatGPT Image 2.",
+    "usageNote": "AI-generated editorial image; no logos, trademarked marks, or recognizable public figures."
+  },
+  "inlineImages": [
+    {
+      "kind": "site",
+      "url": "/blog/oscar-predictions-2026/screenshots/academy-2026.jpg",
+      "alt": "Academy 2026 Oscars ceremony page showing the 98th Academy Awards",
+      "provider": "Jina",
+      "sourceUrl": "https://www.oscars.org/oscars/ceremonies/2026",
+      "credit": "Jina screenshot of the official Academy 2026 Oscars ceremony page.",
+      "usageNote": "Used as contextual source evidence for official Oscars category and ceremony data."
+    }
+  ],
+  "infographics": [
+    {
+      "url": "/blog/oscar-predictions-2026/images/infographic-1.png",
+      "alt": "Oscar predictions 2026 signal stack infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Oscars predictions signal stack for nominations, guilds, critics, market liquidity, and final results.",
+      "usageNote": "AI-generated infographic explaining how ScreenOdds reads Oscars prediction signals."
+    },
+    {
+      "url": "/blog/oscar-predictions-2026/images/infographic-2.png",
+      "alt": "Oscar predictions 2026 market timeline infographic",
+      "provider": "Kie.ai",
+      "promptSummary": "ScreenOdds Oscars prediction timeline from nominations to guilds, BAFTA, final voting, and ceremony resolution.",
+      "usageNote": "AI-generated infographic summarizing Oscars prediction timing."
+    }
+  ],
+  "slug": "oscar-predictions-2026",
+  "title": "Oscar Predictions 2026: Market Signals",
+  "description": "Oscar predictions 2026 explained with Academy results, market signals, guild context, category timing, and ScreenOdds Polymarket links.",
+  "primaryKeyword": "oscar predictions 2026",
+  "keywordVolume": 22200,
+  "keywordDifficulty": 12,
+  "category": "Awards",
+  "updatedAt": "2026-06-20",
+  "heroImage": "/blog/oscar-predictions-2026/images/featured-og.png",
+  "heroAlt": "Editorial Oscars predictions dashboard with awards categories and market signals",
+  "sections": [
+    {
+      "heading": "Why Oscar predictions 2026 is the next anchor keyword",
+      "paragraphs": [
+        "DataForSEO shows `oscar predictions 2026` at 22,200 US monthly searches with keyword difficulty of 12. That makes it the strongest prediction-side keyword ScreenOdds has found so far.",
+        "The page should not replace the existing Polymarket Oscars guide. It should sit above it as the broader predictions hub, then route readers into Best Picture, Best Actor, and market-specific pages."
+      ]
+    },
+    {
+      "heading": "What the official 2026 Oscars page gives us",
+      "paragraphs": [
+        "The Academy page for the 98th Academy Awards lists the ceremony at the Dolby Theatre on Sunday, March 15, 2026, honoring movies released in 2025. It also gives official winners and nominees by category.",
+        "For prediction-market content, that official result page is the clean resolution source. It lets ScreenOdds compare pre-ceremony signals with actual category outcomes instead of relying on recap shorthand."
+      ]
+    },
+    {
+      "heading": "How to read Oscars predictions after the result",
+      "paragraphs": [
+        "Because the 2026 ceremony has already happened, this page should work as both a search landing page and a market post-mortem. Readers searching the keyword still get a useful answer: which signals mattered, which categories resolved cleanly, and where markets can overreact next cycle.",
+        "That makes the article evergreen. News posts can link here when the next Oscars cycle starts, while this page keeps the 2026 prediction keyword from going stale."
+      ]
+    },
+    {
+      "heading": "Signals that matter most for Oscars markets",
+      "paragraphs": [
+        "The strongest Oscars prediction signals are official nominations, guild results, BAFTA movement, critics awards, category overlap, release timing, campaign visibility, and market liquidity. No single signal is enough on its own.",
+        "ScreenOdds should separate high-confidence moves from thin-market noise. A market with a sharp price move and low volume should be treated differently from a move that follows a major guild or nomination signal."
+      ]
+    },
+    {
+      "heading": "How this supports the ScreenOdds awards cluster",
+      "paragraphs": [
+        "This hub should link down to Polymarket Oscars, Best Picture odds, Best Actor odds, and Oscar nomination predictions. It gives the site one broad page for searchers who are not yet looking specifically for Polymarket.",
+        "It also creates a natural bridge to Emmy, Grammy, Tony, BAFTA, and Golden Globes predictions, which all share the same market-reading framework."
+      ]
+    },
+    {
+      "heading": "Best use case for readers",
+      "paragraphs": [
+        "Use this page to understand the difference between entertainment predictions and market-implied probabilities. A prediction article can describe the likely narrative; a market page shows what traders have priced.",
+        "ScreenOdds is strongest when it gives both views: official source data for the result and market context for how the probability moved."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Oscar predictions 2026 already over?",
+      "answer": "The 98th Academy Awards took place on March 15, 2026, so this page treats the keyword as a prediction review and market-signal guide."
+    },
+    {
+      "question": "Why target Oscar predictions 2026?",
+      "answer": "DataForSEO reports 22,200 US monthly searches with keyword difficulty of 12, making it ScreenOdds' strongest prediction-side opportunity."
+    },
+    {
+      "question": "How should this page link to Polymarket content?",
+      "answer": "It should link to the Oscars hub, Polymarket Oscars guide, Best Picture market page, and category-specific awards guides."
+    }
+  ],
+  "related": [
+    {
+      "href": "/blog/polymarket-oscars-odds",
+      "label": "Polymarket Oscars Odds",
+      "description": "The ScreenOdds guide to market-implied Oscars probabilities."
+    },
+    {
+      "href": "/blog/best-picture-odds",
+      "label": "Best Picture Odds",
+      "description": "The highest-value Oscars category page already live on ScreenOdds."
+    },
+    {
+      "href": "/blog/best-actor-oscars-odds",
+      "label": "Best Actor Oscars Odds",
+      "description": "A category-specific Oscars page that supports prediction search intent."
+    }
+  ]
+}
