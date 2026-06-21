@@ -10,10 +10,14 @@ describe("market page sentiment integration", () => {
     );
 
     expect(source).toContain('import { SentimentPulse } from "@/components/sentiment-pulse"');
+    expect(source).toContain('import { SignalLab } from "@/components/signal-lab"');
     expect(source).toContain('import { getSentimentPulseForMarket } from "@/lib/sentiment"');
+    expect(source).toContain('import { buildSignalLabModel } from "@/lib/signal-lab"');
     expect(source).toContain("await getSentimentPulseForMarket(market.slug)");
+    expect(source).toContain("const signalLab = buildSignalLabModel({");
     expect(source).toContain(
       "<SentimentPulse pulse={sentimentPulse} marketProbability={market.probability} />",
     );
+    expect(source).toContain("<SignalLab model={signalLab} />");
   });
 });

@@ -4,11 +4,13 @@ import { notFound } from "next/navigation";
 import { ExternalSignals } from "@/components/external-signals";
 import { MarketCard } from "@/components/market-card";
 import { SentimentPulse } from "@/components/sentiment-pulse";
+import { SignalLab } from "@/components/signal-lab";
 import { SiteNetworkLinks } from "@/components/site-network-links";
 import { getLaunchMarkets, getRelatedMarkets, getSeededMarket } from "@/lib/content";
 import { getExternalSignalsForMarket } from "@/lib/external-signals";
 import { formatCompactCurrency, formatProbability } from "@/lib/markets";
 import { getSentimentPulseForMarket } from "@/lib/sentiment";
+import { buildSignalLabModel } from "@/lib/signal-lab";
 import { getSiteNetworkLinks } from "@/lib/site-network";
 
 type MarketPageProps = {
@@ -58,6 +60,11 @@ export default async function MarketPage({ params }: MarketPageProps) {
   const related = getRelatedMarkets(market);
   const externalSignals = await getExternalSignalsForMarket(market);
   const sentimentPulse = await getSentimentPulseForMarket(market.slug);
+  const signalLab = buildSignalLabModel({
+    market,
+    externalSignals,
+    sentimentPulse,
+  });
   const networkLinks = getSiteNetworkLinks({
     pageType: "market",
     category: market.category,
@@ -139,6 +146,10 @@ export default async function MarketPage({ params }: MarketPageProps) {
 
       <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
         <SentimentPulse pulse={sentimentPulse} marketProbability={market.probability} />
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+        <SignalLab model={signalLab} />
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
