@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getPublishedNewsPosts } from "@/lib/editorial";
 
 export const metadata: Metadata = {
-  title: "ScreenOdds News",
+  title: "Entertainment Market News",
   description:
     "Source-backed entertainment prediction-market news for awards, box office, movies, streaming, and reality TV.",
   alternates: {

@@ -9,6 +9,7 @@ import {
   validateMediaAsset,
   validatePublishedContent,
 } from "./editorial";
+import { metadataTitle } from "./seo";
 
 describe("editorial content registry", () => {
   it("keeps guide and news slugs unique across the full content set", () => {
@@ -36,6 +37,29 @@ describe("editorial content registry", () => {
     expect(published.length).toBeGreaterThan(0);
     for (const item of published) {
       expect(validatePublishedContent(item)).toEqual([]);
+    }
+  });
+
+  it("keeps published search metadata concise and unique enough for SERPs", () => {
+    const published = [...getPublishedGuides(), ...getPublishedNewsPosts()];
+    const newsDescriptions = new Set<string>();
+
+    for (const item of published) {
+      const title = metadataTitle(item.title, item.seoTitle);
+
+      expect(title.length, `${item.slug} title length`).toBeGreaterThanOrEqual(30);
+      expect(title.length, `${item.slug} title length`).toBeLessThanOrEqual(60);
+      expect(item.description.length, `${item.slug} description length`).toBeGreaterThanOrEqual(
+        120,
+      );
+      expect(item.description.length, `${item.slug} description length`).toBeLessThanOrEqual(160);
+
+      if (item.kind === "news") {
+        expect(newsDescriptions.has(item.description), `${item.slug} duplicate description`).toBe(
+          false,
+        );
+        newsDescriptions.add(item.description);
+      }
     }
   });
 

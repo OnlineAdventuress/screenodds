@@ -12,4 +12,11 @@ describe("editorial media assets", () => {
       expect(image.size).toBeGreaterThan(10_000);
     }
   });
+
+  it("keeps the global OpenGraph image lightweight enough for crawlers", () => {
+    const imagePath = path.join(process.cwd(), "public", "images", "screenodds-og.png");
+    const image = statSync(imagePath);
+
+    expect(image.size).toBeLessThanOrEqual(500_000);
+  });
 });

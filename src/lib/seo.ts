@@ -2,6 +2,7 @@ import type { Article } from "./articles";
 import { articles } from "./articles";
 import { getLaunchMarkets, hubPages } from "./content";
 import { getPublishedNewsPosts, type NewsPost } from "./editorial";
+import type { Market } from "./markets";
 
 export const siteConfig = {
   name: "ScreenOdds",
@@ -32,6 +33,28 @@ export function absoluteUrl(path: string): string {
   return new URL(normalizedPath, siteConfig.url).toString();
 }
 
+export function stripScreenOddsSuffix(title: string): string {
+  return title.replace(/\s*\|\s*ScreenOdds\s*$/i, "").trim();
+}
+
+export function metadataTitle(title: string, seoTitle?: string): string {
+  return stripScreenOddsSuffix(seoTitle ?? title);
+}
+
+export function buildMarketPageTitle(market: Pick<Market, "title" | "category">): string {
+  const title = stripScreenOddsSuffix(market.title).trim();
+
+  if (/\bodds\b/i.test(title)) {
+    return title;
+  }
+
+  if (market.category === "Box Office" && /\bbox office\b/i.test(title)) {
+    return `${title} Odds`;
+  }
+
+  return `${title.replace(/\?\s*$/, "")} Odds`;
+}
+
 export function buildWebsiteJsonLd(): JsonLd {
   return {
     "@context": "https://schema.org",
@@ -44,6 +67,37 @@ export function buildWebsiteJsonLd(): JsonLd {
       "@type": "Organization",
       name: siteConfig.name,
       url: siteConfig.url,
+    },
+  };
+}
+
+export function buildMarketWebPageJsonLd(market: Market): JsonLd {
+  const url = absoluteUrl(`/markets/${market.slug}`);
+  const name = buildMarketPageTitle(market);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    description: market.description,
+    url,
+    inLanguage: "en-US",
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    about: market.tags.map((tag) => ({
+      "@type": "Thing",
+      name: tag,
+    })),
+    mainEntity: {
+      "@type": "Dataset",
+      name: `${name} market data`,
+      description: `${market.description} Includes probability, volume, liquidity, and ScreenOdds context.`,
+      url,
+      dateModified: market.updatedAt,
+      keywords: market.tags,
     },
   };
 }
@@ -127,8 +181,24 @@ export function buildBreadcrumbJsonLd(
   };
 }
 
+function dateFromEditorialDay(value: string): Date {
+  return new Date(`${value}T00:00:00Z`);
+}
+
+function dateFromIsoOrEditorialDay(value: string): Date {
+  return value.includes("T") ? new Date(value) : dateFromEditorialDay(value);
+}
+
+function getLatestPublishedContentDate(): Date {
+  const dates = [...articles, ...getPublishedNewsPosts()].map((item) =>
+    dateFromEditorialDay(item.updatedAt).getTime(),
+  );
+
+  return new Date(Math.max(...dates));
+}
+
 export function getSitemapEntries(): SitemapEntry[] {
-  const now = new Date();
+  const latestPublishedContentDate = getLatestPublishedContentDate();
   const entries = new Map<string, SitemapEntry>();
 
   function add(path: string, entry: Omit<SitemapEntry, "url">) {
@@ -137,32 +207,32 @@ export function getSitemapEntries(): SitemapEntry[] {
   }
 
   add("/", {
-    lastModified: now,
+    lastModified: latestPublishedContentDate,
     changeFrequency: "hourly",
     priority: 1,
   });
 
   add("/blog", {
-    lastModified: now,
+    lastModified: latestPublishedContentDate,
     changeFrequency: "weekly",
     priority: 0.7,
   });
 
   add("/news", {
-    lastModified: now,
+    lastModified: latestPublishedContentDate,
     changeFrequency: "daily",
     priority: 0.75,
   });
 
   add("/oscars", {
-    lastModified: now,
+    lastModified: latestPublishedContentDate,
     changeFrequency: "daily",
     priority: 0.85,
   });
 
   for (const hub of Object.values(hubPages)) {
     add(`/${hub.slug}`, {
-      lastModified: now,
+      lastModified: latestPublishedContentDate,
       changeFrequency: "hourly",
       priority: 0.9,
     });
@@ -170,7 +240,7 @@ export function getSitemapEntries(): SitemapEntry[] {
 
   for (const article of articles) {
     add(`/blog/${article.slug}`, {
-      lastModified: new Date(`${article.updatedAt}T00:00:00Z`),
+      lastModified: dateFromEditorialDay(article.updatedAt),
       changeFrequency: "weekly",
       priority: 0.8,
     });
@@ -178,7 +248,7 @@ export function getSitemapEntries(): SitemapEntry[] {
 
   for (const post of getPublishedNewsPosts()) {
     add(`/news/${post.slug}`, {
-      lastModified: new Date(`${post.updatedAt}T00:00:00Z`),
+      lastModified: dateFromEditorialDay(post.updatedAt),
       changeFrequency: "daily",
       priority: 0.75,
     });
@@ -186,7 +256,7 @@ export function getSitemapEntries(): SitemapEntry[] {
 
   for (const market of getLaunchMarkets()) {
     add(`/markets/${market.slug}`, {
-      lastModified: now,
+      lastModified: dateFromIsoOrEditorialDay(market.updatedAt),
       changeFrequency: "hourly",
       priority: 0.75,
     });

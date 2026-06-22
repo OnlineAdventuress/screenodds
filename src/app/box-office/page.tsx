@@ -4,7 +4,7 @@ import { getBoxOfficeHubData } from "@/lib/box-office";
 import { fetchEntertainmentMarkets } from "@/lib/polymarket";
 
 export const metadata: Metadata = {
-  title: "Box Office Prediction Markets | ScreenOdds",
+  title: "Box Office Prediction Markets",
   description:
     "Opening weekend odds, highest-grossing movie markets, release watchlists, and source-backed box office prediction-market context.",
   alternates: {

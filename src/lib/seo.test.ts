@@ -5,9 +5,12 @@ import { getDraftNewsPosts, getPublishedNewsPosts } from "./editorial";
 import {
   absoluteUrl,
   buildArticleJsonLd,
+  buildMarketPageTitle,
+  buildMarketWebPageJsonLd,
   buildNewsArticleJsonLd,
   buildBreadcrumbJsonLd,
   getSitemapEntries,
+  metadataTitle,
   siteConfig,
 } from "./seo";
 
@@ -18,6 +21,42 @@ describe("ScreenOdds SEO helpers", () => {
     expect(absoluteUrl("blog/best-picture-odds")).toBe(
       "https://screenodds.com/blog/best-picture-odds",
     );
+  });
+
+  it("normalizes metadata titles without duplicating the site brand", () => {
+    expect(metadataTitle("Awards Prediction Markets | ScreenOdds")).toBe(
+      "Awards Prediction Markets",
+    );
+    expect(metadataTitle("Long visible headline", "Short SERP Title")).toBe("Short SERP Title");
+  });
+
+  it("builds concise market page titles without duplicated odds wording", () => {
+    const markets = getLaunchMarkets();
+
+    expect(buildMarketPageTitle(markets.find((market) => market.slug === "big-brother-odds")!)).toBe(
+      "Big Brother winner odds",
+    );
+    expect(
+      buildMarketPageTitle(
+        markets.find((market) => market.slug === "highest-grossing-movie-in-2026")!,
+      ),
+    ).toBe("Highest grossing movie in 2026 Odds");
+  });
+
+  it("builds market WebPage JSON-LD with dataset context", () => {
+    const market = getLaunchMarkets()[0];
+    const jsonLd = buildMarketWebPageJsonLd(market);
+
+    expect(jsonLd).toMatchObject({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      url: absoluteUrl(`/markets/${market.slug}`),
+      mainEntity: {
+        "@type": "Dataset",
+        url: absoluteUrl(`/markets/${market.slug}`),
+        keywords: market.tags,
+      },
+    });
   });
 
   it("builds Article JSON-LD with absolute images and canonical page URLs", () => {
@@ -92,5 +131,16 @@ describe("ScreenOdds SEO helpers", () => {
     }
 
     expect(new Set(urls).size).toBe(urls.length);
+  });
+
+  it("uses stable sitemap lastmod dates for static hubs and seeded market pages", () => {
+    const entries = getSitemapEntries();
+    const staticEntry = entries.find((entry) => entry.url === absoluteUrl("/awards"));
+    const marketEntry = entries.find(
+      (entry) => entry.url === absoluteUrl("/markets/polymarket-oscars-best-picture"),
+    );
+
+    expect(staticEntry?.lastModified.toISOString()).toBe("2026-06-21T00:00:00.000Z");
+    expect(marketEntry?.lastModified.toISOString()).toBe("2026-06-08T00:00:00.000Z");
   });
 });

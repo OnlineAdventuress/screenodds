@@ -4,7 +4,7 @@ import { hubPages } from "@/lib/content";
 import { fetchEntertainmentMarkets } from "@/lib/polymarket";
 
 export const metadata: Metadata = {
-  title: "TV and Streaming Prediction Markets | ScreenOdds",
+  title: "TV and Streaming Prediction Markets",
   description: "Netflix, TV release, and streaming chart prediction markets for screen entertainment.",
   alternates: {
     canonical: "/tv",

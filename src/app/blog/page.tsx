@@ -4,7 +4,7 @@ import Image from "next/image";
 import { articles } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "ScreenOdds Blog",
+  title: "Entertainment Market Blog",
   description:
     "SEO guides for entertainment prediction markets, awards odds, movie markets, and reality TV odds.",
   alternates: {

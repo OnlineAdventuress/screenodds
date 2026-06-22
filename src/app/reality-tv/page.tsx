@@ -4,7 +4,7 @@ import { hubPages } from "@/lib/content";
 import { fetchEntertainmentMarkets } from "@/lib/polymarket";
 
 export const metadata: Metadata = {
-  title: "Reality TV Odds | Love Island and Big Brother Markets | ScreenOdds",
+  title: "Reality TV Odds | Love Island Markets",
   description: "Reality TV prediction markets for Love Island odds, Big Brother odds, Top Chef, and similar shows.",
   alternates: {
     canonical: "/reality-tv",

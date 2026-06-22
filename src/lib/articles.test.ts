@@ -34,4 +34,32 @@ describe("ScreenOdds article registry", () => {
       "polymarket oscars",
     );
   });
+
+  it("keeps priority authority guides above the refresh-depth floor", () => {
+    const prioritySlugs = [
+      "best-picture-odds",
+      "big-brother-odds",
+      "love-island-odds",
+      "next-james-bond-actor-odds",
+      "polymarket-oscars-odds",
+    ];
+
+    for (const slug of prioritySlugs) {
+      const article = getArticleBySlug(slug);
+      const text = [
+        article?.title,
+        article?.description,
+        ...(article?.sections ?? []).flatMap((section) => [
+          section.heading,
+          ...section.paragraphs,
+        ]),
+        ...(article?.faqs ?? []).flatMap((faq) => [faq.question, faq.answer]),
+      ].join(" ");
+      const wordCount = text.match(/[A-Za-z0-9][A-Za-z0-9'’.-]*/g)?.length ?? 0;
+
+      expect(wordCount, `${slug} word count`).toBeGreaterThanOrEqual(1_000);
+      expect(article?.sources.length, `${slug} source count`).toBeGreaterThanOrEqual(3);
+      expect(article?.marketLinks.length, `${slug} market links`).toBeGreaterThanOrEqual(2);
+    }
+  });
 });

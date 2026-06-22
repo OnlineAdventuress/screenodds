@@ -4,7 +4,7 @@ import { hubPages } from "@/lib/content";
 import { fetchEntertainmentMarkets } from "@/lib/polymarket";
 
 export const metadata: Metadata = {
-  title: "Movie Prediction Markets | ScreenOdds",
+  title: "Movie Prediction Markets",
   description: "Live movie prediction markets, including next James Bond actor odds and high-volume film markets.",
   alternates: {
     canonical: "/movies",

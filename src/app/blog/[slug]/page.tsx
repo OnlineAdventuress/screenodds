@@ -9,6 +9,7 @@ import {
   buildArticleJsonLd,
   buildBreadcrumbJsonLd,
   buildFaqPageJsonLd,
+  metadataTitle,
 } from "@/lib/seo";
 import type { InfographicAsset, MediaAsset } from "@/lib/editorial";
 import { getSiteNetworkLinks } from "@/lib/site-network";
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   }
 
   return {
-    title: article.title,
+    title: metadataTitle(article.title, article.seoTitle),
     description: article.description,
     alternates: {
       canonical: `/blog/${article.slug}`,

@@ -50,6 +50,7 @@ export type RelatedLink = {
 export type EditorialBase = {
   slug: string;
   title: string;
+  seoTitle?: string;
   description: string;
   category: MarketCategory;
   status: EditorialStatus;

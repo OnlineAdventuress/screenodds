@@ -8,6 +8,7 @@ import { getNewsPostBySlug, getPublishedNewsPosts } from "@/lib/editorial";
 import {
   buildBreadcrumbJsonLd,
   buildNewsArticleJsonLd,
+  metadataTitle,
 } from "@/lib/seo";
 import { getSiteNetworkLinks } from "@/lib/site-network";
 
@@ -30,7 +31,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: post.title,
+    title: metadataTitle(post.title, post.seoTitle),
     description: post.description,
     alternates: {
       canonical: `/news/${post.slug}`,

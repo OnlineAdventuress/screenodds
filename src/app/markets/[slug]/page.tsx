@@ -10,6 +10,13 @@ import { getLaunchMarkets, getRelatedMarkets, getSeededMarket } from "@/lib/cont
 import { getExternalSignalsForMarket } from "@/lib/external-signals";
 import { formatCompactCurrency, formatProbability } from "@/lib/markets";
 import { getSentimentPulseForMarket } from "@/lib/sentiment";
+import {
+  absoluteUrl,
+  buildBreadcrumbJsonLd,
+  buildMarketPageTitle,
+  buildMarketWebPageJsonLd,
+  siteConfig,
+} from "@/lib/seo";
 import { buildSignalLabModel } from "@/lib/signal-lab";
 import { getSiteNetworkLinks } from "@/lib/site-network";
 
@@ -40,11 +47,34 @@ export async function generateMetadata({ params }: MarketPageProps): Promise<Met
     return {};
   }
 
+  const title = buildMarketPageTitle(market);
+
   return {
-    title: `${market.title} Odds`,
+    title,
     description: `${market.description} See probability, one-month volume, liquidity, and related ScreenOdds pages.`,
     alternates: {
       canonical: `/markets/${market.slug}`,
+    },
+    openGraph: {
+      title: `${title} | ScreenOdds`,
+      description: market.description,
+      url: absoluteUrl(`/markets/${market.slug}`),
+      siteName: siteConfig.name,
+      images: [
+        {
+          url: absoluteUrl(siteConfig.image),
+          width: 1200,
+          height: 675,
+          alt: "ScreenOdds entertainment prediction-market desk",
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ScreenOdds`,
+      description: market.description,
+      images: [absoluteUrl(siteConfig.image)],
     },
   };
 }
@@ -70,9 +100,23 @@ export default async function MarketPage({ params }: MarketPageProps) {
     category: market.category,
     tags: [market.title, market.description, ...market.tags],
   });
+  const pageTitle = buildMarketPageTitle(market);
+  const marketJsonLd = buildMarketWebPageJsonLd(market);
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: market.category, path: categoryPath[market.category] },
+    { name: pageTitle, path: `/markets/${market.slug}` },
+  ]);
 
   return (
     <>
+      {[marketJsonLd, breadcrumbJsonLd].map((jsonLd, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      ))}
       <section className="border-b border-zinc-800">
         <div className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
           <Link href={categoryPath[market.category]} className="screen-link">
@@ -82,7 +126,7 @@ export default async function MarketPage({ params }: MarketPageProps) {
             <div>
               <p className="screen-kicker">{market.category}</p>
               <h1 className="mt-4 text-4xl font-semibold tracking-tight text-zinc-50 md:text-6xl">
-                {market.title} odds
+                {pageTitle}
               </h1>
               <p className="mt-5 max-w-3xl text-base leading-8 text-zinc-300">
                 {market.description}
