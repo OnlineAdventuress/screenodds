@@ -115,3 +115,9 @@ Read this before starting each task.
 - What worked: Building Signal Lab as a deterministic model plus a client calculator kept paid APIs out of render paths while adding useful market-page interactivity.
 - What broke: A component test that searched raw HTML for prohibited action words matched Tailwind class names; visible-text checks are safer for copy assertions.
 - Pattern to remember: Market-page tools should consume existing server-normalized models and keep user-entered estimates browser-local.
+
+## 2026-06-22 - SEO Audit Hardening
+
+- What worked: Adding guardrail tests for metadata length, priority-guide depth, sitemap dates, security headers, market JSON-LD, and OG image weight caught the audit gaps before deploy.
+- What broke: `next start` reported the app ready, then exited because the Next 16 build did not leave a `.next/BUILD_ID`; use tests/build output or Netlify preview checks when this happens.
+- Pattern to remember: For ScreenOdds SEO work, verify `npm run lint`, `npm run test`, `npm run build`, then deploy to Netlify and validate production metadata after the deploy is live.
