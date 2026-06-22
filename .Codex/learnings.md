@@ -121,3 +121,9 @@ Read this before starting each task.
 - What worked: Adding guardrail tests for metadata length, priority-guide depth, sitemap dates, security headers, market JSON-LD, and OG image weight caught the audit gaps before deploy.
 - What broke: `next start` reported the app ready, then exited because the Next 16 build did not leave a `.next/BUILD_ID`; use tests/build output or Netlify preview checks when this happens.
 - Pattern to remember: For ScreenOdds SEO work, verify `npm run lint`, `npm run test`, `npm run build`, then deploy to Netlify and validate production metadata after the deploy is live.
+
+## 2026-06-22 - Netlify CLI Next Runtime Deploy
+
+- What worked: Netlify CLI deploys for this Next 16 app are stable when `npm run build` forces webpack, `next.config.ts` sets `experimental.cpus = 1` and `experimental.webpackBuildWorker = false`, and deployment is split into `netlify build` followed by `netlify deploy --prod --no-build --dir .netlify/static --functions .netlify/functions --site 5700712b-37ac-4967-b3a4-9231d35efeda`.
+- What broke: A single `netlify deploy --prod` either orphaned Next build workers, uploaded `.next` instead of `.netlify/static`, or hit a transient deploy-blob 400. Publishing `.netlify/static` directly in `netlify.toml` also fails because the plugin expects `publish = ".next"` during its build lifecycle.
+- Pattern to remember: Keep `netlify.toml` publish as `.next` for the plugin, but override the deploy upload directory to `.netlify/static` in the no-build deploy command. Always verify production image URLs after deploy.
