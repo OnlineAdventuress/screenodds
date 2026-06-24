@@ -133,6 +133,21 @@ describe("Signal Lab model", () => {
     expect(model.marketSlug).toBe("scary-movie-opening-weekend-box-office");
     expect(model.probabilityLabel).toBe("62%");
     expect(model.reliability.label).toBe("Strong signal");
+    expect(model.valueMath).toMatchObject({
+      marketYesPriceCents: 62,
+      marketNoPriceCents: 38,
+      defaultReaderYesPriceCents: 62,
+    });
+    expect(model.evidenceBreakdown.map((item) => item.label)).toEqual([
+      "Market depth",
+      "Source coverage",
+      "Sentiment freshness",
+      "Catalyst clarity",
+    ]);
+    expect(model.readerChecklist.length).toBeGreaterThanOrEqual(4);
+    expect(model.readerChecklist[0]?.label).toMatch(/Check|Compare|Confirm|Watch/);
+    expect(model.researchLinks.some((link) => link.href === "/box-office")).toBe(true);
+    expect(model.researchLinks.some((link) => link.href === "/blog/2026-box-office-predictions")).toBe(true);
     expect(model.checks.some((check) => check.label === "Market liquidity")).toBe(true);
     expect(model.checks.some((check) => check.label === "Box office signal")).toBe(true);
     expect(model.catalysts.some((catalyst) => catalyst.label.includes("Weekend"))).toBe(true);
@@ -160,5 +175,26 @@ describe("Signal Lab model", () => {
     expect(model.reliability.warnings.length).toBeGreaterThan(0);
     expect(model.checks.some((check) => check.label === "Reality TV signal")).toBe(true);
     expect(model.catalysts.length).toBeGreaterThan(0);
+  });
+
+  it("adds distinct related market links when related markets are supplied", () => {
+    const model = buildSignalLabModel({
+      market: makeMarket({ category: "Awards", vertical: "Awards" }),
+      relatedMarkets: [
+        makeMarket({
+          slug: "grammys-predictions",
+          title: "Grammy odds",
+          category: "Awards",
+          vertical: "Awards",
+        }),
+      ],
+    });
+
+    expect(model.researchLinks.some((link) => link.href === "/awards")).toBe(true);
+    expect(model.researchLinks.some((link) => link.href === "/markets/grammys-predictions")).toBe(true);
+    expect(model.researchLinks.some((link) => link.href === "/blog/oscar-predictions-2026")).toBe(true);
+    expect(new Set(model.researchLinks.map((link) => link.href)).size).toBe(
+      model.researchLinks.length,
+    );
   });
 });
