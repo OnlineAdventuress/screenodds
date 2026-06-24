@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
   clampReaderProbability,
+  comparePriceToReaderEstimate,
   compareProbabilityEstimate,
   type SignalCheckStatus,
   type SignalLabModel,
@@ -24,6 +26,10 @@ export function SignalLab({ model }: SignalLabProps) {
     () => compareProbabilityEstimate(model.marketProbability, readerEstimate),
     [model.marketProbability, readerEstimate],
   );
+  const priceComparison = useMemo(
+    () => comparePriceToReaderEstimate(model.marketProbability, readerEstimate),
+    [model.marketProbability, readerEstimate],
+  );
 
   function updateReaderEstimate(value: string) {
     setReaderEstimate(clampReaderProbability(Number(value)));
@@ -35,11 +41,11 @@ export function SignalLab({ model }: SignalLabProps) {
         <div>
           <p className="screen-kicker">Signal Lab</p>
           <h2 className="mt-3 text-2xl font-semibold text-zinc-50">
-            Market price vs. your view
+            Market Value Workbench
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-400">
             Compare the market-implied probability with your own estimate, then
-            check whether volume, liquidity, sources, and catalysts support the move.
+            check whether volume, liquidity, sources, and catalysts support the signal.
           </p>
         </div>
         <div className="rounded border border-zinc-800 px-3 py-2 text-sm text-zinc-300">
@@ -52,6 +58,14 @@ export function SignalLab({ model }: SignalLabProps) {
           <div className="grid gap-3 sm:grid-cols-2">
             <SignalValue label="Market estimate" value={model.probabilityLabel} />
             <SignalValue label="Your estimate" value={`${readerEstimate}%`} />
+            <SignalValue
+              label="Market yes price"
+              value={`${model.valueMath.marketYesPriceCents}c`}
+            />
+            <SignalValue
+              label="Fair yes price"
+              value={`${priceComparison.readerYesPriceCents}c`}
+            />
           </div>
 
           <label
@@ -84,7 +98,23 @@ export function SignalLab({ model }: SignalLabProps) {
           <div className="mt-4 rounded border border-zinc-800 p-3">
             <p className="text-sm font-semibold text-teal-100">{comparison.label}</p>
             <p className="mt-2 text-sm leading-6 text-zinc-400">{comparison.summary}</p>
+            <p className="mt-2 text-sm leading-6 text-zinc-400">
+              {priceComparison.summary}
+            </p>
           </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            <SignalValue
+              label="Market no price"
+              value={`${model.valueMath.marketNoPriceCents}c`}
+            />
+            <SignalValue
+              label="Break-even probability"
+              value={model.valueMath.breakEvenProbabilityLabel}
+            />
+          </div>
+          <p className="mt-3 text-xs leading-5 text-zinc-500">
+            {model.valueMath.priceSummary}
+          </p>
           <p className="mt-3 text-xs leading-5 text-zinc-500">
             This comparison is informational and depends on liquidity, fees, market
             rules, and source confidence. Your estimate stays in this browser.
@@ -117,10 +147,28 @@ export function SignalLab({ model }: SignalLabProps) {
               </div>
             ))}
           </div>
+
+          <div className="rounded border border-zinc-800 p-4">
+            <p className="text-sm font-semibold text-zinc-100">Evidence breakdown</p>
+            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              {model.evidenceBreakdown.map((item) => (
+                <div
+                  key={item.label}
+                  className={`rounded border p-3 ${statusClasses[item.status]}`}
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <p className="text-sm font-semibold">{item.label}</p>
+                    <span className="font-mono text-xs">{item.score}/100</span>
+                  </div>
+                  <p className="mt-2 text-sm leading-6 text-zinc-400">{item.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="mt-6 grid gap-4 lg:grid-cols-[0.85fr_1.15fr]">
+      <div className="mt-6 grid gap-4 lg:grid-cols-3">
         <div>
           <p className="text-sm font-semibold text-zinc-100">Upcoming catalysts</p>
           <div className="mt-3 divide-y divide-zinc-800 rounded border border-zinc-800">
@@ -136,6 +184,35 @@ export function SignalLab({ model }: SignalLabProps) {
         </div>
 
         <div>
+          <p className="text-sm font-semibold text-zinc-100">Reader checklist</p>
+          <div className="mt-3 divide-y divide-zinc-800 rounded border border-zinc-800">
+            {model.readerChecklist.map((item) => (
+              <div key={item.label} className="p-3">
+                <p className="text-sm font-semibold text-zinc-100">{item.label}</p>
+                <p className="mt-2 text-sm leading-6 text-zinc-400">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <p className="text-sm font-semibold text-zinc-100">Next research links</p>
+          <div className="mt-3 divide-y divide-zinc-800 rounded border border-zinc-800">
+            {model.researchLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block p-3 transition hover:bg-zinc-900/70"
+              >
+                <p className="text-sm font-semibold text-teal-100">{link.label}</p>
+                <p className="mt-2 text-sm leading-6 text-zinc-400">{link.detail}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6">
           <p className="text-sm font-semibold text-zinc-100">Methodology</p>
           <ul className="mt-3 space-y-2 text-sm leading-6 text-zinc-400">
             {model.methodology.map((item) => (
@@ -145,7 +222,6 @@ export function SignalLab({ model }: SignalLabProps) {
               </li>
             ))}
           </ul>
-        </div>
       </div>
     </div>
   );
