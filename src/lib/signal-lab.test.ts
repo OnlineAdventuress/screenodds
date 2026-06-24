@@ -2,7 +2,9 @@ import { describe, expect, it } from "vitest";
 import {
   buildSignalLabModel,
   clampReaderProbability,
+  comparePriceToReaderEstimate,
   compareProbabilityEstimate,
+  probabilityToCents,
 } from "./signal-lab";
 import type { ExternalSignal } from "./external-signals";
 import type { Market } from "./markets";
@@ -66,6 +68,31 @@ describe("Signal Lab probability helpers", () => {
     });
     expect(compareProbabilityEstimate(0.51, 50)).toMatchObject({
       label: "Close to your estimate",
+    });
+  });
+
+  it("converts market probability into yes/no cents", () => {
+    expect(probabilityToCents(0.224)).toBe(22);
+    expect(probabilityToCents(0)).toBe(0);
+    expect(probabilityToCents(1)).toBe(100);
+    expect(probabilityToCents(Number.NaN)).toBe(0);
+  });
+
+  it("compares market price to the reader fair price using neutral labels", () => {
+    expect(comparePriceToReaderEstimate(0.62, 50)).toMatchObject({
+      marketYesPriceCents: 62,
+      readerYesPriceCents: 50,
+      differenceCents: 12,
+      label: "Market is above your estimate",
+    });
+    expect(comparePriceToReaderEstimate(0.22, 35)).toMatchObject({
+      marketYesPriceCents: 22,
+      readerYesPriceCents: 35,
+      differenceCents: -13,
+      label: "Market is below your estimate",
+    });
+    expect(comparePriceToReaderEstimate(0.51, 50)).toMatchObject({
+      label: "Market is close to your estimate",
     });
   });
 });

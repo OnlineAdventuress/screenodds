@@ -15,11 +15,24 @@ export type ProbabilityComparisonLabel =
   | "Market lower than your estimate"
   | "Close to your estimate";
 
+export type PriceComparisonLabel =
+  | "Market is above your estimate"
+  | "Market is below your estimate"
+  | "Market is close to your estimate";
+
 export type ProbabilityComparison = {
   marketProbability: number;
   readerProbability: number;
   differencePoints: number;
   label: ProbabilityComparisonLabel;
+  summary: string;
+};
+
+export type PriceComparison = {
+  marketYesPriceCents: number;
+  readerYesPriceCents: number;
+  differenceCents: number;
+  label: PriceComparisonLabel;
   summary: string;
 };
 
@@ -37,6 +50,13 @@ export type SignalLabModel = {
     label: ReliabilityLabel;
     summary: string;
     warnings: string[];
+  };
+  valueMath: {
+    marketYesPriceCents: number;
+    marketNoPriceCents: number;
+    defaultReaderYesPriceCents: number;
+    breakEvenProbabilityLabel: string;
+    priceSummary: string;
   };
   checks: Array<{
     label: string;
@@ -88,12 +108,45 @@ export function compareProbabilityEstimate(
   };
 }
 
+export function probabilityToCents(probability: number): number {
+  if (!Number.isFinite(probability)) {
+    return 0;
+  }
+
+  return Math.min(100, Math.max(0, Math.round(probability * 100)));
+}
+
+export function comparePriceToReaderEstimate(
+  marketProbability: number,
+  readerProbabilityPercent: number,
+): PriceComparison {
+  const marketYesPriceCents = probabilityToCents(marketProbability);
+  const readerYesPriceCents = clampReaderProbability(readerProbabilityPercent);
+  const differenceCents = marketYesPriceCents - readerYesPriceCents;
+  const label =
+    Math.abs(differenceCents) <= 3
+      ? "Market is close to your estimate"
+      : differenceCents > 0
+        ? "Market is above your estimate"
+        : "Market is below your estimate";
+
+  return {
+    marketYesPriceCents,
+    readerYesPriceCents,
+    differenceCents,
+    label,
+    summary: `${label}. Difference: ${Math.abs(differenceCents)} cents on a $1-style probability scale.`,
+  };
+}
+
 export function buildSignalLabModel({
   market,
   externalSignals = [],
   sentimentPulse = null,
 }: BuildSignalLabInput): SignalLabModel {
   const reliability = scoreReliability(market, externalSignals, sentimentPulse);
+  const marketYesPriceCents = probabilityToCents(market.probability);
+  const defaultReaderYesPriceCents = clampReaderProbability(market.probability * 100);
 
   return {
     marketSlug: market.slug,
@@ -105,6 +158,13 @@ export function buildSignalLabModel({
     volumeLabel: formatCompactCurrency(market.volume1mo),
     liquidityLabel: formatCompactCurrency(market.liquidity),
     reliability,
+    valueMath: {
+      marketYesPriceCents,
+      marketNoPriceCents: 100 - marketYesPriceCents,
+      defaultReaderYesPriceCents,
+      breakEvenProbabilityLabel: formatProbability(market.probability),
+      priceSummary: `${formatProbability(market.probability)} market probability is roughly ${marketYesPriceCents} cents on a $1-style probability scale.`,
+    },
     checks: buildSignalChecks(market, externalSignals, sentimentPulse),
     catalysts: buildCatalysts(market),
     methodology: [
