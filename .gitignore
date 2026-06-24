@@ -8,6 +8,7 @@ coverage/
 !.env.example
 *.log
 public/generated/
+.worktrees/
 
 # Local Netlify folder
 .netlify
