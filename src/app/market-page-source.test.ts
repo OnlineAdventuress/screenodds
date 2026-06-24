@@ -15,6 +15,7 @@ describe("market page sentiment integration", () => {
     expect(source).toContain('import { buildSignalLabModel } from "@/lib/signal-lab"');
     expect(source).toContain("await getSentimentPulseForMarket(market.slug)");
     expect(source).toContain("const signalLab = buildSignalLabModel({");
+    expect(source).toContain("relatedMarkets: related");
     expect(source).toContain(
       "<SentimentPulse pulse={sentimentPulse} marketProbability={market.probability} />",
     );

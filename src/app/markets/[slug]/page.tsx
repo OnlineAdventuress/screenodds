@@ -94,6 +94,7 @@ export default async function MarketPage({ params }: MarketPageProps) {
     market,
     externalSignals,
     sentimentPulse,
+    relatedMarkets: related,
   });
   const networkLinks = getSiteNetworkLinks({
     pageType: "market",
